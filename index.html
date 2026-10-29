@@ -2221,8 +2221,7 @@ function renderNav(){
   $('#nav').innerHTML=`<div class="dtitle">教育學程課程筆記<small>115-1・教育心理學＋教學原理</small></div>`+COURSES.map(c=>`<div class="navh">${c.name}</div>`+UNITS.filter(u=>u.course===c.id).map(u=>{const d=(done[u.id]||[]).length,t=u.sections.length;
     return `<a href="#${u.id}" class="${route===u.id?'on':''}"><span class="n">${u.no}</span><span>${u.title}</span><span class="bar"><i style="width:${Math.round(d/t*100)}%"></i></span></a>`}).join('')).join('')
    +`<hr><a href="#quiz" class="${route==='quiz'?'on':''}"><span class="n">測</span><span>綜合測驗</span></a>`
-   +`<a href="#wrong" class="${route==='wrong'?'on':''}"><span class="n">錯</span><span>錯題本${wrong.size?`<span class="badge">${wrong.size}</span>`:''}</span></a>`
-   +`<a href="#notes" class="${route==='notes'?'on':''}"><span class="n">記</span><span>我的筆記</span></a>`;
+   +`<a href="#wrong" class="${route==='wrong'?'on':''}"><span class="n">錯</span><span>錯題本${wrong.size?`<span class="badge">${wrong.size}</span>`:''}</span></a>`;
 }
 
 function route(){
@@ -2235,7 +2234,6 @@ function route(){
   if(u) renderUnit(u);
   else if(r==='quiz') renderMixed();
   else if(r==='wrong') renderWrong();
-  else if(r==='notes') renderAllNotes();
   else renderHome();
 }
 
@@ -2291,7 +2289,6 @@ function renderUnit(u){
   <div class="tabs" role="tablist">
     <button data-t="notes" class="${unitTab==='notes'?'on':''}">重點筆記</button>
     <button data-t="quiz" class="${unitTab==='quiz'?'on':''}">本章測驗（${u.qs.length}）</button>
-    <button data-t="mine" class="${unitTab==='mine'?'on':''}">我的筆記</button>
   </div><div id="pane"></div>`;
   $('#main').querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{unitTab=b.dataset.t;renderUnit(u)});
   const pane=$('#pane');
@@ -2307,15 +2304,7 @@ function renderUnit(u){
     $('#goq').onclick=()=>{unitTab='quiz';renderUnit(u);window.scrollTo(0,0)};
   } else if(unitTab==='quiz'){
     runQuiz(pane,u.qs,{key:u.id});
-  } else {
-    const key='ep.note.'+u.id;
-    pane.innerHTML=`<div class="notebox"><label for="note-${u.id}" class="muted">寫下這章你自己的整理、口訣或還不懂的地方，會自動存在這個瀏覽器。</label>
-      <textarea id="note-${u.id}" placeholder="例：同化 = 用舊方法看新東西；調適 = 改自己的方法"></textarea>
-      <div class="row"><span class="muted" id="st"></span><button class="btn ghost" id="cp">複製這章筆記</button></div></div>`;
-    const ta=$('#note-'+u.id),st=$('#st');ta.value=LS.get(key,'');
-    const show=()=>{st.textContent=ta.value.length+' 字'};show();let t;
-    ta.oninput=()=>{clearTimeout(t);st.textContent='儲存中…';t=setTimeout(()=>{st.textContent=LS.set(key,ta.value)?`已儲存・${ta.value.length} 字`:'這個瀏覽器不允許儲存，請自行複製保存'},400)};
-    $('#cp').onclick=e=>copyText(ta.value,e.target,ta);
+
   }
 }
 
@@ -2398,18 +2387,6 @@ function renderWrong(){
   if(!list.length)return;
   $('#go').onclick=()=>{runQuiz($('#qz'),list,{key:'wrong'+Date.now(),showUnit:true});$('#qz').scrollIntoView({block:'start'})};
   const c=$('#clr');c.onclick=()=>{if(c.dataset.sure){wrong.clear();saveWrong();route()}else{c.dataset.sure=1;c.textContent='再按一次確認清空'}};
-}
-
-function renderAllNotes(){
-  const notes=UNITS.map(u=>({u,t:LS.get('ep.note.'+u.id,'')}));
-  const any=notes.some(n=>n.t.trim());
-  $('#main').innerHTML=`<div class="eyebrow">自己的整理</div><h1>我的筆記</h1>
-  <p class="lead">各章「我的筆記」分頁寫的內容都集中在這裡。筆記存在這個瀏覽器裡，換電腦或清除瀏覽資料就會不見，重要的記得複製出來。</p>
-  ${any?`<div class="row" style="justify-content:flex-start"><button class="btn ghost" id="cpall">複製全部筆記</button></div>`:''}
-  ${notes.map(n=>`<section class="sec"><div class="sec-head"><h2><span class="num">${n.u.no}</span>${n.u.title}<span class="muted">　${courseName(n.u)}</span></h2><a class="knew" href="#${n.u.id}" data-mine="${n.u.id}" style="text-decoration:none;color:inherit">編輯</a></div>
-   ${n.t.trim()?`<div style="white-space:pre-wrap">${esc(n.t)}</div>`:'<p class="muted">還沒有寫筆記。</p>'}</section>`).join('')}`;
-  $('#main').querySelectorAll('[data-mine]').forEach(a=>a.onclick=()=>{unitTab='mine'});
-  const b=$('#cpall');if(b)b.onclick=()=>copyText(notes.filter(n=>n.t.trim()).map(n=>`【${courseName(n.u)}・${chap(n.u)} ${n.u.title}】\n${n.t}`).join('\n\n'),b);
 }
 
 function renderSearch(q){
