@@ -1,0 +1,2390 @@
+<title>115-1 教育學程課程筆記</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: notebook — chapter rail on the left, one chapter at a time on the right; key terms marked with highlighter */
+:root{
+  --bg:#EDF1F3; --paper:#FBFCFD; --ink:#1A2530; --muted:#5B6773; --line:#D3DCE2;
+  --accent:#1E6A5B; --accent-ink:#FFFFFF; --accent-soft:#DCEBE5;
+  --mark:#FFE07A; --ex:#EEF3F8; --ex-line:#9DB3C8;
+  --good:#2B7A4B; --good-soft:#DDF0E3; --bad:#B03A36; --bad-soft:#F7E1DF;
+  --f-display:"LXGW WenKai TC","Kaiti TC","DFKai-SB","BiauKai",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10161B; --paper:#172027; --ink:#E3E9EE; --muted:#93A1AD; --line:#2A3641;
+  --accent:#6CC2A8; --accent-ink:#0E1A16; --accent-soft:#1B3330;
+  --mark:rgba(232,190,60,.36); --ex:#1B2731; --ex-line:#46627A;
+  --good:#79CC98; --good-soft:#18352A; --bad:#EE8B85; --bad-soft:#3A1F1F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10161B; --paper:#172027; --ink:#E3E9EE; --muted:#93A1AD; --line:#2A3641;
+  --accent:#6CC2A8; --accent-ink:#0E1A16; --accent-soft:#1B3330;
+  --mark:rgba(232,190,60,.36); --ex:#1B2731; --ex-line:#46627A;
+  --good:#79CC98; --good-soft:#18352A; --bad:#EE8B85; --bad-soft:#3A1F1F; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;max-width:1180px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);align-self:start;max-height:calc(100vh - 32px);overflow:auto;display:flex;flex-direction:column;gap:14px}
+.brand{font-family:var(--f-display);font-size:1.5rem;line-height:1.3;font-weight:700;text-wrap:balance;cursor:pointer}
+.brand small{display:block;font-family:var(--f-body);font-size:.78rem;font-weight:400;color:var(--muted);letter-spacing:.04em}
+.search{width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper)}
+nav{display:flex;flex-direction:column;gap:2px}
+.navh{font-size:.78rem;letter-spacing:.12em;color:var(--muted);font-weight:700;padding:10px 10px 2px}
+nav a{display:grid;grid-template-columns:2.7em 1fr;align-items:center;gap:4px;padding:8px 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-size:.95rem;line-height:1.35}
+nav a:hover{background:var(--paper)}
+nav a.on{background:var(--accent);color:var(--accent-ink)}
+nav a .n{font-family:var(--f-display);font-size:1.05rem;opacity:.75}
+nav a .bar{grid-column:2;height:3px;border-radius:2px;background:var(--line);overflow:hidden;margin-top:5px}
+nav a .bar i{display:block;height:100%;background:var(--accent)}
+nav a.on .bar{background:rgba(255,255,255,.3)} nav a.on .bar i{background:var(--accent-ink)}
+nav hr{border:0;border-top:1px solid var(--line);margin:8px 0}
+.badge{display:inline-block;min-width:1.6em;padding:0 6px;border-radius:99px;background:var(--bad-soft);color:var(--bad);font-size:.78rem;text-align:center;margin-left:6px}
+
+main{min-width:0}
+.eyebrow{font-size:.8rem;letter-spacing:.12em;color:var(--accent);font-weight:700}
+h1{font-family:var(--f-display);font-size:2.3rem;line-height:1.25;margin:4px 0 6px;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:1.5rem;line-height:1.35;margin:0;text-wrap:balance}
+h4{margin:0 0 4px;font-size:1rem}
+.src{color:var(--muted);font-size:.85rem}
+.tabs{display:flex;gap:6px;margin:18px 0 22px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tabs button{border:0;background:none;padding:10px 14px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;font-weight:500}
+.tabs button.on{color:var(--ink);border-color:var(--accent)}
+
+.sec{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin-bottom:16px}
+.sec-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.sec-head .num{font-family:var(--f-display);color:var(--accent);margin-right:8px}
+.sec.done{border-color:var(--accent)}
+.knew{flex:none;border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:4px 12px;font-size:.82rem;cursor:pointer;white-space:nowrap}
+.sec.done .knew{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.sec p,.sec ul,.sec ol{margin:8px 0;max-width:68ch}
+.sec li{margin:3px 0}
+mark{background:linear-gradient(transparent 55%,var(--mark) 55%);color:inherit;padding:0 .08em}
+.ex{background:var(--ex);border-left:3px solid var(--ex-line);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0;max-width:72ch}
+.tip{border:1px dashed var(--accent);background:var(--accent-soft);padding:8px 14px;border-radius:8px;margin:12px 0;max-width:72ch}
+.ex>b:first-child,.tip>b:first-child{display:inline-block;font-size:.78rem;letter-spacing:.1em;margin-right:8px;padding:0 8px;border-radius:4px;background:var(--ex-line);color:var(--paper)}
+.tip>b:first-child{background:var(--accent);color:var(--accent-ink)}
+.add{display:inline-block;font-size:.72rem;padding:0 6px;border:1px solid var(--muted);color:var(--muted);border-radius:4px;margin:0 4px;vertical-align:1px}
+.tbl{overflow-x:auto;margin:10px 0}
+table{border-collapse:collapse;min-width:100%;font-size:.93rem}
+th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--bg);font-weight:700;white-space:nowrap}
+table.grid2 td{text-align:center;width:40%}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:10px 0}
+.two>div{border:1px solid var(--line);border-radius:8px;padding:10px 14px;min-width:0}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:10px 0}
+.flow span{position:relative;padding:8px 12px;border:1px solid var(--accent);border-radius:8px;background:var(--accent-soft);font-weight:500;line-height:1.4}
+.flow span small{display:block;font-weight:400;color:var(--muted);font-size:.8rem}
+.flow span:not(:last-child)::after{content:"→";position:absolute;right:-8px;top:50%;transform:translate(50%,-50%);color:var(--accent);font-size:.9rem}
+.flow{column-gap:20px}
+
+/* notes */
+.notebox{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px}
+.notebox textarea{width:100%;min-height:340px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:
+  repeating-linear-gradient(var(--paper) 0 31px,var(--line) 31px 32px);line-height:32px;resize:vertical}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:10px}
+.muted{color:var(--muted);font-size:.88rem}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:8px 16px;cursor:pointer;font-weight:500}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* quiz */
+.quiz{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px}
+.qtop{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.88rem;font-variant-numeric:tabular-nums}
+.qbar{height:4px;background:var(--line);border-radius:2px;margin:8px 0 16px;overflow:hidden}.qbar i{display:block;height:100%;background:var(--accent);transition:width .25s}
+.qq{font-size:1.12rem;font-weight:500;margin:0 0 14px;max-width:66ch}
+.qtag{font-size:.75rem;color:var(--accent);font-weight:700;letter-spacing:.06em}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:grid;grid-template-columns:1.8em 1fr;gap:6px;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:10px 14px;cursor:pointer;line-height:1.55}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt .k{font-family:var(--f-display);color:var(--muted)}
+.opt.ok{background:var(--good-soft);border-color:var(--good)} .opt.ok .k{color:var(--good)}
+.opt.no{background:var(--bad-soft);border-color:var(--bad)} .opt.no .k{color:var(--bad)}
+.opt:disabled{cursor:default}
+.fb{margin-top:14px;padding:12px 14px;border-radius:8px;background:var(--ex)}
+.fb b.g{color:var(--good)} .fb b.r{color:var(--bad)}
+.score{font-family:var(--f-display);font-size:3rem;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
+.review{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.review div{border-left:3px solid var(--bad);padding:4px 12px;background:var(--bg);border-radius:0 6px 6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{border:1px solid var(--line);border-radius:99px;padding:5px 14px;background:var(--paper);cursor:pointer}
+.chip.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+/* home */
+.lead{color:var(--muted);max-width:62ch;margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:18px 0 28px}
+.card{display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;cursor:pointer;color:var(--ink);text-decoration:none}
+.card:hover{border-color:var(--accent)}
+.card .cn{font-family:var(--f-display);color:var(--accent);font-size:.95rem}
+.card .ct{font-family:var(--f-display);font-size:1.25rem;line-height:1.3}
+.card .cm{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.h-sec{margin:28px 0 10px}
+.hit{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:10px;cursor:pointer}
+.hit:hover{border-color:var(--accent)}
+.hit small{color:var(--accent);font-weight:700}
+
+@media (max-width:820px){
+  .app{grid-template-columns:minmax(0,1fr);gap:16px;padding-block:12px 48px}
+  aside{position:static;max-height:none;overflow:visible}
+  nav{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px;scrollbar-width:thin}
+  nav a{flex:none;display:block;padding:6px 12px;border:1px solid var(--line);background:var(--paper);white-space:nowrap}
+  nav a .bar{display:none} nav a .n{margin-right:4px}
+  nav hr{display:none}
+  .navh{flex:none;align-self:center;padding:0 4px 0 8px;white-space:nowrap}
+  h1{font-size:1.85rem}
+  .sec,.quiz{padding:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<div class="app">
+<aside>
+  <div class="brand" role="link" tabindex="0">教育學程<br>課程筆記<small>115-1・教育心理學＋教學原理</small></div>
+  <input id="search" class="search" type="search" placeholder="搜尋概念，例如：鷹架" aria-label="搜尋筆記與題目">
+  <nav id="nav"></nav>
+</aside>
+<main id="main"></main>
+</div>
+<script>
+const UNITS = [
+{
+id:'u1', no:1, title:'教育心理學的研究取向', src:'教育心理學的研究取向（不含題目）.pptx',
+sections:[
+{h:'研究取向的四個發展階段', b:`
+<p>教育心理學的研究取向依時間演變：</p>
+<div class="flow"><span>哲學取向心理學<small>17、18 世紀</small></span><span>科學心理學（實驗心理學）<small>20 世紀初</small></span><span>科學教育心理學<small>20 世紀</small></span><span>教學心理學<small>1960 以後</small></span></div>
+<div class="tip"><b>考點</b>順序題很常考，記口訣「<mark>哲 → 科 → 科教 → 教學</mark>」。</div>`},
+{h:'哲學取向心理學（中國與西方）', b:`
+<ul>
+<li><b>中國：孔子、孟子、荀子</b>：① 重人性 ② 道德教育 ③ <mark>知情意行並重</mark>。</li>
+<li><b>西方：柏拉圖、亞里斯多德</b>：身心均衡發展。</li>
+<li><b>官能心理學（Faculty Psychology）→ 形式訓練（Formal Discipline）</b>：認為心智由各種「官能」組成，只要學好形式良好的科目，官能就能訓練好，之後自然能遷移運用。</li>
+</ul>
+<div class="ex"><b>例子</b>講義例：<mark>幾何訓練思考推理、拉丁文訓練記憶</mark>。生活中的類似說法：「學珠心算可以讓腦袋變靈活，以後做什麼都快」——這就是形式訓練的想法。</div>`},
+{h:'三位西方教育家', b:`
+<div class="tbl"><table>
+<tr><th>人物</th><th>主張</th></tr>
+<tr><td>裴斯泰洛齊</td><td>① 原始性 → 社會性 → 道德性 ② <mark>教育愛</mark> ③ <mark>頭、心、手均衡發展</mark> ④ 重個別發展</td></tr>
+<tr><td>赫爾巴特</td><td>① 知情意 ② 重道德教育 ③ 重兒童興趣 ④ <mark>四段式教學法：明顯（明瞭）、聯合、系統、方法</mark></td></tr>
+<tr><td>福祿貝爾</td><td>① 家庭教育 ② 自由創造 ③ <mark>團體遊戲</mark> ④ 感覺與知覺發展</td></tr>
+</table></div>
+<div class="tip"><b>記法</b>裴 = 愛與頭心手；赫 = 四段教學法；福 = 遊戲。</div>`},
+{h:'科學心理學與科學教育心理學', b:`
+<p><b>科學心理學（實驗心理學）</b>：對象是<mark>動物</mark>、情境在<mark>實驗室</mark>、方法是<mark>借用</mark>（借自然科學的方法）。</p>
+<p><b>科學教育心理學</b>：</p>
+<ul>
+<li><b>桑代克（Thorndike）</b>：推動教育科學運動，<mark>「科學教育心理學之父」</mark>。根據動物實驗提出<mark>三條學習律</mark>（練習律、預備律、效果律）；動物心理學的鼻祖、<mark>聯結主義</mark>創始人，創建教育心理學並設計心理測驗。</li>
+<li><b>杜威（Dewey）</b>：推動<mark>進步教育運動</mark>，創實驗學校。主張：<mark>學校即社會、教育即生活</mark>、學生中心的課程、<mark>做中學（learning by doing）</mark>、教育無固定目的。</li>
+<li>之後分成三個派別：<mark>行為取向、認知取向、人本取向</mark>。</li>
+</ul>
+<div class="ex"><b>例子</b>老師不直接講解「浮力」，而是讓學生把各種東西丟進水桶，自己發現哪些會浮——這是杜威「做中學」的精神。</div>`},
+{h:'教學心理學（1960 以後）', b:`
+<p>興起原因：</p>
+<ol><li>教學科技的發展</li><li>恢復基礎學科運動</li><li>認知心理學的影響</li></ol>
+<p>缺點：<mark>只重知識傳遞技術，忽略情意人格基礎</mark>。</p>`},
+{h:'三化取向：教育心理學研究新取向', b:`
+<ol>
+<li><b>研究目的教育化</b>：教育目的是<mark>了解人性、改變人性、實現教育目的</mark>。
+<ul><li>社會需求 → <mark>外鑠</mark> → <mark>經師</mark>（傳授知識）</li><li>學生需求 → <mark>內發</mark> → <mark>人師</mark>（照顧學生成長）</li><li>需求 → 滿足 → 價值</li></ul></li>
+<li><b>研究對象全人化</b>：身心發展、學習心理、個別差異。知（認知心理學）、行（行為主義）、情與意（人本心理學）。</li>
+<li><b>研究方法本土化</b></li>
+</ol>
+<div class="tip"><b>考點</b>「知」對應認知心理學、「行」對應行為主義、「情意」對應人本心理學。</div>`},
+{h:'學生類型與家庭類型', b:`
+<div class="tbl"><table>
+<tr><th>學生類型</th><th>例子</th></tr>
+<tr><td>不知不行</td><td>不知道要洗手，也沒洗手</td></tr>
+<tr><td>知而不行</td><td>知道熬夜傷身，還是天天熬夜</td></tr>
+<tr><td>知而後行</td><td>老師講過交通規則，學生照著做</td></tr>
+<tr><td>行而後知</td><td>先跟著做實驗，做完才懂背後原理</td></tr>
+</table></div>
+<p><b>家庭類型</b>：<mark>順教育</mark>（家庭配合學校）、<mark>缺教育</mark>（家庭缺席不管）、<mark>反教育</mark>（家庭教的與學校相反）。</p>
+<div class="ex"><b>例子</b>家長教孩子「考試時偷看隔壁沒關係」→ 反教育；父母都忙於工作完全不過問 → 缺教育。</div>`},
+{h:'教師素養：CK、PK、PCK', b:`
+<ul>
+<li><b>學科內容知識（CK）</b>：懂這個學科本身。</li>
+<li><b>教育學知識（PK）</b>：懂一般的教學與教育。</li>
+<li><b>學科教學知識（PCK）</b>：知道<mark>這個學科該怎麼教</mark>。</li>
+</ul>
+<div class="ex"><b>例子</b>數學系教授懂微積分（CK），但不一定知道怎麼讓國中生理解負數；能用「溫度計零下」「欠錢」來教負數的老師，展現的是 <mark>PCK</mark>。</div>`},
+{h:'舒爾曼（Shulman, 1987）教師教育課程七大範疇', b:`
+<ol>
+<li><b>學科內容知識</b>：對任教學科有專業而深刻的認識。</li>
+<li><b>學科教育學知識</b>：教這些知識所需的教學技巧。</li>
+<li><b>學習者的知識</b>：學習理論與學習者特徵（教育心理學、發展心理學、學生輔導）。</li>
+<li><b>一般教學法知識</b>：課堂管理與組織的理念和策略。</li>
+<li><b>課程知識</b>：課程基本理論與學校課程。</li>
+<li><b>教育脈絡知識</b>：教師群體文化，<mark>學校、社區及政府政策之間的關係</mark>。</li>
+<li><b>目的、價值、哲學和社會背景知識</b>：教育哲學、教育社會學、教育價值。</li>
+</ol>`},
+{h:'教學是做決策', b:`
+<ul>
+<li>教室很多樣：生理、認知、行為、家庭的差異。</li>
+<li>教師最重要的角色是<mark>決策者（decision maker）</mark>，教學時<mark>大約每兩分鐘就要做一個決定</mark>（內容、策略、班級經營…）。</li>
+<li>Ormrod 的自家心理學測驗提醒我們：<mark>教學不能只靠常識</mark>。</li>
+<li>「我是教數學的老師」vs.「<mark>我是教學生學數學的老師</mark>」：重點在學生。</li>
+<li><b>布魯納（Bruner）</b>：「任何一項道理，皆能透過適當合宜的方法，教給每一位學生。」</li>
+<li>教學成功的境界：健康地成長、快樂地學習、個個有所長、人人皆成器。</li>
+</ul>`}
+],
+quiz:[
+['「學好幾何就能訓練推理能力，學好拉丁文就能訓練記憶力」屬於哪一種觀點？',['官能心理學的形式訓練','杜威的做中學','桑代克的效果律','維果茨基的鷹架'],'官能心理學認為心智由官能組成，學好形式良好的科目就能訓練官能，稱為形式訓練。'],
+['教育心理學研究取向的發展順序何者正確？',['哲學取向 → 科學心理學 → 科學教育心理學 → 教學心理學','科學心理學 → 哲學取向 → 教學心理學 → 科學教育心理學','哲學取向 → 教學心理學 → 科學心理學 → 科學教育心理學','教學心理學 → 科學教育心理學 → 科學心理學 → 哲學取向'],'17、18 世紀哲學取向 → 20 世紀初實驗心理學 → 20 世紀科學教育心理學 → 1960 後教學心理學。'],
+['被稱為「科學教育心理學之父」、根據動物實驗提出三條學習律的是誰？',['桑代克','杜威','赫爾巴特','巴夫洛夫'],'桑代克是聯結主義創始人，提出練習律、預備律、效果律。'],
+['「學校即社會、教育即生活、做中學」是誰的主張？',['杜威','裴斯泰洛齊','福祿貝爾','布魯納'],'杜威推動進步教育運動，創實驗學校。'],
+['赫爾巴特的四段式教學法是？',['明顯、聯合、系統、方法','注意、保持、再生、動機','選擇、珍視、行動、反省','摘要、提問、澄清、預測'],'其他選項分別是觀察學習歷程、價值澄清法（只有三階段）、交互教學法。'],
+['主張「教育愛」與「頭、心、手均衡發展」的是？',['裴斯泰洛齊','赫爾巴特','福祿貝爾','桑代克'],'裴斯泰洛齊重教育愛、頭心手均衡、個別發展。'],
+['1960 年後興起的教學心理學，講義指出它的缺點是？',['只重知識傳遞技術，忽略情意人格基礎','只研究動物，無法推論到人','過度重視學生情意，忽略知識','只重哲學思辨，缺乏科學方法'],'教學心理學受教學科技、基礎學科運動、認知心理學影響，偏重知識傳遞技術。'],
+['下列何者不屬於「三化取向」？',['研究對象動物化','研究目的教育化','研究對象全人化','研究方法本土化'],'三化是目的教育化、對象全人化、方法本土化。'],
+['小明知道熬夜傷身，卻還是天天熬夜，屬於哪一種學生類型？',['知而不行','不知不行','知而後行','行而後知'],'知道道理但沒有做到，是知而不行。'],
+['一位老師用「切披薩」讓學生理解分數，這主要展現了哪種教師素養？',['學科教學知識（PCK）','學科內容知識（CK）','教育學知識（PK）','課程知識'],'知道某個學科內容要怎麼教給學生，就是 PCK。'],
+['Shulman 七大範疇中，「了解學校、社區及政府政策之間的關係」屬於？',['教育脈絡知識','課程知識','學習者的知識','一般教學法知識'],'教育脈絡知識包含教師群體文化與學校、社區、政策的關係。'],
+['依講義，教師在教學中最重要的角色是什麼？',['決策者，約每兩分鐘做一個決定','知識傳遞者，專心把課講完','管理者，主要負責維持秩序','評量者，負責出題與打分數'],'教學是做決策，老師大約每兩分鐘就要做一個決定。'],
+['「任何一項道理，皆能透過適當合宜的方法，教給每一位學生」是誰的教學信念？',['布魯納','皮亞傑','杜威','桑代克'],'這是布魯納（J. Bruner）的名言。'],
+['在「研究目的教育化」中，回應學生需求、由內發而來的教師稱為？',['人師','經師','良師','名師'],'社會需求 → 外鑠 → 經師；學生需求 → 內發 → 人師。'],
+['家長教孩子「考試時偷看隔壁沒關係」，屬於哪一種家庭類型？',['反教育','缺教育','順教育','無教育'],'家庭教的內容與學校教育方向相反，是反教育。']
+]
+},
+{
+id:'u2', no:2, title:'大腦功能', src:'大腦功能(不含題目).pptx',
+sections:[
+{h:'大腦皮質各區的功能', b:`
+<div class="tbl"><table>
+<tr><th>腦區</th><th>功能</th></tr>
+<tr><td>前額葉皮質區</td><td><mark>解決問題、情緒、複雜性思考</mark></td></tr>
+<tr><td>運動聯合區</td><td>複雜性運動的協調（例：跳舞）</td></tr>
+<tr><td>主要運動皮質區</td><td>自主性動作的啟動</td></tr>
+<tr><td>主要自體感覺皮質區</td><td>由身體接收觸覺訊息</td></tr>
+<tr><td>感官聯合區</td><td>處理多重的感官訊息</td></tr>
+<tr><td>視覺皮質區</td><td>偵測<mark>簡單</mark>的視覺刺激</td></tr>
+<tr><td>視覺聯合區</td><td>掌管<mark>複雜</mark>的視覺訊息處理</td></tr>
+<tr><td>聽覺皮質區</td><td>偵測聲音的質地（<mark>音量、音質</mark>）</td></tr>
+<tr><td>聽覺聯合區</td><td>掌管複雜性的聽覺訊息處理</td></tr>
+<tr><td>布洛卡區</td><td>語言的<mark>表達</mark>與咬字清晰</td></tr>
+<tr><td>威尼克區</td><td>語言的<mark>理解</mark></td></tr>
+</table></div>
+<div class="tip"><b>記法</b>「皮質區」做<b>簡單偵測</b>，「聯合區」做<b>複雜處理</b>。</div>`},
+{h:'語言中樞：布洛卡區 vs. 威尼克區', b:`
+<div class="two">
+<div><h4>布洛卡區受損（布洛卡失語症）</h4><ul><li>無法講話、無法用字詞</li><li><mark>可以了解語言內容</mark></li><li>說話緩慢、不連貫</li></ul></div>
+<div><h4>威尼克區受損（威尼克失語症）</h4><ul><li><mark>無法了解語言內容</mark></li><li>可以清楚地說話</li><li>但字詞是無意義的組合，稱為<mark>「字詞沙拉」</mark></li></ul></div>
+</div>
+<div class="ex"><b>例子</b>阿公中風後聽得懂你說「要不要喝水」，也會點頭，但想回答時只擠出「水…喝…」→ <b>布洛卡區</b>。另一位病人講話很流利：「今天的藍色跑去吃飯了窗戶」，也聽不懂你的問題 → <b>威尼克區</b>。</div>
+<div class="tip"><b>記法</b>布洛卡 =「說不出」；威尼克 =「聽不懂、亂說」。</div>`},
+{h:'語言側化與邊緣系統', b:`
+<ul>
+<li><mark>右利者（右撇子）的語言區在左半腦</mark>；左利者則不一定。</li>
+<li><b>視丘</b>：具有控制情緒的功能。</li>
+<li><b>杏仁核</b>：與情緒的表現有關。</li>
+<li><b>海馬迴</b>：與<mark>記憶</mark>有關。</li>
+</ul>`},
+{h:'左右腦與胼胝體', b:`
+<ul>
+<li>大腦分成左右兩半球，由<mark>胼胝體</mark>連接；每個半球特化執行某些行為。</li>
+<li>感覺訊息<mark>交叉傳遞</mark>：身體左側 → 右腦；身體右側 → 左腦。</li>
+</ul>
+<div class="ex"><b>例子</b>左手被熱水燙到，觸覺訊息主要送到<b>右腦</b>的自體感覺皮質區。</div>
+<p><b>課堂思考</b>：孩子為何用左手寫字？要不要導引轉為右手？——可從「左利者語言區不一定在左腦」與尊重個別差異來思考。</p>`},
+{h:'腦的發展與可塑性', b:`
+<ul>
+<li>嬰兒<mark>18 個月之前</mark>：大腦神經元<mark>大量生長與聯結</mark>；之後主要是加強已聯結神經元的效能。</li>
+<li>腦的<mark>可塑性在幼兒期最高</mark>。</li>
+<li>實作時與非實作時，大腦的活化狀態不同：<mark>大腦因外在刺激而活化</mark>。</li>
+</ul>`},
+{h:'專家與生手的腦', b:`
+<ul>
+<li><b>專家</b>：只活化小部分區域，因為<mark>已達自動化</mark>。</li>
+<li><b>生手</b>：許多區域都活化。</li>
+</ul>
+<div class="ex"><b>例子</b>剛學開車的人要同時想油門、方向盤、後照鏡，整個腦都在忙；開了十年的人可以一邊開車一邊聊天，因為開車已自動化。教學上，基本技能練到熟練，才能把腦力留給更高層次的思考。</div>`}
+],
+quiz:[
+['阿公中風後聽得懂別人說話，但講話緩慢斷續、說不出想說的詞，最可能是哪一區受損？',['布洛卡區','威尼克區','海馬迴','視覺聯合區'],'布洛卡區掌管語言表達；受損者能理解但說不出。'],
+['病人說話流利，但內容是無意義的詞語組合，也聽不懂問題，這種「字詞沙拉」是哪一區受損？',['威尼克區','布洛卡區','前額葉皮質區','主要運動皮質區'],'威尼克區掌管語言理解。'],
+['負責解決問題、情緒與複雜性思考的是？',['前額葉皮質區','感官聯合區','聽覺皮質區','主要自體感覺皮質區'],'前額葉皮質區掌管解決問題、情緒與複雜思考。'],
+['下列何者與「記憶」最有關？',['海馬迴','杏仁核','視丘','布洛卡區'],'海馬迴與記憶有關；杏仁核與情緒表現有關；視丘可控制情緒。'],
+['連接左右大腦半球的構造是？',['胼胝體','海馬迴','杏仁核','視丘'],'胼胝體連接左右腦。'],
+['左手被燙到，觸覺訊息主要傳到哪裡？',['右腦','左腦','兩邊平均','小腦'],'感覺訊息交叉傳遞：身體左側到右腦。'],
+['學跳舞時協調複雜的動作，主要靠哪一區？',['運動聯合區','主要運動皮質區','視覺皮質區','威尼克區'],'運動聯合區負責複雜性運動的協調，講義舉例就是舞蹈。'],
+['依講義，大腦神經元大量生長與聯結主要發生在？',['出生後 18 個月之前','3 到 6 歲','青春期','成年以後'],'18 個月之前大量生長聯結，之後主要是加強效能。'],
+['專家做熟悉的工作時，大腦活化的區域比生手少，原因是？',['已經自動化','大腦退化','注意力不足','神經元比較少'],'專家已達自動化，只需活化小部分區域。'],
+['負責偵測聲音的音量、音質的是？',['聽覺皮質區','聽覺聯合區','威尼克區','感官聯合區'],'聽覺皮質區偵測聲音質地；複雜聽覺處理才是聯合區。'],
+['右撇子的人，語言區通常在？',['左半腦','右半腦','兩側都有','小腦'],'右利者語言區在左半腦，左利者則不一定。'],
+['腦的可塑性在哪個時期最高？',['幼兒期','青春期','成年期','老年期'],'講義：腦的可塑性幼兒期最高。']
+]
+},
+{
+id:'u3', no:3, title:'身體發展與教育', src:'身體發展與教育(不含題目).pptx',
+sections:[
+{h:'身體發展的兩大影響因素', b:`<p>身體發展受<mark>遺傳（成熟）</mark>與<mark>環境（學習）</mark>兩大因素影響。</p>`},
+{h:'嬰兒期（0–2 歲）感覺發展', b:`
+<div class="tbl"><table>
+<tr><th>感覺</th><th>發展</th></tr>
+<tr><td>視覺</td><td>出生時是<mark>大近視眼</mark>；顏色約 <mark>3 個月</mark>；深知覺約 <mark>6 個月</mark>；成人視力約 <mark>3 歲</mark>。問題：鬥雞眼、先天性視力障礙。</td></tr>
+<tr><td>聽覺</td><td><mark>出生即完備</mark>，新生兒就能辨識母親的聲音。</td></tr>
+<tr><td>味覺</td><td>出生即完備，能分辨<mark>酸、甜、苦</mark>。</td></tr>
+<tr><td>嗅覺</td><td>出生即完備，<mark>滿月</mark>嬰兒能辨別母親身體的味道。</td></tr>
+</table></div>
+<p><b>莫洛反射（Moro reflex，驚嚇反應）</b>：嬰兒仰臥時輕敲腹部或讓他瞬間失去平衡，會<mark>雙臂外伸、手掌攤開、背部拱起</mark>。初生到 <mark>5、6 個月</mark>都看得到，<mark>初生數週最強</mark>，之後減弱。</p>
+<div class="ex"><b>例子</b>關門聲「砰」一聲，睡著的新生兒突然雙手張開、像要抱住什麼——這就是莫洛反射。</div>
+<div class="tip"><b>考點</b>四種感覺中只有<b>視覺</b>不是出生即完備。</div>`},
+{h:'動作發展模式與順序', b:`
+<p><b>三個模式</b>：</p>
+<ul>
+<li><mark>首部到尾端</mark>：先控制頭頸，再到軀幹、腳。</li>
+<li><mark>軀幹到四肢</mark>：先控制肩膀、手臂，再到手指。</li>
+<li><mark>整體到特殊</mark>：先是全身性的大動作，再到精細的特定動作。</li>
+</ul>
+<p><b>口訣</b>：<mark>七坐八爬九發牙</mark>。順序：翻身 → 起坐 → 扶手站立 → 獨自站立 → 獨自行走上樓梯 → 原地跳躍。</p>
+<div class="tbl"><table>
+<tr><th>年齡</th><th>發展能力</th><th>遊戲</th></tr>
+<tr><td>0–3 月</td><td>踢腳與揮手</td><td>多互動、多伸展</td></tr>
+<tr><td>6–9 月</td><td>會坐、爬、用手指抓東西</td><td>抓抓樂</td></tr>
+<tr><td>9–12 月</td><td>扶著走</td><td>搖搖樂</td></tr>
+<tr><td>1–1.5 歲</td><td>雙手往前丟球</td><td>堆積木</td></tr>
+<tr><td>1.5–2 歲</td><td>扶著上下樓梯</td><td>投硬幣</td></tr>
+<tr><td>2–2.5 歲</td><td>跑步</td><td>串珠子</td></tr>
+<tr><td>2.5–3 歲</td><td>騎三輪車</td><td>對摺紙</td></tr>
+</table></div>
+<p>學習「爬」是<mark>感覺統合的基礎</mark>。</p>
+<div class="ex"><b>例子</b>嬰兒想拿玩具時，一開始是整隻手臂亂揮（整體），幾個月後才會用拇指和食指捏起小餅乾（特殊）。</div>`},
+{h:'嬰兒期的營養', b:`
+<p>出生後六個月內以母奶或牛奶為營養來源。<b>母奶的優點</b>：</p>
+<ol><li>不含細菌</li><li>蛋白質含天然免疫物質</li><li>營養較牛奶均衡</li><li>促進顎部關節及口部肌肉發展</li><li>建立<mark>信任與依附</mark>的社會關係</li></ol>`},
+{h:'學前兒童（3–6 歲）身體發展', b:`
+<p>頭腦發展快速：「三歲定終身」。</p>
+<p><b>身體各部分發展的一般模式</b>：</p>
+<ol>
+<li><mark>腦與頭</mark>的部位發展最早。</li>
+<li>骨骼肌肉：<mark>3 歲前快速，4 歲以後趨緩，青春期又加速</mark>，約 20 歲成熟。</li>
+<li>淋巴組織：出生即迅速發展，<mark>青春期之前達頂峰，成年反而下降</mark>。</li>
+<li>生殖系統：直到<mark>青春期之前</mark>才開始迅速發展。</li>
+<li>出生到成年之間，<mark>青春期</mark>是身體發展的重要關鍵。</li>
+</ol>
+<p><b>營養失衡原因</b>：偏食、食無定時定量、正餐忽略而零食太多。<b>營養</b>：蛋白質供應成長原料；碳水化合物供應活動能量；維生素、脂肪、礦物質、水分有綜合影響。也要注意肥胖問題與環境因素。</p>`},
+{h:'學齡兒童（6–12 歲）身體發展', b:`
+<ul>
+<li>前半段：男女發展速度都<mark>趨緩</mark>。</li>
+<li>後半段：<mark>女生快於男生</mark>。</li>
+<li>身高體重成長最快：<mark>男生 12–14 歲、女生 10–12 歲</mark>。</li>
+<li><mark>6–9 歲：女 &lt; 男；10–12 歲：女 &gt; 男</mark>。</li>
+</ul>
+<div class="ex"><b>例子</b>國小五、六年級時，班上常是女生比男生高；到了國中二、三年級，男生才追上並超過。</div>`},
+{h:'青少年身體發展與青春期', b:`
+<ul>
+<li><b>青年期</b>：個體從<mark>生理成熟到心理成熟</mark>的一段期間。</li>
+<li>身高體重：10–12 歲女 &gt; 男；<mark>13 歲以後女 &lt; 男</mark>。</li>
+<li>身高頂峰：<mark>男 18 歲、女 16 歲</mark>。</li>
+<li>青春期：<mark>男 12–15 歲、女 11–14 歲</mark>。</li>
+<li>第一性徵指生殖器官；第二性徵包括男生長鬍鬚、喉結突起、聲音變粗、肌肉發達，女生乳房隆起、聲調變高等。</li>
+<li><b>青春期生長陡增</b>：生殖系統接近成熟時分泌激素，使身高體重產生重大變化；出現早晚與性別有關。</li>
+</ul>`},
+{h:'青春風暴期與教育問題', b:`
+<p><b>霍爾（Hall）</b>稱青年期為<mark>風暴期</mark>：</p>
+<ul><li>特徵：<mark>情緒表現強烈、情緒不穩定</mark>。</li>
+<li>原因：① 性生理成熟產生的性驅力無法獲得滿足；② <mark>理性發展未臻成熟</mark>，不能自行克制。</li></ul>
+<p><b>現今青年期比前人長</b>：因為<mark>青春期提早</mark>出現，又缺少人生歷練使<mark>心理成熟延後</mark> → 情緒困擾機會增多。婚姻傳統習俗改變也是原因之一。</p>
+<p><b>風暴期常見行為</b>：</p>
+<ul>
+<li><b>與父母衝突</b>：叛逆、反抗權威；源於<mark>青少年強烈的獨立需求</mark>與<mark>父母的管束方式</mark>無法協調。</li>
+<li><b>情緒崩潰</b>：注意力放在自己身上，常感困窘、孤獨、緊張、被忽略。</li>
+<li><b>危險行為</b>：不顧後果、違反規範，例如濫用藥物、飆車；<mark>男孩比率更高</mark>。</li>
+</ul>
+<div class="ex"><b>例子</b>國二學生堅持要自己決定穿什麼、幾點回家，父母仍用國小時的方式管，雙方就容易爆發衝突。</div>`}
+],
+quiz:[
+['嬰兒大約幾個月發展出深知覺？',['6 個月','3 個月','1 個月','3 歲'],'顏色約 3 個月、深知覺約 6 個月、成人視力約 3 歲。'],
+['下列哪一種感覺「不是」出生即完備？',['視覺','聽覺','味覺','嗅覺'],'嬰兒出生時是大近視眼，視覺要到 3 歲才達成人水準。'],
+['嬰兒受驚嚇時雙臂外伸、手掌攤開、背部拱起，稱為？',['莫洛反射','抓握反射','吸吮反射','物體恆存'],'莫洛反射又名驚嚇反應，初生數週最強，5、6 個月後消失。'],
+['「七坐八爬九發牙」描述的是？',['動作發展順序','語言發展順序','認知發展階段','人格發展階段'],'描述嬰兒的動作發展。'],
+['嬰兒先能控制肩膀與手臂，之後才能控制手指，符合哪一個發展模式？',['軀幹到四肢','首部到尾端','特殊到整體','尾端到首部'],'由身體中軸往外發展，是軀幹到四肢。'],
+['依講義，淋巴組織的發展情形是？',['青春期之前達到頂峰，成年時反而下降','出生後發展最慢，成年才成熟','與骨骼肌肉同步，20 歲成熟','青春期之前完全不發展'],'淋巴組織出生即迅速發展，青春期前到頂峰。'],
+['10–12 歲學齡兒童的身高體重，一般情況是？',['女生大於男生','男生大於女生','男女完全相同','男女差異無法比較'],'6–9 歲女 < 男，10–12 歲女 > 男。'],
+['依講義，身高發展的頂峰是？',['男生 18 歲，女生 16 歲','男生 16 歲，女生 18 歲','男女都是 20 歲','男生 14 歲，女生 12 歲'],'男 18、女 16。'],
+['霍爾認為青年期情緒不穩的原因之一是？',['理性發展未臻成熟，不能自行克制','大腦神經元停止生長','視覺尚未發展完成','缺乏同儕互動'],'另一原因是性驅力無法獲得滿足。'],
+['現今青年期比前人長，主要原因是？',['青春期提早，加上心理成熟延後','青春期延後，加上心理成熟提早','學校教育年限縮短','營養不良'],'青春期提早出現，又缺少人生歷練使心理成熟延後。'],
+['下列何者「不是」講義列出的母奶優點？',['能讓嬰兒提早長牙','不含細菌','含天然免疫物質','建立信任與依附關係'],'講義列出：不含細菌、免疫物質、營養均衡、顎部口部肌肉發展、信任依附。'],
+['學習「爬」被視為什麼的基礎？',['感覺統合','語言發展','道德發展','抽象思考'],'講義：學習爬是感覺統合之基礎。'],
+['青少年與父母衝突，主要源於？',['青少年強烈的獨立需求與父母的管束方式無法協調','青少年視力發展不良','父母過度放任','學業成績下降'],'這是講義對親子衝突原因的說明。']
+]
+},
+{
+id:'u4', no:4, title:'認知發展與教育', src:'認知發展與教育(不含題目).pptx',
+sections:[
+{h:'認知與認知發展', b:`
+<ul>
+<li><b>認知（cognition）</b>：個體對事物進行認識、記憶、理解、思維及推理等心理活動。</li>
+<li><b>認知發展</b>：對事物的認識與解決問題的思維方式、能力，<mark>隨年齡增長而逐漸改變的歷程</mark>。</li>
+<li>教學方式要配合認知發展：<mark>小學</mark>用具體教學、教師負擔的責任多；<mark>中學</mark>用抽象思考教學、學生負擔的責任多。</li>
+</ul>`},
+{h:'皮亞傑的基本假設', b:`
+<p>皮亞傑（Piaget）：瑞士兒童心理學家，<mark>發生知識論（發生認識論）</mark>創始人，探討知識的起源與何時發生。</p>
+<ol>
+<li><mark>兒童不是縮小的成人</mark>。</li>
+<li>認知結構的改變是自動自發的，<mark>認知發展是內發的歷程</mark>。</li>
+<li>兒童從經驗建構知識 → <mark>建構主義</mark>，Learning by doing。</li>
+<li>知識的本質來自<mark>運思（operation）</mark>，由感官動作的外在運思內化而來。</li>
+<li>與周遭物體及社會環境的互動是絕對必要的。</li>
+<li>腦的發育成熟，使不同年齡兒童的思考方式有<mark>本質上的不同</mark>。</li>
+<li>強調<mark>成熟</mark>，不強調學習。</li>
+<li><mark>量增質變</mark>的發展論。</li>
+</ol>
+<p><b>影響認知成長快慢的四因素</b>：<mark>生理成熟、身體經驗、社會交流、平衡（自我調整）</mark>。</p>`},
+{h:'基模、組織與適應（同化／調適）', b:`
+<ul>
+<li><b>基模（schema）</b>：吸收知識、認識世界的基本架構。最原始的是與生俱來的感覺動作基模，如<mark>吸吮、抓取</mark>。認知發展就是基模隨年齡改變。</li>
+<li><b>組織</b>：統合運用身心各種功能（視、聽、觸…）以理解事物。</li>
+<li><b>適應</b>：基模因環境而主動改變，包括兩個互補歷程：
+<ul><li><mark>同化（assimilation）</mark>：用<b>舊基模</b>處理新問題。</li>
+<li><mark>調適（accommodation）</mark>：舊基模不夠用，<b>主動修改舊基模</b>。</li></ul></li>
+<li><b>平衡與失衡</b>：<mark>同化 → 失衡 → 調適 → 平衡</mark>，讓思維日益複雜。</li>
+</ul>
+<div class="ex"><b>例子</b>小孩的基模是「四隻腳、毛毛的 = 狗狗」，看到貓也叫「狗狗」→ <b>同化</b>。媽媽說「那是貓，會喵喵叫」，小孩發現不對勁（<b>失衡</b>），於是分出「貓」這個新類別 → <b>調適</b>，最後達到<b>平衡</b>。</div>
+<div class="ex"><b>教學例子</b>學生以為「乘法一定會變大」（舊基模），遇到 6 × 0.5 = 3 時產生失衡；老師引導他修正為「乘以小於 1 的數會變小」，就是調適。</div>`},
+{h:'四個認知發展階段總覽', b:`
+<div class="tbl"><table>
+<tr><th>階段</th><th>年齡</th><th>重點</th></tr>
+<tr><td>感覺動作期</td><td>0–2 歲</td><td>基模以行為與知覺為主，焦點在「此時此地」</td></tr>
+<tr><td>前運思期</td><td>2–7 歲</td><td>能表徵不在眼前的事物，但還不能合邏輯地推理</td></tr>
+<tr><td>具體運思期</td><td>7–11 歲</td><td>有邏輯，但限於<mark>具體事物</mark></td></tr>
+<tr><td>形式運思期</td><td>11 歲以後</td><td>能對<mark>抽象、假設</mark>的想法做邏輯推理</td></tr>
+</table></div>
+<p><b>階段特點</b>：各階段有獨特思考模式；以前一階段為基礎；連續中呈現階段現象；<mark>順序不變</mark>；出現時間有個別差異。</p>
+<p><b>教育含義</b>：確認心智成長的內發性與主動性、階段性及普遍性、發展速度不一。</p>`},
+{h:'感覺動作期（0–2 歲）', b:`
+<ol>
+<li>以感覺與動作為學習基礎（反射動作）。</li>
+<li>只注意當下正在做的事及看得見的東西。</li>
+<li>基模以行為與知覺為主。</li>
+<li><mark>物體恆存（object permanence）</mark>：知道東西看不見了仍然存在，<mark>約 1 歲左右</mark>發展完成。</li>
+<li><mark>延後模仿</mark>：能模仿之前看過、但現在不在眼前的行為。</li>
+</ol>
+<div class="ex"><b>例子</b>把玩具藏到毯子下，6 個月大的寶寶就不找了（沒有物體恆存）；1 歲寶寶會掀開毯子去找。昨天看到哥哥跺腳生氣，今天自己也跺腳 → 延後模仿。</div>`},
+{h:'前運思期（2–7 歲）', b:`
+<ol>
+<li><b>中心化</b>：知覺只集中在某一層面，所以<mark>不具守恆概念</mark>。
+<br><b>守恆（保留）概念</b>：物體外表改變，仍了解某些屬性不變。依講義：<mark>數量（4–6 歲）→ 體積（7–8 歲）→ 重量（9–12 歲）</mark>。</li>
+<li><b>不可逆性</b>：無法把思考倒回去（哥哥與弟弟的例子）。</li>
+<li><b>自我中心</b>：無法站在別人角度看事情，例如<mark>三山實驗</mark>。</li>
+<li><b>自我中心語言</b>。</li>
+</ol>
+<p>另外：缺乏類別包含概念、缺乏可逆性思考、無法邏輯地思考轉變過程。</p>
+<div class="ex"><b>例子</b><br>・<b>守恆</b>：兩杯一樣多的果汁，把其中一杯倒進細長杯，5 歲孩子說「這杯比較多，因為比較高」→ 只看高度（中心化）。<br>・<b>不可逆</b>：「你有哥哥嗎？」「有。」「那你哥哥有弟弟嗎？」「沒有。」<br>・<b>自我中心</b>：三山實驗中，孩子以為坐在對面的娃娃看到的景色和自己看到的一樣；打電話時對著話筒點頭。</div>`},
+{h:'具體運思期（7–11 歲）', b:`
+<ol>
+<li>以<mark>具體事物</mark>思維。</li>
+<li><mark>可逆性推理、可序列化</mark>：1 比 2 長、2 比 3 長 → 1 比 3 長。</li>
+<li><mark>去中心化</mark>，具守恆概念（講義例：紅色玩具放在綠色膠片下是什麼顏色？能分辨外表與本質）。</li>
+<li>具<mark>分類及類別包含</mark>概念。</li>
+</ol>
+<div class="ex"><b>例子</b>講義的木珠題：「10 顆木珠，8 顆褐色、2 顆白色，褐珠多還是木珠多？」前運思期孩子答「褐珠多」；約 <mark>7 歲</mark>能答對「木珠多」（類別包含）。</div>`},
+{h:'形式運思期（11 歲以後）', b:`
+<p>能思考不依據具體事實、甚至與事實無關的概念；能提出多重假設並測試、<mark>區分並控制變項</mark>、<mark>比例推理</mark>。</p>
+<ul>
+<li><b>假設演繹推理</b>：例如<mark>鐘擺（吊錘擺速）實驗</mark>，一次只改變一個因素（繩長、重量、高度）找出影響擺速的原因。</li>
+<li><b>命題推理</b>：例如「假如我是校長…」。</li>
+<li><b>組合推理</b>：C 是 A、B 造成的結果：A 產生 C、B 產生 C、AB 一起產生 C。</li>
+</ul>
+<div class="ex"><b>講義三題</b><br>1. 木珠題（具體、包含關係）→ 約 <b>7 歲</b>答對。<br>2.「兒童都是人類、人類都是生物，所以兒童都是生物？」（符合真實世界）→ 約 <b>10 歲</b>。<br>3.「兒童都是籃球、籃球都是雷根糖，所以兒童都是雷根糖？」（假設性、與事實不符）→ 約 <b>12 歲</b>，需要形式運思。</div>`},
+{h:'對皮亞傑的批判與新皮亞傑學派', b:`
+<p><b>批判</b>：</p>
+<ol>
+<li><mark>發展先於學習</mark>，缺乏教育價值（不能加速學習）。</li>
+<li>需重新評估兒童的自我中心問題。</li>
+<li>階段是否真的截然分開？</li>
+<li><mark>低估小學兒童的能力、高估青少年的本事</mark>。</li>
+<li>忽略經驗與先前知識的影響。</li>
+</ol>
+<p><b>新皮亞傑學派</b>：</p>
+<ol>
+<li>運思能力受<mark>作業性質</mark>（及動機）影響。</li>
+<li><mark>訓練和經驗（含社會互動）可加速發展</mark>，例如有無釣魚經驗會影響認知水準。</li>
+<li>文化對發展有重要影響。</li>
+</ol>`},
+{h:'教學現場：皮亞傑理論的應用', b:`
+<ul>
+<li>提供實際操作物體的經驗，尤其是小學生。</li>
+<li>學生的話很自我中心時，表達困惑或說明別人想的不一樣。</li>
+<li>要求學生解釋推理，質疑不合邏輯的解釋。</li>
+<li>做複雜任務前，先確認學生具備所需推理能力（守恆、可逆性、比例推理、控制變項）。</li>
+<li>把抽象及假設性的想法，與具體物體和可觀察事件連結。</li>
+</ul>
+<div class="ex"><b>例子</b>教國小三年級「公升與毫升」時，讓學生用量杯實際倒水；教國中「變因控制」時，先讓學生動手做擺錘再歸納原理。</div>`},
+{h:'維果茨基的社會文化觀點', b:`
+<p>維果茨基（Vygotsky）：<mark>社會文化歷史學派</mark>創始人，地位僅次於皮亞傑。</p>
+<ul>
+<li>智力發展只能從兒童經驗的<mark>歷史與文化脈絡</mark>來了解。</li>
+<li>發展受成長環境中的<mark>符號系統（sign system）</mark>影響。</li>
+<li>認知發展是由<mark>外鑠而「內化」</mark>的歷程：把社會意義與經驗轉成個人內在意義。</li>
+<li><mark>強調語言</mark>：語言傳播思想，也引導思考與行為。</li>
+<li><mark>私自言語（private speech）</mark>：把共有知識轉化成個人知識的機制。</li>
+<li>複雜心智歷程一開始是社會性活動，之後逐漸內化、獨自運用。</li>
+<li>有更能幹的人協助時，兒童能完成更具挑戰的任務；<mark>具挑戰性的任務最能增進認知成長</mark>。</li>
+<li><mark>遊戲</mark>讓兒童發揮並超越自己的認知能力。</li>
+</ul>
+<div class="ex"><b>例子</b>小朋友玩拼圖時自言自語：「藍色的是天空…這塊放上面…」，這就是私自言語，幫助他引導自己的思考。</div>`},
+{h:'最近發展區（ZPD）', b:`
+<p><b>定義</b>：兒童<mark>獨自解決問題的實際發展層次</mark>，與<mark>經成人協助或與能力較好的同儕合作時的潛在發展層次</mark>之間的差距。又譯近側發展區、可能發展區。</p>
+<p>ZPD 內的作業是兒童還不能獨自完成、但有協助就能完成的。</p>
+<div class="ex"><b>講義例</b>甲、乙兩生心理年齡（MA）都是 6 歲。有社會支持時，甲能表現到 MA 10，乙只到 MA 8。<br>→ 甲的 ZPD = 10 − 6 = <b>4</b>；乙的 ZPD = 8 − 6 = <b>2</b>。<mark>同樣心理年齡，ZPD 可能不同</mark>。</div>`},
+{h:'鷹架（Scaffolding）', b:`
+<ul>
+<li>由 <mark>Wood, Bruner &amp; Ross（1976）</mark>提出。</li>
+<li>功能：幫助學習者<mark>跨越 ZPD</mark>，從實際層次達到潛在層次。</li>
+<li>像建築鷹架一樣是<mark>暫時性、過渡性</mark>的，要把學習責任一點一點轉移給學生。</li>
+</ul>
+<p><b>教師可提供的鷹架</b>：示範、放聲思考、提問、提示、調整教材、同儕互動、訓練指導、比較差異、加深複雜度、不同任務、鼓勵探究。</p>
+<p><b>鷹架教學四步驟</b>：</p>
+<div class="flow"><span>教師做<small>學生觀察</small></span><span>教師做<small>學生協助</small></span><span>學生做<small>教師協助</small></span><span>學生做<small>教師觀察</small></span></div>
+<div class="ex"><b>例子</b>教騎腳踏車：先裝輔助輪、爸爸扶著後座，慢慢放手，最後拆掉輔助輪。教寫作文：先給段落句型，學生熟練後再撤掉句型。</div>`},
+{h:'維果茨基理論的教學應用與交互教學法', b:`
+<ul>
+<li>讓學生處於「接近全知而又不能全知」的情境。</li>
+<li>鼓勵學生邊解題邊向自己解說。</li>
+<li>提供認知工具；給需要他人協助才能完成的作業。</li>
+<li>提供足夠鷹架，學生熟練後<mark>逐漸減少協助</mark>。</li>
+<li>分組完成複雜任務；從事文化中常見的成人活動；讓幼兒透過遊戲練習成人角色。</li>
+</ul>
+<p>相關應用：建構主義、情境認知、自我調整學習、<mark>認知學徒制</mark>、<mark>交互教學法</mark>。</p>
+<p><b>交互教學法（reciprocal teaching）</b>：由 <mark>Brown 與 Palincsar</mark> 根據維果茨基理論發展。四種閱讀策略：<mark>摘要、提問、澄清、預測</mark>。目的是讓學生主動進行有意義的閱讀，並學會監控自己的學習。</p>
+<div class="ex"><b>例子</b>國文課分組讀一篇文章，每段輪流由一位學生當「小老師」：先摘要、問組員問題、澄清難懂的詞，再預測下一段會寫什麼。</div>`},
+{h:'皮亞傑 vs. 維果茨基', b:`
+<p>相同點：<mark>都是建構論學者</mark>。</p>
+<div class="tbl"><table>
+<tr><th></th><th>皮亞傑</th><th>維果茨基</th></tr>
+<tr><td>發展與學習</td><td><mark>發展先於學習</mark>（自然預備狀態）</td><td><mark>學習先於發展</mark>（加速預備狀態）</td></tr>
+<tr><td>社會文化</td><td>不強調</td><td>重視</td></tr>
+<tr><td>自我中心語言</td><td>不成熟的認知表現</td><td>協調思維與行動的方法、認知思維方式的表達</td></tr>
+<tr><td>建構觀</td><td><mark>個人建構主義</mark>（同化調適而成）</td><td><mark>社會建構主義</mark>（與生活內容結合）、情境認知</td></tr>
+</table></div>`},
+{h:'語言發展', b:`
+<ul>
+<li>語言是學習的工具，也是學習結果的表現（多一個語言多一個世界）。</li>
+<li><b>先天論</b>：<mark>Chomsky（1972）語言習得機制（LAD）</mark>，所以嬰幼兒能在極短時間學會複雜語言。</li>
+<li><b>後天學習論</b>：學語言和學其他事情沒有太大差別。</li>
+<li><b>關鍵期（敏感期）</b>：5 歲到 10 歲前沉浸在語言中，較易掌握動詞時態與正確發音。</li>
+</ul>
+<p><b>語文教學</b>：從情境推測字義 → <mark>全語文教學</mark>；順序<mark>聽 → 說 → 讀 → 寫</mark>；多閱讀；不要只問「聽懂了嗎」，要請學生用自己的話再說一次。</p>
+<p><b>有效溝通</b>：正確發音、語用情境（輪流說話、說再見、轉換話題）、<mark>後設語言覺識</mark>（思考語言本身特性的能力，例如理解笑話、雙關語、諺語的非字面意義，如「你的眼睛比胃還大」）。語言受文化影響。</p>
+<p><b>第二語言</b>：早接觸對正確發音重要，但任何年齡開始都可能學得流利；講母語提升自我認同；雙語增進跨文化理解；<mark>沉浸教學</mark>（完全或部分沉浸）。</p>
+<div class="ex"><b>例子</b>小孩聽到「你的眼睛比胃還大」，以為真的在講眼睛的大小；大一點的孩子懂得是在說「點太多吃不完」，表示有了後設語言覺識。</div>`}
+],
+quiz:[
+['小孩看到貓也叫牠「狗狗」，這是皮亞傑的哪個歷程？',['同化','調適','平衡','組織'],'用舊基模處理新事物是同化。'],
+['小孩被糾正後，建立了「貓」這個新的類別，這是？',['調適','同化','中心化','延後模仿'],'修改舊基模以適應環境是調適。'],
+['皮亞傑認知發展中的歷程順序是？',['同化 → 失衡 → 調適 → 平衡','調適 → 同化 → 平衡 → 失衡','失衡 → 平衡 → 同化 → 調適','平衡 → 調適 → 失衡 → 同化'],'講義：同化—失衡—調適—平衡。'],
+['寶寶會掀開毯子找被藏起來的玩具，表示已發展出什麼？約幾歲完成？',['物體恆存，約 1 歲','守恆概念，約 7 歲','可逆性，約 2 歲','去中心化，約 11 歲'],'物體恆存屬於感覺動作期，約一歲左右完成。'],
+['把一樣多的水倒入細長杯，5 歲孩子說「變多了」，這反映前運思期的什麼特徵？',['中心化，缺乏守恆概念','物體恆存','假設演繹推理','類化'],'只注意高度一個層面，是中心化。'],
+['「你有哥哥嗎？」「有。」「你哥哥有弟弟嗎？」「沒有。」反映的是？',['不可逆性','守恆概念','序列化','後設語言覺識'],'無法把關係倒過來想，是前運思期的不可逆性。'],
+['三山實驗用來說明前運思期兒童的什麼特徵？',['自我中心','物體恆存','守恆概念','類別包含'],'孩子以為別人看到的景色和自己一樣。'],
+['依講義，守恆概念發展的順序是？',['數量 → 體積 → 重量','重量 → 體積 → 數量','體積 → 數量 → 重量','數量 → 重量 → 體積'],'講義：數量（4–6 歲）、體積（7–8 歲）、重量（9–12 歲）。考試以老師講義為準。'],
+['能推論「1 比 2 長、2 比 3 長，所以 1 比 3 長」，屬於哪個時期的能力？',['具體運思期','前運思期','感覺動作期','形式運思期'],'序列化與可逆性推理是具體運思期的特徵。'],
+['鐘擺實驗中，學生一次只改變一個因素來找出影響擺速的原因，展現的是？',['形式運思期的假設演繹推理','具體運思期的序列化','前運思期的中心化','感覺動作期的延後模仿'],'區分並控制變項、假設演繹是形式運思期。'],
+['「10 顆木珠中 8 顆褐色、2 顆白色，褐珠多還是木珠多？」依講義約幾歲能答對？',['7 歲','4 歲','10 歲','12 歲'],'具體的類別包含問題，約 7 歲答對。'],
+['「如果兒童都是籃球、籃球都是雷根糖，兒童都是雷根糖嗎？」要到約 12 歲才能答對，因為？',['需要對與事實不符的假設進行推理','需要物體恆存','需要具體操作','需要守恆概念'],'假設性、與真實世界不符的推理要到形式運思期。'],
+['下列何者「不是」皮亞傑提出影響認知成長的因素？',['增強','生理成熟','社會交流','平衡'],'四因素：成熟、身體經驗、社會交流、平衡。增強是行為主義的概念。'],
+['甲乙心理年齡都是 6 歲，有協助時甲達 10 歲、乙達 8 歲，下列何者正確？',['甲的最近發展區比乙大','乙的最近發展區比甲大','兩人最近發展區相同','兩人都沒有最近發展區'],'甲 ZPD = 4，乙 ZPD = 2。'],
+['「鷹架」這個概念是由誰提出？',['Wood, Bruner & Ross','Brown & Palincsar','Piaget','Chomsky'],'Wood, Bruner & Ross（1976）提出鷹架。'],
+['鷹架教學模式的順序何者正確？',['教師做學生觀察 → 教師做學生協助 → 學生做教師協助 → 學生做教師觀察','學生做教師觀察 → 學生做教師協助 → 教師做學生協助 → 教師做學生觀察','教師做學生協助 → 教師做學生觀察 → 學生做教師觀察 → 學生做教師協助','學生做教師協助 → 教師做學生觀察 → 學生做教師觀察 → 教師做學生協助'],'責任由教師逐步轉移到學生。'],
+['交互教學法的四種策略「不包括」？',['背誦','摘要','澄清','預測'],'四種策略：摘要、提問、澄清、預測。'],
+['「學習先於發展」是誰的主張？',['維果茨基','皮亞傑','佛洛伊德','柯爾柏格'],'皮亞傑主張發展先於學習；維果茨基主張學習先於發展。'],
+['小孩做拼圖時自言自語，維果茨基認為這是？',['私自言語，把社會知識轉成個人思考工具','不成熟的自我中心表現，應該糾正','語言障礙的徵兆','古典制約的結果'],'維果茨基重視私自言語的功能；皮亞傑才把它看成不成熟的表現。'],
+['新皮亞傑學派以「有無釣魚經驗會影響認知水準」說明什麼？',['訓練和經驗可以加速兒童的發展','認知發展完全由遺傳決定','階段順序可以顛倒','語言是先天的'],'新皮亞傑學派認為經驗與訓練能加速發展。'],
+['提出「語言習得機制（LAD）」的是？',['Chomsky','Vygotsky','Skinner','Bandura'],'Chomsky 主張語言能力是先天的。'],
+['孩子聽懂「你的眼睛比胃還大」是在說點太多吃不完，展現了什麼能力？',['後設語言覺識','物體恆存','守恆概念','私自言語'],'能思考語言本身特性、理解非字面意義。']
+]
+},
+{
+id:'u5', no:5, title:'社會發展與教育', src:'社會發展與教育(不含題目).pptx',
+sections:[
+{h:'人格與社會發展', b:`
+<ul>
+<li><b>人格（personality）</b>：個體的行為在不同情況下<mark>相當一致</mark>，且個體之間<mark>有明顯差異</mark>。</li>
+<li><b>社會發展</b>：受社會文化影響，個體對待自己與別人的行為隨年齡增長而改變的歷程。</li>
+<li>本章架構：人格發展（<mark>佛洛伊德、艾瑞克森</mark>）＋ 道德發展（<mark>皮亞傑、柯爾柏格</mark>）。</li>
+</ul>`},
+{h:'佛洛伊德精神分析論', b:`
+<p>又稱心理分析論、心理動力論。</p>
+<ul>
+<li><b>本能</b>：生的本能、死的本能。</li>
+<li><b>人格結構</b>：
+<ul><li><mark>本我（id）</mark>：生物我，<mark>唯樂原則</mark>。</li>
+<li><mark>自我（ego）</mark>：<mark>現實（真實）原則</mark>。</li>
+<li><mark>超我（superego）</mark>：<mark>道德原則</mark>。</li></ul></li>
+<li><b>人格動力</b>：三者之間的<mark>衝突</mark>；意識與潛意識。</li>
+</ul>
+<div class="ex"><b>例子</b>考前看到同學在打電動：「好想一起玩！」是<b>本我</b>；「明天要考試，先讀兩小時再玩」是<b>自我</b>；「偷用別人帳號玩是不對的」是<b>超我</b>。</div>
+<p><b>性心理發展五階段</b>：</p>
+<div class="tbl"><table>
+<tr><th>口腔期</th><th>肛門期</th><th>性器期</th><th>潛伏期</th><th>兩性期</th></tr>
+<tr><td>0–1.5 歲</td><td>1.5–3 歲</td><td>3–6 歲</td><td>6 歲–青春期</td><td>青春期以後</td></tr>
+</table></div>
+<p>特徵：重視<mark>早期經驗</mark>的影響、<mark>性心理</mark>的發展。</p>`},
+{h:'艾瑞克森心理社會發展理論', b:`
+<p>又稱<mark>心理社會論、發展危機論</mark>。修正佛洛伊德理論；一生分八階段，每階段有一個發展任務，也就是<mark>發展危機</mark>。</p>
+<div class="tbl"><table>
+<tr><th>期</th><th>年齡</th><th>心理社會危機</th><th>重要關係</th></tr>
+<tr><td>一</td><td>出生–18 個月</td><td><mark>信任 vs. 不信任</mark></td><td>母職人物</td></tr>
+<tr><td>二</td><td>18 個月–3 歲</td><td><mark>獨立自主 vs. 羞愧懷疑</mark></td><td>親職人物</td></tr>
+<tr><td>三</td><td>3–6 歲</td><td><mark>主動探索 vs. 罪惡感</mark></td><td>家庭基本成員</td></tr>
+<tr><td>四</td><td>6–12 歲</td><td><mark>勤奮努力 vs. 自貶自卑</mark></td><td>鄰居、學校</td></tr>
+<tr><td>五</td><td>12–18 歲</td><td><mark>自我認同 vs. 角色混淆</mark></td><td>同儕團體、領導楷模</td></tr>
+<tr><td>六</td><td>成年前期</td><td>友愛親密 vs. 孤獨疏離</td><td>友誼、伴侶</td></tr>
+<tr><td>七</td><td>成年中期</td><td>積極生產 vs. 自我頹廢</td><td>分工與共同生活的家人</td></tr>
+<tr><td>八</td><td>成年後期</td><td>完美無憾 vs. 悲觀絕望</td><td>人類、我族</td></tr>
+</table></div>
+<div class="ex"><b>例子</b><br>・4 歲孩子想自己倒牛奶、一直問「為什麼」，大人總是罵「不要亂動」→ 容易產生<b>罪惡感</b>（第三期）。<br>・國小生做勞作、參加比賽得到肯定 → 培養<b>勤奮</b>；一直被比較、做什麼都失敗 → <b>自卑</b>（第四期）。老師要讓每個學生有成功經驗。<br>・高中生不知道自己想念什麼科系、想成為什麼樣的人 → <b>角色混淆</b>（第五期）。</div>
+<p><b>批評</b>：沒有解釋人「<mark>如何</mark>」或「<mark>為什麼</mark>」從一個階段發展到下一個階段。</p>`},
+{h:'佛洛伊德 vs. 艾瑞克森', b:`
+<div class="tbl"><table>
+<tr><th></th><th>佛洛伊德</th><th>艾瑞克森</th></tr>
+<tr><td>重心</td><td><mark>本我</mark></td><td><mark>自我</mark></td></tr>
+<tr><td>理論</td><td>性心理發展論</td><td>心理社會發展論</td></tr>
+<tr><td>學派</td><td>弗洛伊德學派</td><td>新弗洛伊德學派</td></tr>
+<tr><td>關注</td><td>病因與經驗</td><td>社會適應</td></tr>
+<tr><td>範圍</td><td>到青春期（五期）</td><td>一生（八期）</td></tr>
+</table></div>`},
+{h:'青少年的自我感', b:`
+<ul>
+<li><b>兒童期</b>：學齡前與低年級，多數兒童自我感大致是正面的。</li>
+<li><b>青少年早期</b>：
+<ul><li><mark>想像的觀眾（imaginary audience）</mark>：以為在任何社交場合，別人的眼光都衝著自己來。</li>
+<li><mark>個人傳奇（personal fable，個人神話）</mark>：認為自己跟任何人都不同，自己的情感獨一無二，沒人經歷過。</li></ul></li>
+<li><b>青少年後期</b>：<mark>自我認同（identity）</mark>：對「我是誰、什麼重要、想完成什麼人生目標」建構出的定義。</li>
+</ul>
+<div class="ex"><b>例子</b>臉上冒一顆痘痘，就覺得全班都在盯著看、不敢去上學 → <b>想像的觀眾</b>。失戀時說「你們根本不懂，沒有人像我這麼痛」，或覺得「別人騎車會出事，我不會」→ <b>個人傳奇</b>。</div>
+<p>青少年自我感八項目：學科能力、運動能力、守規矩、外表吸引力、受人喜歡、好朋友、浪漫魅力、前途。</p>`},
+{h:'馬西亞（Marcia）的四種自我統合', b:`
+<p class="add-p"><span class="add">補充說明</span>講義只列名稱，以下用「有沒有探索 × 有沒有做出承諾」來理解：</p>
+<div class="tbl"><table>
+<tr><th>類型</th><th>探索</th><th>承諾</th><th>例子</th></tr>
+<tr><td><mark>迷失型</mark>（identity diffusion）</td><td>無</td><td>無</td><td>對未來沒想法，也不想去想</td></tr>
+<tr><td><mark>未定型</mark>（moratorium）</td><td>有</td><td>無</td><td>參加很多社團、營隊，還在試，尚未決定</td></tr>
+<tr><td><mark>定向型</mark>（identity achievement）</td><td>有</td><td>有</td><td>試過多種方向後，確定要當老師</td></tr>
+<tr><td><mark>早閉型</mark>（foreclosure）</td><td>無</td><td>有</td><td>從小被爸媽決定要當醫生，沒想過其他可能</td></tr>
+</table></div>`},
+{h:'皮亞傑的道德發展論', b:`
+<p>發展順序：<mark>無律 → 他律 → 自律</mark>。</p>
+<div class="tbl"><table>
+<tr><th></th><th>他律道德（7–11 歲）</th><th>自律道德（11 歲以後）</th></tr>
+<tr><td>別稱</td><td>道德現實主義、約束道德</td><td>合作道德、理性道德</td></tr>
+<tr><td>規則</td><td>來自外在權威，<mark>不可變更、不能協商</mark></td><td>相互同意的結果，<mark>可以協商</mark></td></tr>
+<tr><td>判斷好壞</td><td>依<mark>行為的客觀後果</mark></td><td>依<mark>行為的意圖（動機）</mark></td></tr>
+<tr><td>公正</td><td>等於成人決定的內容；嚴厲懲罰被視為公正</td><td>平等對待或考慮個人需求；懲罰要與過錯相當</td></tr>
+<tr><td>懲罰</td><td>犯錯後自動發生，正義是本身固有的</td><td>受人類意圖影響</td></tr>
+</table></div>
+<div class="ex"><b>例子</b>小華幫媽媽洗碗不小心打破 15 個杯子；小明偷吃餅乾打破 1 個杯子。他律階段的孩子會說「小華比較壞，因為破得多」（看後果）；自律階段的孩子會說「小明比較壞，因為他在偷吃」（看動機）。</div>`},
+{h:'柯爾柏格（Kohlberg）三期六段論', b:`
+<p>採<mark>認知發展取向</mark>，用<mark>道德兩難（moral dilemmas）</mark>故事（如 <mark>Heinz 偷藥</mark>）研究；判斷階段的重點是<mark>推理理由，而非最後的決定</mark>。以社會規範（習俗）為標準。</p>
+<div class="tbl"><table>
+<tr><th>時期</th><th>階段</th><th>說明</th></tr>
+<tr><td rowspan="2">前習俗期<br><small>9 歲以下，自我中心</small></td><td>1 避罰服從取向</td><td>會不會被處罰</td></tr>
+<tr><td>2 相對功利取向</td><td>對自己有沒有好處；「你幫我抓背，我就幫你抓背」</td></tr>
+<tr><td rowspan="2">習俗期<br><small>9 歲以上到成人</small></td><td>3 尋求認可（好孩子）取向</td><td>能否得到他人或權威認可</td></tr>
+<tr><td>4 遵守法規（法律秩序）取向</td><td>合不合法律、社會規範；為秩序而維護秩序</td></tr>
+<tr><td rowspan="2">後習俗期<br><small>依自己的良心與價值觀</small></td><td>5 社會法制（契約）取向</td><td>符合社會共同利益；<mark>法律可以為了社會的好而改變</mark></td></tr>
+<tr><td>6 普遍倫理取向</td><td>符合普遍道德原理、良心準則（如黃金律）</td></tr>
+</table></div>
+<div class="ex"><b>例子：「為什麼不該作弊？」</b><br>① 被抓到會記過 → 階段 1<br>② 自己作弊不划算／「你給我抄，下次我給你抄」→ 階段 2<br>③ 老師和爸媽會覺得我是好孩子 → 階段 3<br>④ 違反校規，大家都不守規矩就亂了 → 階段 4<br>⑤ 考試制度是大家同意的公平約定，若制度不合理應透過程序修改 → 階段 5<br>⑥ 誠實是我認為人應該堅守的原則，即使沒人知道 → 階段 6</div>`},
+{h:'對柯爾柏格的批評與兩人比較', b:`
+<p><b>批評</b>（依講義）：</p>
+<ol>
+<li>注重德行而非德知（講義原文）。</li>
+<li><mark>只研究道德推理，而非實際行為</mark>。</li>
+<li><mark>對女性的偏誤</mark>：研究以男性驗證；男孩以<mark>正義</mark>為中心，女孩較考慮<mark>關懷與責任</mark>。</li>
+</ol>
+<p><b>皮亞傑 vs. 柯爾柏格</b>：皮亞傑認為認知發展階段與道德推理有關；柯爾柏格認為邏輯結構的發展對道德推理只是<mark>必要條件，而非充分條件</mark>。兩人都用<mark>心理發展觀點</mark>說明道德。</p>`},
+{h:'鼓勵教室裡的道德發展與個別差異', b:`
+<ul>
+<li>說明為什麼某些行為不被允許。</li>
+<li>鼓勵轉換觀點、同理與利社會行為。</li>
+<li>讓學生接觸道德楷模；討論與學科有關的道德議題。</li>
+<li>參與社區服務（服務學習）。</li>
+<li>注意<b>文化差異</b>（有些族群更重視忠誠與利社會行為）與<b>性別差異</b>（男性正義取向、女性關懷取向）。</li>
+<li>社經差異：低收入家庭兒童遭遇的困難常超過負荷。</li>
+<li>特殊需求學生的自尊常比同學低落。</li>
+</ul>`},
+{h:'懲戒的三種形態', b:`
+<div class="tbl"><table>
+<tr><th>類型</th><th>意義</th><th>講義例：學生騙老師因生病沒寫作業</th></tr>
+<tr><td><mark>贖罪罰</mark></td><td>使受罰者受到痛苦</td><td>罰抄課文 1000 次</td></tr>
+<tr><td><mark>相互罰</mark></td><td>（講義：懲罰與行為間無關係）</td><td>取得好成績時不再給他獎勵</td></tr>
+<tr><td><mark>自然罰</mark></td><td>因行為本身的後果受到處罰</td><td>既然說生病，就躺在床上一天並吃藥</td></tr>
+</table></div>`},
+{h:'價值澄清法（Raths 等人，1966）', b:`
+<p>價值形成的歷程：<mark>三階段七規準</mark>。</p>
+<div class="tbl"><table>
+<tr><th>階段</th><th>規準</th></tr>
+<tr><td><mark>選擇</mark>（Choosing）</td><td>1. 自由選擇 2. 從各種選項中選擇 3. 慎思後再選擇</td></tr>
+<tr><td><mark>珍視</mark>（Prizing）</td><td>4. 重視和珍惜所做的選擇 5. 願意公開肯定自己的選擇</td></tr>
+<tr><td><mark>行動</mark>（Acting）</td><td>6. 根據選擇採取行動 7. 重複實行，成為生活模式</td></tr>
+</table></div>
+<div class="ex"><b>例子</b>學生在思考過各種選項後決定吃素（選擇），願意跟同學說明原因（珍視），並且每天持續實行（行動）。</div>`}
+],
+quiz:[
+['想翹課去玩，但想到會被記曠課而作罷，主要是哪個人格結構在運作？',['自我（現實原則）','本我（唯樂原則）','超我（道德原則）','潛意識'],'考量現實後果做調節，是自我的現實原則。'],
+['佛洛伊德的「潛伏期」是哪個年齡？',['6 歲到青春期','0 到 1.5 歲','3 到 6 歲','青春期以後'],'口腔、肛門、性器、潛伏（6 歲–青春期）、兩性期。'],
+['依艾瑞克森，國小階段（6–12 歲）的發展危機是？',['勤奮努力 vs. 自貶自卑','自我認同 vs. 角色混淆','主動探索 vs. 罪惡感','信任 vs. 不信任'],'學齡期的重點是勤奮對自卑。'],
+['依艾瑞克森，12–18 歲青少年的發展危機是？',['自我認同 vs. 角色混淆','友愛親密 vs. 孤獨疏離','獨立自主 vs. 羞愧懷疑','勤奮努力 vs. 自貶自卑'],'青少年期的任務是建立自我認同。'],
+['4 歲孩子想自己動手做、一直問問題，大人總是斥責，依艾瑞克森可能導致？',['罪惡感','不信任','角色混淆','自我頹廢'],'3–6 歲是主動探索 vs. 罪惡感。'],
+['艾瑞克森的理論被批評的地方是？',['沒有解釋人如何、為何從一個階段發展到下一階段','只研究男性','忽略社會因素','只談到青春期'],'講義指出這是它被批評之處。'],
+['臉上長一顆痘痘，就覺得全班都在看自己，這是？',['想像的觀眾','個人傳奇','早閉型統合','角色混淆'],'以為別人的眼光都衝著自己來。'],
+['青少年認為「沒有人能懂我的感受」「別人會出事，我不會」，這是？',['個人傳奇（個人神話）','想像的觀眾','他律道德','超我'],'認為自己獨一無二、與眾不同。'],
+['從小被父母決定要當醫生，從沒想過其他可能，就認定這個方向，屬於 Marcia 的哪一型？',['早閉型統合','定向型統合','未定型統合','迷失型統合'],'沒有探索就做了承諾，是早閉型。'],
+['大學生參加很多社團、營隊，正在嘗試各種方向但還沒決定，屬於？',['未定型統合','早閉型統合','定向型統合','迷失型統合'],'有探索、尚未承諾，是未定型。'],
+['年幼兒童認為「打破 15 個杯子比打破 1 個杯子更壞」，不管動機為何，屬於？',['他律道德，依後果判斷','自律道德，依動機判斷','後習俗道德','相對功利取向'],'他律道德依行為客觀後果判斷好壞。'],
+['「不作弊是因為被抓到會被記過」，屬於柯爾柏格哪一階段？',['避罰服從取向','相對功利取向','尋求認可取向','社會法制取向'],'只考慮會不會被處罰，是階段 1。'],
+['「這次你借我抄，下次換我借你抄」，屬於柯爾柏格哪一階段？',['相對功利取向','避罰服從取向','遵守法規取向','普遍倫理取向'],'互惠交換、對自己有利，是階段 2。'],
+['「我不作弊，因為老師和爸媽會覺得我是好孩子」，屬於哪一階段？',['尋求認可（好孩子）取向','遵守法規取向','相對功利取向','社會法制取向'],'追求他人或權威的認可，是階段 3。'],
+['「作弊違反校規，如果大家都不遵守，學校就亂了」，屬於哪一階段？',['遵守法規取向','尋求認可取向','社會法制取向','避罰服從取向'],'為了維持秩序而遵守規範，是階段 4。'],
+['柯爾柏格判斷一個人道德階段的關鍵是？',['他的推理理由','他最後的決定','他的實際行為','他的年齡'],'柯爾柏格重視推理，而非最後決定。'],
+['柯爾柏格理論對女性的偏誤，指的是？',['研究以男性驗證，忽略女性較重關懷與責任','研究只用女性樣本','認為女性道德階段較高','沒有使用道德兩難'],'男性正義取向，女性關懷取向。'],
+['柯爾柏格認為，皮亞傑所說的邏輯結構發展對道德推理而言是？',['必要條件，而非充分條件','充分條件，而非必要條件','充分且必要條件','既不必要也不充分'],'講義原文。'],
+['學生騙老師因生病沒寫作業，老師讓他「躺在床上一天並吃藥」，是哪種懲戒？',['自然罰','贖罪罰','相互罰','剝奪式處罰'],'讓他承受說法本身帶來的後果，是自然罰。'],
+['價值澄清法的三個階段是？',['選擇、珍視、行動','注意、保持、再生','同化、調適、平衡','摘要、提問、澄清'],'Raths 等人：選擇、珍視、行動，共七規準。']
+]
+},
+{
+id:'u6', no:6, title:'行為主義的學習理論', src:'行為主義的學習理論(不含題目).pptx',
+sections:[
+{h:'學習理論三大學派與行為主義主張', b:`
+<div class="tbl"><table>
+<tr><th>學派</th><th>關鍵字</th></tr>
+<tr><td>行為主義</td><td>行動 － <mark>外鑠</mark></td></tr>
+<tr><td>認知學派</td><td>已知 － 理解</td></tr>
+<tr><td>人本主義</td><td>需求 － <mark>內發</mark></td></tr>
+</table></div>
+<p>行為主義認為學習來自情境中<mark>刺激與反應（S-R）的聯結</mark>，包含三個理論：<mark>古典制約、操作制約、社會學習論</mark>。</p>
+<p><b>行為主義的主張</b>：</p>
+<ol>
+<li>人與其他動物的學習歷程類似。</li>
+<li>研究 S-R 學習歷程，最具客觀。</li>
+<li>排除內在認知歷程的研究，內在世界是<mark>黑盒子</mark>。</li>
+<li>學習 = <mark>外顯行為的改變</mark>。</li>
+<li>有機體生來是一張<mark>白紙</mark>（洛克觀點）。</li>
+<li>學習受環境影響。</li>
+<li>理論愈簡潔愈好用。</li>
+</ol>`},
+{h:'古典制約（Pavlov）', b:`
+<p>巴夫洛夫（Pavlov）：俄國生理學家，以狗的唾液實驗描述古典制約，1904 年得諾貝爾獎。屬於<mark>反應性行為</mark>。</p>
+<div class="tbl"><table>
+<tr><th>階段</th><th>過程</th></tr>
+<tr><td>實驗前</td><td>UCS（食物）→ UCR（唾液）；CS（鈴聲）→ 無反應</td></tr>
+<tr><td>實驗中</td><td>CS（鈴聲）＋ UCS（食物）→ UCR（唾液）</td></tr>
+<tr><td>實驗後</td><td><mark>CS（鈴聲）→ CR（唾液）</mark></td></tr>
+</table></div>
+<p>UCS 非制約刺激、UCR 非制約反應、CS 制約刺激、CR 制約反應。</p>
+<div class="ex"><b>例子</b>每次下課鐘響（CS）後就能去福利社吃東西（UCS），久了一聽到鐘聲就開始想吃東西（CR）。</div>`},
+{h:'古典制約學習法則', b:`
+<ul>
+<li><b>增強</b>：增強物適時出現，增加以後重複該反應的機率。</li>
+<li><mark>類化</mark>：與原刺激<b>相似</b>的刺激，不需再學習就引起相同反應。</li>
+<li><mark>辨別</mark>：能分辨相似刺激與原刺激的不同，而有不同反應。</li>
+<li><mark>消弱</mark>：反應建立後，<b>只出現 CS 而不出現 UCS</b>，反應會逐漸減弱。</li>
+<li><mark>自然恢復</mark>：講義寫法為「開始出現消弱時，再讓 CS 和 UCS 同時出現，反應會再度出現」。<span class="add">補充</span>多數教科書定義為：消弱後經過一段休息，CS 單獨出現時 CR 又自動恢復一部分。</li>
+</ul>
+<div class="ex"><b>例子</b>被一隻黑狗咬過，之後看到任何狗都害怕 → <b>類化</b>；後來只怕那隻黑狗、不怕其他狗 → <b>辨別</b>；每天經過那隻黑狗都沒被咬，慢慢不怕了 → <b>消弱</b>。</div>`},
+{h:'古典制約的例證與應用', b:`
+<ul>
+<li><mark>逃避學習</mark>：停止一個<b>已經在進行</b>的嫌惡刺激。</li>
+<li><mark>迴避學習</mark>：<b>事先避開</b>一個即將來臨的嫌惡刺激（聽到鈴聲就縮腳以避免電擊）。例：學生翹課逃學。</li>
+<li><mark>習得無助感</mark>（learned helplessness）。</li>
+<li><mark>條件情緒反應（CER）</mark>：不好的刺激帶來嫌惡情緒，之後一預知該刺激，情緒就產生。</li>
+<li><mark>恐懼症</mark>：「一朝被蛇咬，十年怕井繩」。</li>
+</ul>
+<p><b>教學應用</b>：教「狗」這個字時拿出圖卡配對學習；<mark>學校恐懼症</mark>可用行為改變技術、<mark>減敏感法</mark>治療。</p>
+<div class="ex"><b>例子</b>學生曾被數學老師當眾羞辱，之後一看到數學課本就緊張胃痛 → 條件情緒反應。老師可以讓數學課和輕鬆、成功的經驗連結，慢慢降低焦慮（減敏感）。</div>`},
+{h:'桑代克的連結論與三大學習律', b:`
+<p>桑代克（Thorndike）：「教育心理學之父」，創立<mark>連結主義</mark>，以<mark>貓迷籠實驗</mark>著名，認為學習是經由<mark>嘗試錯誤</mark>獲得。</p>
+<ol>
+<li><mark>練習律</mark>：S-R 聯結因練習而加強。強調練習、複習。</li>
+<li><mark>預備律</mark>：個體在預備狀態下學習會感到滿足。強調學習動機。</li>
+<li><mark>效果律</mark>：反應獲得滿足的效果，聯結就加強。</li>
+</ol>
+<div class="ex"><b>例子</b>貓在籠子裡亂抓，偶然碰到機關門開了、吃到魚（效果律）；重複多次後，貓一進籠子就直接去踩機關（練習律）。</div>`},
+{h:'史金納的操作制約', b:`
+<p>史金納（Skinner）提出<mark>操作制約</mark>，也稱<mark>工具制約</mark>；實驗用<mark>史金納箱</mark>：飢餓的白老鼠偶然壓桿，得到食物，之後壓桿次數增加。</p>
+<p><b>核心</b>：行為後面跟著期待的後果，行為次數會增加；沒有後果，行為會減少甚至消失。</p>
+<ul>
+<li><b>增強</b>：凡是使操作反應頻率增加的安排；受桑代克效果律影響，以「增強」取代「獎賞」。</li>
+<li><b>增強物</b>：任何能增加某一行為頻率的事物或事件。</li>
+<li><b>桑代克 vs. 史金納</b>：桑代克認為酬賞增強的是 S-R 聯結；史金納認為增強的是<mark>相同反應再發生的可能性</mark>。</li>
+</ul>`},
+{h:'增強的類型', b:`
+<ul>
+<li><mark>正增強</mark>：<b>加入</b>某刺激，使行為<b>增加</b>。例：上課踴躍發言就給一杯飲料。</li>
+<li><mark>負增強</mark>：<b>移除</b>某刺激，使行為<b>增加</b>。例：最踴躍發言的人不用掃廁所。</li>
+<li>只要是增強，都是讓<mark>可欲的行為增加</mark>。</li>
+<li><mark>原級（初級）增強物</mark>：滿足基本生物需求，如食物。</li>
+<li><mark>次級（二級）增強物</mark>：本身不滿足生理需求，經由連結而有增強作用，如<mark>錢、讚美、好成績</mark>。</li>
+<li><b>後效強化</b>：行為後果決定以後的行為。</li>
+</ul>
+<p><b>正增強物的形式</b>：</p>
+<ul>
+<li><b>具體增強物</b>：點心、貼紙、玩具。</li>
+<li><b>社會增強物</b>：微笑、注意、讚美、道謝。</li>
+<li><b>活動增強</b>：做喜歡的事。<mark>普力馬原則（Premack principle）</mark>，又稱<mark>老祖母規則</mark>：用喜歡的活動增強較不喜歡的活動，如「寫完功課可以看電視 30 分鐘」。</li>
+</ul>
+<p><b>不同年級</b>：低年級喜歡<mark>小而立即</mark>的增強物（貼紙、讚美、當小幫手）；高年級越能<mark>延宕滿足</mark>，喜歡和同儕相處的時間、同儕接納、私下給的明確正向回饋。</p>`},
+{h:'增強與處罰的區分', b:`
+<div class="tbl"><table class="grid2">
+<tr><th></th><th>加入刺激</th><th>移除刺激</th></tr>
+<tr><th>喜好的刺激</th><td><mark>正增強</mark><br><small>行為增加</small></td><td><mark>處罰 II（剝奪式）</mark><br><small>行為減少</small></td></tr>
+<tr><th>不喜好的刺激</th><td><mark>處罰 I（施予式）</mark><br><small>行為減少</small></td><td><mark>負增強</mark><br><small>行為增加</small></td></tr>
+</table></div>
+<p><b>負增強 vs. 處罰</b>：負增強是<mark>排除痛苦經驗</mark>，使反應增加，<b>知道什麼該做</b>；處罰是<mark>給予痛苦經驗</mark>，停止不良反應，<b>教導什麼不該做</b>。</p>
+<div class="ex"><b>學校例子</b><br>・正增強：作業全對，蓋一個好寶寶章。<br>・負增強：這週沒遲到，週五不用早到打掃。<br>・施予式處罰：遲到就罰站。<br>・剝奪式處罰：上課講話就取消下課時間。</div>
+<div class="tip"><b>考點</b>「負」不是「壞」，是「拿走」。看到「行為增加」就是增強，「行為減少」就是處罰。</div>`},
+{h:'增強時制', b:`
+<ul>
+<li><b>立即增強 vs. 延宕增強</b></li>
+<li><b>連續增強</b>：每次都增強，適合建立新行為。</li>
+<li><b>間歇（部分）增強</b>：有時增強，適合維持行為。
+<div class="tbl"><table>
+<tr><th>類型</th><th>規則</th><th>例子</th></tr>
+<tr><td><mark>定率</mark></td><td>固定次數後增強</td><td>集滿 10 點換一支筆；計件工資</td></tr>
+<tr><td><mark>不定率</mark></td><td>不固定次數後增強</td><td>抽獎、刮刮樂、夾娃娃機</td></tr>
+<tr><td><mark>定時</mark></td><td>固定時間後增強</td><td>每週五固定小考；月薪</td></tr>
+<tr><td><mark>不定時</mark></td><td>不固定時間後增強</td><td>老師隨時抽考、不定期檢查作業</td></tr>
+</table></div></li>
+</ul>
+<p class="add-p"><span class="add">補充</span>一般而言，不定率最不容易消弱；定時增強容易出現「時間快到才努力」的現象（如考前才讀書）。</p>
+<div class="ex"><b>講義活動：紙上獎盃</b>學年結束時老師發給每位小朋友一張紙上獎盃，屬於延宕的社會性（次級）增強，因為離行為發生太久、人人都有，效果較有限。</div>`},
+{h:'有效運用增強', b:`
+<ul>
+<li><b>時機</b>：增強要在期望反應之後<mark>立即</mark>出現；年紀越大越能延宕滿足。</li>
+<li><b>動機</b>：同一刺激對不同人效果不同，要找出真正能增強每位學生的後果。</li>
+<li>一開始就明確指出期望的行為：<mark>終點行為（terminal behaviors）</mark>。</li>
+<li><mark>代幣制度（token economy）</mark>：表現好行為得代幣，之後換酬賞或特權（累積點數換獎品）。</li>
+<li>從外在增強物轉移到內在增強物。</li>
+<li><mark>行為後果契約（contingency contract）</mark>：師生面對面討論，確認並同意學生要做到的合宜行為。</li>
+<li>公開增強時，確保所有學生都有機會。</li>
+<li><mark>團體後效（group contingency）</mark>：依團體行為決定後果。</li>
+<li>先用<mark>連續增強</mark>到行為穩定，再<mark>漸進</mark>改為<mark>間歇增強</mark>、減少外在增強物。</li>
+<li>監控進步，先記錄<mark>基準線（baseline，起點行為）</mark>。</li>
+</ul>
+<div class="ex"><b>講義活動：拍賣會</b>三年級老師讓學生每讀 25 頁得一個代幣，讀完一本再得兩個、寫心得再得一個，兩個月辦一次拍賣會用代幣競標文具 → 這是<b>代幣制度</b>。優點：鼓勵閱讀、具體可見；缺點：可能只為代幣而讀、挑短書，閱讀內在動機可能被削弱。</div>`},
+{h:'行為主義的應用：塑造、類化、辨別、行為動能', b:`
+<ul>
+<li><mark>行為塑造（shaping）</mark>：增強與終點行為<b>越來越相似</b>的一系列反應，稱為<mark>連續漸進（successive approximations）</mark>。</li>
+<li><mark>類化</mark>：在相似情況下做出同樣反應。</li>
+<li><mark>辨別</mark>：只有某刺激出現時反應才會得到增強，於是學會分辨兩個刺激。</li>
+<li><mark>行為動能（behavioral momentum）</mark>：學生先做出相似反應後，較可能做出期望反應 → <b>先給簡單或有趣的工作，再自然導向困難的工作</b>。</li>
+</ul>
+<div class="ex"><b>例子</b><br>・塑造：害羞的學生，先增強他舉手，再增強他說一個字，接著說一句話，最後上台報告。<br>・行為動能：上課先出三題很簡單的暖身題，學生連續答對後，再出比較難的題目。</div>`},
+{h:'減少不可取的行為', b:`
+<ul>
+<li><mark>消弱</mark>：絕不讓不當行為得到增強；要移除<b>所有</b>增強物才會消弱。</li>
+<li><b>提供線索</b>：<mark>身體靠近</mark>、<mark>口頭提示</mark>。</li>
+<li><mark>增強不相容的行為</mark>：增強一個替代行為，減少不具成效的行為。</li>
+<li>別不經意地增強了不可取的行為。</li>
+<li>必須迅速制止時，選擇溫和但有效的懲罰；說明行為與後果；<mark>強調不可取的是行為，不是學生</mark>；改正措施用盡才尋求專家協助。</li>
+</ul>
+<div class="ex"><b>例子</b>學生上課故意講笑話引大家注意 → 老師不理會、同學也不笑（消弱）。學生常離開座位 → 增強「坐在座位上完成學習單」（增強不相容行為）。學生在後排滑手機 → 老師邊講課邊走到他旁邊（身體靠近）。</div>`},
+{h:'懲罰：多用增強，少用懲罰', b:`
+<p>懲罰不屬於操作制約；它可能暫時壓抑反應，但無法永遠消除。建議<mark>把重心放在增強可取行為</mark>。</p>
+<div class="two">
+<div><h4>有效的懲罰</h4><ul><li>口頭斥責</li><li><mark>反應代價</mark>（response cost）</li><li><mark>合理的後果</mark>（logical consequences）</li><li><mark>暫停法</mark>（time-out）</li><li>留校察看（校內停學）</li></ul></div>
+<div><h4>無效的懲罰</h4><ul><li><mark>體罰</mark></li><li><mark>心理上的懲罰</mark></li><li><mark>額外的功課</mark></li><li><mark>停學</mark>（校外停學）</li></ul></div>
+</div>
+<p><b>懲罰原則</b>：合乎人道、不過於嚴厲；事先告知；說到做到；私下施予；解釋為什麼不對；在溫暖支持的環境中執行；同時教導並增強替代行為；監控成效。</p>
+<div class="ex"><b>例子</b>弄髒教室就負責把它清乾淨（合理的後果）；代幣制度中違規扣一點（反應代價）。罰寫數學題 50 題是「額外的功課」，會讓學生討厭數學，屬於無效懲罰。</div>`},
+{h:'行為主義取向的優缺點', b:`
+<ul>
+<li>致力於改變行為，<mark>忽略可能阻礙學習的認知因素</mark>。</li>
+<li>若某活動對學生已有內在增強效果，<mark>再給外在增強反而可能減損喜好</mark>。</li>
+</ul>
+<div class="ex"><b>例子</b>本來就很愛畫畫的孩子，爸媽改成「畫一張給 50 元」，之後沒錢就不想畫了。</div>`},
+{h:'班度拉社會認知理論', b:`
+<p>原稱<mark>社會學習理論</mark>，<mark>班度拉（Bandura）</mark>提出，源於行為主義但<mark>加入認知歷程</mark>（自我效能論）。</p>
+<ol>
+<li><mark>三元交互（triadic theory）</mark>：<b>環境、個人認知、行為</b>三者不斷交互作用。</li>
+<li>除環境外，個人對人事物的看法是學習的重要因素。</li>
+<li>學習來自<mark>觀察學習與模仿（示範）</mark>。</li>
+<li><mark>替代學習</mark>：從別人的經驗學習，不需親身經歷 S-R 聯結。</li>
+<li>學習是內在歷程，<mark>不一定會帶來行為改變</mark>。</li>
+<li>行為導向特定目標。</li>
+<li>行為越來越<mark>自我規範、自我增強</mark>。</li>
+</ol>
+<p><b>對增強與懲罰的看法</b>：學習者<b>察覺</b>到後果才會影響行為；會預期後果；也會受發生在別人身上的事影響 → <mark>替代增強、替代懲罰</mark>；新學會的技巧通常在預期會被增強時才表現出來；預期的後果沒出現，本身就有增強或懲罰效果。</p>
+<div class="ex"><b>例子</b>小美看到同學主動擦黑板被老師稱讚，下次她也去擦（替代增強）；看到同學作弊被記過，自己不敢作弊（替代懲罰）。</div>`},
+{h:'模仿與觀察學習', b:`
+<p>可透過楷模學得：學業技巧、攻擊、人際行為。</p>
+<p><b>有效楷模的特徵</b>：才能、聲望與影響力、「合於性別」的行為、與學習者自身情況有關。</p>
+<p><b>最能引起兒童模仿的楷模</b>：心目中最重要的人；<mark>同性別</mark>的人；曾獲榮譽、出身高社經的兒童；同年齡同階層的兒童彼此較常模仿。有獨特行為甚至被懲罰的人，不是一般兒童最喜歡模仿的對象。</p>
+<p><b>模仿方式</b>：</p>
+<ul>
+<li><mark>直接模仿</mark>：照著做。</li>
+<li><mark>綜合模仿</mark>：綜合多次不同經驗。</li>
+<li><mark>象徵模仿</mark>：模仿人物的性格，如模仿明星的正義性格。</li>
+<li><mark>抽象模仿</mark>：學到抽象原則，如學數學概念。</li>
+</ul>
+<p><b>觀察學習四歷程</b>：</p>
+<div class="flow"><span>注意<small>注意到楷模</small></span><span>保持<small>記憶下來</small></span><span>再生<small>表現在行動上</small></span><span>動機<small>願意表現出來</small></span></div>
+<p>應用：明星代言、模範兒童選舉。</p>`},
+{h:'自我效能', b:`
+<p><b>自我效能（self-efficacy）</b>：個人對自己能否表現某行為或達成某目標的<mark>自我判斷</mark>。班度拉認為增強要透過認知產生期待，才能引發行為。</p>
+<p><b>影響</b>：活動的選擇、目標、努力及堅持、學習及成就。</p>
+<p><b>影響自我效能發展的因素</b>：</p>
+<ol>
+<li><mark>先前的成敗經驗</mark></li>
+<li><mark>他人傳遞的訊息</mark>（指出他的良好表現）</li>
+<li><mark>他人的成敗經驗</mark>（跟他一樣的人做到了）</li>
+<li><mark>在團體中的成敗經驗</mark> → <mark>集體自我效能</mark>（例：卡內基訓練）</li>
+</ol>
+<p><b>教學提升</b>：基礎技能教到熟練；讓學生在複雜技巧上有明顯進步；給需要努力堅持才能完成的任務；保證他們能成功；提供成功的同儕楷模；小組合作完成大型作業。教師自己也要有高的<mark>教師自我效能</mark>。</p>
+<div class="ex"><b>例子</b>一個覺得「我數學就是爛」的學生，老師先給他幾題能做對的題目、指出「上週的你還不會這種題」，再讓他看到跟他程度差不多的同學也學會了，他的自我效能就會提升。</div>`},
+{h:'自我調節', b:`
+<p><b>自我調節的行為</b>：自我決定的標準與目標、規範情緒、<mark>自我指導</mark>、<mark>自我監控（自我觀察）</mark>、<mark>自我評量</mark>、<mark>自我施加的後果</mark>（自我增強或處罰）。</p>
+<p><b>自我調節學習的歷程</b>：設定目標 → 自我激勵 → 控制注意力 → 自我監控 → 適時求助 → 自我評量。</p>
+<p><b>三個重要概念</b>：自我觀察、自我評價、自我強化。</p>
+<p><b>教學促進</b>：協助設定困難但可行的目標；要學生觀察並記錄自己的行為；教自我指導語；鼓勵自評；教學生增強自己；給獨自練習機會；提供人際問題解決策略。</p>
+<div class="ex"><b>例子</b>學生用表格記錄每天讀書時數（自我監控），週末檢查有沒有達到目標（自我評量），達成就允許自己看一部電影（自我增強）。</div>`},
+{h:'行為主義在教學上的應用', b:`
+<ul>
+<li>正增強 → 增加行為；塑造 → 形成新行為；間歇增強 → 持續行為；類化 → 學習遷移；消弱 → 減少不當行為；懲罰 → 抑制不當行為；楷模學習 → 建立模範。</li>
+<li><mark>電腦輔助教學（CAI）</mark></li>
+<li><mark>編序教學法</mark>（Programmed Instruction）</li>
+<li><mark>精熟學習（Mastery Learning）— 布魯姆（Bloom）</mark>：重精熟水準的訂定。</li>
+<li><mark>個人化系統教學（PSI）— 凱勒計畫（Keller Plan）</mark>：學生自學為主，優秀學生當輔導員。</li>
+</ul>`}
+],
+quiz:[
+['巴夫洛夫實驗中，制約形成後的「鈴聲」是？',['制約刺激（CS）','非制約刺激（UCS）','制約反應（CR）','非制約反應（UCR）'],'鈴聲原本是中性刺激，配對後成為制約刺激。'],
+['被一隻黑狗咬過，之後看到所有的狗都害怕，這是？',['類化','辨別','消弱','自然恢復'],'對相似刺激產生相同反應是類化。'],
+['後來他只怕那隻黑狗，看到其他狗不怕，這是？',['辨別','類化','塑造','替代學習'],'能區分相似刺激而有不同反應是辨別。'],
+['古典制約中，「消弱」是指？',['只出現制約刺激而不再伴隨非制約刺激，反應逐漸減弱','制約刺激與非制約刺激一起出現','增強相似的刺激','給予處罰使行為減少'],'CS 單獨出現、不再配 UCS，反應減弱。'],
+['學生曾被老師當眾羞辱，之後一進教室就心跳加速、想吐，最符合？',['條件情緒反應','普力馬原則','行為動能','代幣制度'],'嫌惡刺激帶來的情緒被制約到相關刺激上。'],
+['動物聽到鈴聲就先縮腳，因此避免了電擊，這是？',['迴避學習','逃避學習','習得無助','觀察學習'],'事先避開即將來臨的嫌惡刺激是迴避學習。'],
+['「反應獲得滿足的效果，聯結就會加強」是桑代克的哪一律？',['效果律','練習律','預備律','類化律'],'效果律影響了後來史金納的增強概念。'],
+['桑代克的貓迷籠實驗說明學習是經由什麼獲得？',['嘗試錯誤','頓悟','觀察模仿','古典制約'],'貓偶然碰到機關，逐漸減少錯誤反應。'],
+['「上課最踴躍發言的人可以不用掃廁所」，結果大家發言更踴躍，這是？',['負增強','正增強','施予式處罰','剝奪式處罰'],'移除討厭的事（掃廁所）使行為增加，是負增強。'],
+['遲到就罰站，屬於？',['施予式處罰','剝奪式處罰','負增強','消弱'],'加入不喜歡的刺激使行為減少。'],
+['上課講話就取消下課時間，屬於？',['剝奪式處罰','施予式處罰','負增強','正增強'],'移除喜歡的東西使行為減少。'],
+['「寫完功課才可以看 30 分鐘電視」運用的是？',['普力馬原則（老祖母規則）','代幣制度','行為後果契約','替代增強'],'用喜歡的活動增強較不喜歡的活動。'],
+['錢、讚美、好成績屬於？',['次級增強物','原級增強物','負增強物','非制約刺激'],'經由連結才具有增強作用。'],
+['抽獎、刮刮樂讓人一直玩下去，屬於哪一種增強時制？',['不定率','定率','定時','不定時'],'不固定次數後才得到增強。'],
+['每週五固定小考，學生常常週四晚上才讀書，這是哪一種增強時制？',['定時','不定時','定率','不定率'],'固定時間間隔後增強。'],
+['集滿 10 點可以換一支筆，屬於？',['定率','不定率','定時','連續增強'],'固定次數後增強。'],
+['害羞的學生，老師先增強他舉手，再增強他說一句話，最後增強他上台報告，這是？',['行為塑造（連續漸進）','行為動能','消弱','類化'],'增強越來越接近終點行為的反應。'],
+['老師先出幾題簡單題目讓學生連續答對，再自然導向較難的題目，運用的是？',['行為動能','普力馬原則','消弱','暫停法'],'先做相似的簡單反應，較容易做出期望反應。'],
+['學生在後排滑手機，老師一邊講課一邊走到他旁邊，這是？',['提供線索：身體靠近','剝奪式處罰','負增強','消弱'],'講義列為制止不當行為的線索。'],
+['下列哪一項被講義列為「無效」的懲罰？',['額外的功課','反應代價','暫停法','合理的後果'],'無效懲罰：體罰、心理懲罰、額外功課、校外停學。'],
+['看到同學主動擦黑板被老師稱讚，自己也去擦，這是？',['替代增強','負增強','古典制約','自然恢復'],'從別人得到的增強中學習。'],
+['班度拉觀察學習的四個歷程順序是？',['注意 → 保持 → 再生 → 動機','動機 → 注意 → 保持 → 再生','保持 → 注意 → 動機 → 再生','注意 → 再生 → 保持 → 動機'],'先注意、再記住、再做出來、最後有意願表現。'],
+['社會認知理論的「三元交互」是指哪三者？',['環境、個人認知、行為','刺激、反應、增強','本我、自我、超我','同化、調適、平衡'],'三者不斷交互作用。'],
+['下列何者「不是」講義提到影響自我效能的因素？',['給予高額物質獎勵','先前的成敗經驗','他人傳遞的訊息','他人的成敗經驗'],'四來源：自己成敗、他人訊息、他人成敗、團體中的成敗。'],
+['精熟學習法是誰提出的？',['布魯姆（Bloom）','凱勒（Keller）','班度拉（Bandura）','史金納（Skinner）'],'凱勒提出的是個人化系統教學（PSI）。'],
+['本來就愛畫畫的孩子，被給錢畫畫後反而沒錢就不想畫，說明行為主義的哪個缺點？',['外在增強可能減損原有的內在興趣','忽略環境的影響','只能用在動物身上','增強時制太複雜'],'講義指出這是行為主義取向的缺點之一。']
+]
+}
+];
+const UNITS_B = [
+{
+id:'t1', no:'1', title:'緒論', src:'第01章緒論（無題版）.pptx',
+sections:[
+{h:'教學的字源與定義', b:`
+<ul>
+<li><b>《說文解字》</b>：「教，上所施，下所效也；學，覺悟也（知不足）。」</li>
+<li><b>教育部《重編國語辭典》</b>對「教學」有兩個解釋：① 教師把<mark>知識與技能</mark>傳授給學生的過程；② <mark>教誨、感化</mark>（情意）。</li>
+<li>英文 Teaching 與 instruction 意義相近。</li>
+</ul>
+<p><b>教學的定義</b>：「施教者依據教育及教學理論與原則，運用適當的方法、策略及技巧，<mark>指引並激發受教者學習</mark>，以增進其社會與生活之<mark>知識、技能及態度</mark>的<mark>互動過程</mark>。」</p>
+<div class="ex"><b>例子</b>國文老師教《夏夜》：既要教學生修辭技巧（知識、技能），也要讓學生感受親近大自然的美感（教誨、感化）。兩個解釋都用到。</div>`},
+{h:'教學的五項內涵', b:`
+<ol>
+<li>教學是一種<mark>過程</mark>，是施教者與受教者互動的過程。</li>
+<li>教學應依據<mark>教育及教學理論與原則</mark>。</li>
+<li>教學要有<mark>多樣的方法、策略及技巧</mark>。</li>
+<li>教學應讓受教者獲得具備社會與生活的<mark>素養</mark>。</li>
+<li>教學是<mark>「工作—成效」</mark>的概念：施教者應讓受教者有「學」的事實，否則<mark>教學不成立</mark>；不過「成效」有程度上的差異。</li>
+</ol>
+<div class="ex"><b>例子</b>老師把整本課文講完，但全班都沒有學會。從「工作—成效」的角度看，這堂課只有「教」，不算完整的「教學」。</div>`},
+{h:'皮德思（Peters）教育三規準', b:`
+<p>英國哲學家皮德思：合價值性、合認知性、合自願性。</p>
+<div class="tbl"><table>
+<tr><th>規準</th><th>意思</th><th>對應</th><th>講義例子</th></tr>
+<tr><td><mark>合價值性</mark></td><td>對個人或社會有價值，向上向善；不違反善良風俗</td><td>教學<b>結果</b></td><td>認識生態、推廣保護環境</td></tr>
+<tr><td><mark>合認知性</mark></td><td>探求事實與真理；獲得完整知識，不是零碎的記憶背誦</td><td>教學<b>內容</b></td><td>教地理、化學，而非風水、煉丹</td></tr>
+<tr><td><mark>合自願性</mark></td><td>用引導啟發，不強迫、不揠苗助長</td><td>教學<b>方法</b></td><td>師父領進門，修行在個人</td></tr>
+</table></div>
+<div class="tip"><b>記法</b>價值 → 結果；認知 → 內容；自願 → 方法。</div>`},
+{h:'歐陽教（1990）教學三規準', b:`
+<ol>
+<li><mark>目的性</mark>：任何教學都是有意向、有計畫、有明確結果的活動，教師隨時心繫教學目標。</li>
+<li><mark>釋明性</mark>：能講清楚說明白要傳遞的內容。要有兩項功夫：① 事前的教材分析；② 課堂的教學內容陳述。</li>
+<li><mark>覺知性</mark>：讓學生了解學習內容既重要又有趣，引發學習的興趣與意願。</li>
+</ol>
+<div class="ex"><b>例子</b>老師先用生活中的新聞引起動機，讓學生覺得「這跟我有關」→ 覺知性。老師事先畫好概念圖，課堂上用淺顯語言解釋 → 釋明性。</div>
+<div class="tip"><b>注意</b>皮德思三規準（價值、認知、自願）和歐陽教三規準（目的、釋明、覺知）是兩套，考試很愛混在一起出題。</div>`},
+{h:'有效教學：Borich（2011）五項關鍵行為', b:`
+<ol>
+<li><mark>清晰授課</mark>：清楚呈現重點，口齒清晰。</li>
+<li><mark>多樣化教學</mark>：運用多種方法、策略、技巧與教學媒體。</li>
+<li><mark>任務取向</mark>：不偏離教學目標與重點，充分運用時間，課前準備好教材架構。</li>
+<li><mark>引導學生投入</mark>：把專注力聚焦在學習活動，如行間走動、制定學習規則。</li>
+<li><mark>確保學生成功率</mark>：成功率指學生理解內容、正確完成練習或作業的比率；提供回答、報告、展示、表演的機會。</li>
+</ol>
+<p><b>與教學規準的對應</b>：</p>
+<div class="tbl"><table>
+<tr><th>關鍵行為</th><th>符應的規準</th></tr>
+<tr><td>清晰授課</td><td>釋明性</td></tr>
+<tr><td>多樣化教學、引導學生投入</td><td>覺知性</td></tr>
+<tr><td>任務取向</td><td>目的性</td></tr>
+<tr><td>確保學生成功率</td><td>強化覺知性</td></tr>
+</table></div>
+<div class="ex"><b>例子</b>老師在學生練習時走到各組旁邊看、遇到卡住的學生就提示 → 引導學生投入；讓程度不同的學生都有上台展示的機會 → 確保成功率。</div>`},
+{h:'教學的八項要素', b:`
+<div class="tbl"><table>
+<tr><th>要素</th><th>內容</th></tr>
+<tr><td>學習者</td><td>在學校指學生，在社會上有各種身分</td></tr>
+<tr><td>教學者</td><td>成熟且有專業的成人（教師），也可能是各行業人員，甚至學生</td></tr>
+<tr><td>目標</td><td>教什麼？培養何種能力？</td></tr>
+<tr><td>教材（課程）</td><td>根據目標與對象規劃的學習內容</td></tr>
+<tr><td>時間（進度）</td><td>一套教材要教多久，是重要資源</td></tr>
+<tr><td>方法</td><td>如何引導學生學習以達目標的任何作為</td></tr>
+<tr><td>情境（空間）</td><td>空間、環境、場所與布置</td></tr>
+<tr><td>評量</td><td>確認學習者是否達到預期目標的一系列檢核</td></tr>
+</table></div>
+<p class="muted">口訣：<b>學、教、目、材、時、法、境、評</b>。講義討論題：隨社會與教育環境改變還有哪些要素？你認為哪三項最重要？（老師備註：八項都重要，但要訓練學生看事情的著眼點並敘述理由。）</p>`},
+{h:'教學與相關概念的區別', b:`
+<div class="tbl"><table>
+<tr><th>比較</th><th>區別</th></tr>
+<tr><td>教育 vs 教學</td><td>教育是在學校接受師長安排的<b>所有</b>學習活動；教學是教師針對<b>某一學習領域</b>進行的引導學習活動</td></tr>
+<tr><td>學習 vs 教學</td><td>學習是學習者<b>自己主動</b>尋找資源或諮詢他人而有所得；教學是在<b>教師安排</b>下進行</td></tr>
+<tr><td>課程 vs 教學</td><td>課程是學習某類知識、技能、態度的規劃架構、綱要與內容；教學依據課程編寫教材並傳遞（有些過去的課程已成歷史，不再教學）</td></tr>
+<tr><td>訓練 vs 教學</td><td>訓練偏向技能的<mark>反覆操作練習</mark>以達熟練；是教學的一部分，但有些訓練超出學生能力</td></tr>
+<tr><td>宣傳 vs 教學</td><td>宣傳透過<mark>不斷重複</mark>讓人<mark>不知不覺</mark>吸收；<mark>教學強調覺知，不採用宣傳</mark></td></tr>
+<tr><td>制約作用 vs 教學</td><td>制約是在刺激情境下重複操作產生的反應；<mark>教學會用制約原理</mark></td></tr>
+</table></div>
+<div class="ex"><b>例子</b>廣告天天重複「某某牌最好喝」，讓你不知不覺記住 → 宣傳。老師要你知道為什麼好、能自己判斷 → 教學。練習投籃 500 次 → 訓練。</div>
+<div class="tip"><b>注意</b>講義寫「七個概念」，但實際列出的是六組比較；另外要求用范氏圖（Venn diagram）畫出<b>教育、教學、學習、訓練、宣傳</b>五個概念的包含關係。</div>`}
+],
+quiz:[
+['「教地理、化學，而不是教風水、煉丹」符合皮德思的哪一項規準？',['合認知性（教學內容）','合價值性（教學結果）','合自願性（教學方法）','目的性'],'合認知性要求探求事實與真理，這是針對教學內容。'],
+['「師父領進門，修行在個人」說明皮德思的哪一項規準？',['合自願性（教學方法）','合認知性（教學內容）','合價值性（教學結果）','釋明性'],'合自願性重引導啟發，不強迫、不揠苗助長。'],
+['皮德思的「合價值性」主要對應教學的哪一部分？',['教學結果','教學內容','教學方法','教學評量'],'價值對應結果、認知對應內容、自願對應方法。'],
+['歐陽教認為教學要能「講清楚說明白要傳遞的內容」，這是哪一項規準？',['釋明性','目的性','覺知性','合認知性'],'釋明性包括事前教材分析和課堂教學內容陳述。'],
+['讓學生覺得學習內容既重要又有趣，以引發學習意願，是歐陽教的哪一項規準？',['覺知性','目的性','釋明性','合價值性'],'覺知性在引發興趣與意願。'],
+['依講義，Borich 有效教學的五項關鍵行為「不包括」？',['增加作業份量','清晰授課','任務取向','確保學生成功率'],'五項為清晰授課、多樣化教學、任務取向、引導學生投入、確保學生成功率。'],
+['「清晰授課」符應歐陽教的哪一項規準？',['釋明性','目的性','覺知性','合自願性'],'講義：清晰授課符應釋明性。'],
+['「任務取向」（不偏離目標與重點）符應哪一項規準？',['目的性','釋明性','覺知性','合價值性'],'任務取向在掌握教學的目的性。'],
+['下列何者「不是」講義所列的教學八項要素之一？',['家長','評量','時間（進度）','情境（空間）'],'八項：學習者、教學者、目標、教材、時間、方法、情境、評量。'],
+['講義指出教學是「工作—成效」的概念，意思是？',['施教者應讓受教者有「學」的事實，否則教學不成立','只要老師教完進度就算教學成立','學生成績達到滿分才算教學成立','教學成效不需要被檢視'],'但成效有程度上的差異。'],
+['《說文解字》對「學」的解釋是？',['覺悟也（知不足）','上所施，下所效也','知識的累積','模仿與練習'],'「教，上所施，下所效也；學，覺悟也（知不足）。」'],
+['依講義，宣傳與教學最主要的差別是？',['教學強調覺知，宣傳是不知不覺中注入','宣傳比教學更重視個別差異','教學靠反覆重複，宣傳靠啟發思考','兩者沒有差別'],'宣傳以不斷重複達到不知不覺注入吸收的效果。'],
+['以「反覆操作練習以達熟練精巧」為主的是？',['訓練','宣傳','課程','學習'],'訓練偏向技能或技術的反覆練習。'],
+['依講義，「教學」與「教育」的差別是？',['教學是針對某一學習領域所進行的引導學習活動','教學範圍比教育更大','教育只包含課堂上的活動','教學不需要老師安排'],'教育是學校裡師長安排的所有學習活動，範圍較大。']
+]
+},
+{
+id:'t2', no:'2', title:'學習與教學分析', src:'第02章學習與教學分析 (無題版).pptx',
+sections:[
+{h:'課程綱要的能力與素養', b:`
+<ul>
+<li>教學除了依據學習結果（認知、情意、技能），還要依據課程綱要培養何種能力或素養。</li>
+<li>《九年一貫課程綱要》：現代國民所需的<mark>10 項基本能力</mark>。</li>
+<li>《十二年國民基本教育課程綱要》：<mark>三面九項核心素養</mark>。</li>
+<li><b>核心素養的意義</b>：一個人為適應現在生活及面對未來挑戰，所應具備的<mark>知識、能力與態度</mark>（帶著走的能力）。</li>
+</ul>`},
+{h:'三面九項核心素養', b:`
+<div class="tbl"><table>
+<tr><th>三面向</th><th>九項核心素養</th></tr>
+<tr><td rowspan="3"><mark>a 自主行動</mark></td><td>(1) 身心素質與自我精進</td></tr>
+<tr><td>(2) 系統思考與解決問題</td></tr>
+<tr><td>(3) 規劃執行與創新應變</td></tr>
+<tr><td rowspan="3"><mark>b 溝通互動</mark></td><td>(4) 符號運用與溝通表達</td></tr>
+<tr><td>(5) 科技資訊與媒體素養</td></tr>
+<tr><td>(6) 藝術涵養與美感素養</td></tr>
+<tr><td rowspan="3"><mark>c 社會參與</mark></td><td>(7) 道德實踐與公民意識</td></tr>
+<tr><td>(8) 人際關係與團隊合作</td></tr>
+<tr><td>(9) 多元文化與國際理解</td></tr>
+</table></div>
+<div class="tip"><b>記法</b>每面向 3 項：自主行動管「自己」，溝通互動管「工具與表達」，社會參與管「道德、人際、多元」。</div>
+<div class="ex"><b>例子</b>全班規劃並執行一場校園減塑行動，需要「系統思考與解決問題」(2) 與「規劃執行與創新應變」(3)，都屬於自主行動。</div>`},
+{h:'戴爾經驗金字塔（Dale）', b:`
+<p>經驗金字塔（cone of experience）從<mark>具體到抽象</mark>共<mark>十層</mark>：</p>
+<div class="flow"><span>直接、有目的經驗</span><span>設計經驗</span><span>戲劇參與</span><span>示範</span><span>參觀旅行</span><span>展覽</span><span>電影</span><span>廣播、錄音、靜畫</span><span>視覺符號</span><span>口述符號</span></div>
+<p class="muted">最底層最具體，最頂層「口述符號」最抽象。講義思考題：VR、AR 屬於哪一經驗層次？（可自行討論：VR 讓人身歷其境，接近設計經驗／戲劇參與；單純看影片則接近電影。）</p>
+<div class="ex"><b>例子</b>學游泳：親自下水練習是「直接、有目的經驗」；看老師示範動作是「示範」；看游泳教學影片是「電影」；只聽老師口頭說明是「口述符號」。</div>`},
+{h:'學習金字塔與保留比率', b:`
+<div class="tbl"><table>
+<tr><th>學習性質</th><th>經驗層級</th><th>學習保留</th></tr>
+<tr><td rowspan="4">被動學習</td><td>聽講</td><td><mark>5%</mark></td></tr>
+<tr><td>閱讀</td><td>10%</td></tr>
+<tr><td>看視聽影片</td><td>20%</td></tr>
+<tr><td>參觀展示</td><td>30%</td></tr>
+<tr><td rowspan="3">主動學習</td><td>參與小組討論</td><td>50%</td></tr>
+<tr><td>實作演練</td><td>75%</td></tr>
+<tr><td>教他人／立即運用</td><td><mark>90%</mark></td></tr>
+</table></div>
+<div class="tip"><b>數字口訣</b>5、10、20、30 → 50、75、90。</div>
+<p><b>學習金字塔的迷思</b>：戴爾的經驗金字塔<mark>本來沒有保留比率的數字</mark>，這些數字是後來添加到「學習金字塔（cone of learning）」上的。</p>`},
+{h:'學習金字塔的應用（四點提醒）', b:`
+<p>學思達教學法（張輝誠，2015）和 MAPS 教學法（王政忠，2016）都以學習金字塔為翻轉學習的立論基礎之一。應用時要了解：</p>
+<ol>
+<li>並非最上二層的「口說、聽」與「文字、閱讀」學習效果不好。</li>
+<li>觀察或被動的學習層級（靜畫到示範），也可轉變為主動或參與的學習。</li>
+<li>越具體真實的經驗，要與上層的抽象概念<mark>連結並統整</mark>，否則容易變成零碎的經驗或「歡樂的活動」。</li>
+<li>教學上應提供學生<mark>完整的經驗</mark>，並引導學生主動學習。</li>
+</ol>
+<div class="ex"><b>例子</b>帶學生去參觀博物館（具體經驗），若回來後沒有整理成概念、沒有討論，就只是出去玩一趟；加上學習單與分組報告才算統整。</div>`},
+{h:'直接教學（以教師為中心）', b:`
+<p>教師以教科書文字資料、口頭講解，輔以展示、示範，引導學生練習，把知識技能以原本的型態傳遞給學生。</p>
+<p><b>運用時機</b>：① 要把基礎教材有組織地傳遞時；② 要激發動機與興趣時；③ 要學生精熟或過度學習基礎教材時；④ 教師要掌控教學節奏時。</p>
+<p><b>直接教學七步驟</b>：</p>
+<div class="flow"><span>每日複習</span><span>陳述教學目標與重點</span><span>呈現新教材</span><span>引導練習</span><span>回饋與訂正</span><span>獨立練習</span><span>每週每月複習</span></div>
+<div class="ex"><b>例子</b>教「一元二次方程式公式解」：先複習昨天的因式分解 → 說明今天要會用公式解 → 示範例題 → 全班一起練習 → 老師批改訂正 → 回家獨立練習 → 週末小考複習。</div>`},
+{h:'間接教學（以學生為中心）', b:`
+<p>在認知、技能及情意<b>較高層次</b>的學習，教師<mark>不直接告知</mark>，而引導學生主動探究以獲結論（沈翠蓮，2001）。</p>
+<p>Borich（2011）間接教學策略<mark>六種</mark>：</p>
+<ol><li>內容組織</li><li>概念探究活動</li><li>問題探究</li><li>用學生經驗與想法</li><li>學生自我評鑑</li><li>小組討論活動</li></ol>
+<div class="ex"><b>例子</b>不直接講「浮力公式」，而是給學生不同材質的物體與水槽，讓他們自己分類浮沉、歸納出規律 → 概念探究活動。</div>`},
+{h:'直接教學與間接教學哪個有效？', b:`
+<ul>
+<li>認知領域<b>較低層次</b>的學習：直接教學<mark>便利、經濟、省時</mark>，有其成效。</li>
+<li>認知領域<b>較高層次</b>的學習，以及態度、行為的養成：<mark>間接教學比直接教學有效</mark>。</li>
+</ul>
+<p><b>直接教學仍重要的三個原因</b>：① 認知、情意、技能的基礎層次學習與熟練，是學校學習的基礎；② 講述有便利性、經濟性、省時；③ 可將教材有組織有系統地傳遞給學生。</p>
+<div class="tbl"><table>
+<tr><th></th><th>直接教學</th><th>間接教學</th></tr>
+<tr><td>中心</td><td>教師</td><td>學生</td></tr>
+<tr><td>適合</td><td>基礎、低層次、精熟</td><td>高層次、態度行為養成</td></tr>
+<tr><td>例子</td><td>講述、示範、練習</td><td>探究、討論、自我評鑑</td></tr>
+</table></div>`},
+{h:'教學策略與教學方法', b:`
+<ul>
+<li><b>教學策略</b>：「教師決定要達成某種學習目標，思考運用何種資源和最佳的手段，以促進學習者達到預期的學習目標。」範圍廣、創新可能多。</li>
+<li><b>教學方法</b>：除了策略的內涵之外，還有兩項主要內涵：<mark>① 有明確且固定的教學步驟貫串整個單元；② 步驟中有特定的要素、機制及準備</mark>。有些文獻以「教學模式」取代教學方法。</li>
+<li>本書將教學方法分為<mark>六類</mark>：思考取向、情意取向、實作取向、社會取向、個別化取向、創新取向。</li>
+</ul>
+<div class="ex"><b>例子</b>「多舉生活例子幫助理解」是教學策略；「概念獲得教學法」有固定步驟（選目標、列屬性、舉正反例…）→ 教學方法。</div>`},
+{h:'十項教學原則', b:`
+<div class="tbl"><table>
+<tr><th>原則</th><th>重點</th></tr>
+<tr><td>1 準備原則</td><td>學習前的預備就緒狀態（心理準備、學習準備）；也包含教師的教學準備</td></tr>
+<tr><td>2 興趣原則</td><td>對領域或科目有持續學習的內在心理驅力</td></tr>
+<tr><td>3 自學（主動）原則</td><td>自己產生學習慾望、主動學習，不必靠外在增強</td></tr>
+<tr><td>4 熟練原則</td><td>學習要達到精熟程度，要練習</td></tr>
+<tr><td>5 增強原則</td><td>正確反應或好表現，給予喜好的增強物或移除嫌惡的增強物；四種方式：正增強、負增強、懲罰、隔離</td></tr>
+<tr><td>6 類化原則</td><td>把所學連結到性質相近的事物或情境（學習遷移）</td></tr>
+<tr><td>7 個別適應原則</td><td>依智力與非智力差異，運用個別化策略或調整教材</td></tr>
+<tr><td>8 社會化原則</td><td>充分運用學生群體，發展群性</td></tr>
+<tr><td>9 紀錄與反省原則</td><td>保存教學資源、做教學札記，據此省思調整</td></tr>
+<tr><td>10 同時學習原則</td><td>同一時間學到的是多方面的（認知、技能、情意）</td></tr>
+</table></div>
+<div class="tip"><b>注意</b>講義說準備原則、熟練原則源自桑代克的「練習律」。但在教育心理學講義裡，「預備狀態」對應的是<b>預備律</b>，熟練才對應練習律。考試以老師講義為準，遇到題目時看選項怎麼出。</div>
+<div class="ex"><b>例子</b>「學生寫對題目就給貼紙」→ 增強原則；「把學到的比喻技巧用到作文」→ 類化原則；「老師每週寫教學札記」→ 紀錄與反省原則。</div>`},
+{h:'增強物的性質與操作方式（表 2-3）', b:`
+<div class="tbl"><table class="grid2">
+<tr><th></th><th>增強物是「喜歡」的</th><th>增強物是「嫌惡」的</th></tr>
+<tr><th>給予</th><td>針對好行為<br><mark>正增強</mark></td><td>針對禁止行為<br><mark>懲罰</mark></td></tr>
+<tr><th>取消</th><td>針對禁止行為<br><mark>隔離（剝奪式懲罰）</mark></td><td>針對好行為<br><mark>負增強</mark></td></tr>
+</table></div>
+<div class="ex"><b>例子</b><br>・給予喜歡 + 好行為：作業全對給貼紙（正增強）。<br>・取消嫌惡 + 好行為：本週沒遲到，免掃廁所（負增強）。<br>・給予嫌惡 + 禁止行為：罰站（懲罰）。<br>・取消喜歡 + 禁止行為：上課講話，取消下課時間（隔離／剝奪式懲罰）。</div>
+<p class="muted">與教育心理學第 6 章的「增強與處罰」表是同一個概念，可以對照著看。</p>`},
+{h:'同時學習原則：主學習、副學習、附（輔）學習', b:`
+<p>美國教育家<mark>克伯屈</mark>倡導：學習不是單獨的，而是複雜的整體活動。學生在同一時間內能學到三項：</p>
+<div class="tbl"><table>
+<tr><th>類型</th><th>內容</th><th>講義例（鴉片戰爭）</th></tr>
+<tr><td><mark>主學習</mark></td><td>教學要達到的行為目標</td><td>瞭解戰爭發生的原因、經過、結果</td></tr>
+<tr><td><mark>副學習</mark></td><td>與主學習有關的概念</td><td>瞭解中英地理關係、吸食鴉片有害健康</td></tr>
+<tr><td><mark>附（輔）學習</mark></td><td>進行學習時培養的情意態度</td><td>激起愛國情操、發憤圖強</td></tr>
+</table></div>`}
+],
+quiz:[
+['十二年國教核心素養的三面向是？',['自主行動、溝通互動、社會參與','認知、技能、情意','知識、能力、態度','自主學習、合作學習、創新學習'],'三面九項，每面向 3 項。'],
+['「系統思考與解決問題」屬於哪一個面向？',['自主行動','溝通互動','社會參與','情意態度'],'(1)(2)(3) 屬於自主行動。'],
+['「人際關係與團隊合作」屬於哪一個面向？',['社會參與','溝通互動','自主行動','認知發展'],'(7)(8)(9) 屬於社會參與。'],
+['「科技資訊與媒體素養」屬於哪一個面向？',['溝通互動','自主行動','社會參與','技能面向'],'(4)(5)(6) 屬於溝通互動。'],
+['戴爾經驗金字塔共有幾層？最抽象的一層是？',['十層，口述符號','十層，直接經驗','七層，視覺符號','七層，口述符號'],'由具體到抽象共十層，最頂層是口述符號。'],
+['學習金字塔中，保留比率最高（90%）的是？',['教他人／立即運用','實作演練','參與小組討論','閱讀'],'教他人或立即運用 90%，實作演練 75%。'],
+['學習金字塔中，「聽講」的學習保留比率是？',['5%','10%','20%','30%'],'5、10、20、30 屬被動學習。'],
+['關於學習金字塔的迷思，下列何者正確？',['戴爾原本的經驗金字塔並沒有保留比率數字，數字是後來添加的','戴爾的經驗金字塔原本就有精確的保留比率','聽講和閱讀的學習效果一定很差','被動學習的層級不能轉變成主動學習'],'講義指出迷思所在，並提醒被動層級也可以轉成主動學習。'],
+['直接教學七步驟中，「引導練習」之後的步驟是？',['回饋與訂正','獨立練習','呈現新教材','每日複習'],'順序：每日複習 → 陳述目標 → 呈現新教材 → 引導練習 → 回饋與訂正 → 獨立練習 → 每週每月複習。'],
+['下列何者較適合使用直接教學？',['要把基礎教材有組織地傳遞給學生時','要培養學生態度與價值觀時','要學生自行探究並歸納結論時','要進行高層次問題探究時'],'直接教學適合基礎、低層次、需精熟的學習。'],
+['下列何者「不是」Borich 的間接教學策略？',['教師逐步示範','概念探究活動','學生自我評鑑','小組討論活動'],'逐步示範屬於直接教學。'],
+['認知高層次學習與態度、行為的養成，研究顯示哪種教學較有效？',['間接教學','直接教學','兩者完全相同','都沒有效果'],'低層次認知用直接教學便利省時，高層次與態度行為用間接教學較有效。'],
+['教學「方法」比教學「策略」多的內涵是？',['有明確且固定的教學步驟貫串整個單元','只在單一節課使用','不需要事前準備','不考慮學習目標'],'方法有固定步驟，且步驟中有特定的要素、機制及準備。'],
+['學生對某科目有持續學習的內在心理驅力，是哪一項教學原則？',['興趣原則','熟練原則','類化原則','社會化原則'],'興趣原則是內在心理驅力。'],
+['教師每週寫教學札記，據此省思並調整教學，屬於哪一項教學原則？',['紀錄與反省原則','個別適應原則','增強原則','準備原則'],'紀錄與反省原則要求保存教學資源、做札記。'],
+['按表 2-3，「取消嫌惡的增強物」針對好行為，屬於？',['負增強','正增強','懲罰','隔離'],'取消嫌惡 + 好行為 = 負增強。'],
+['學鴉片戰爭時激起學生的愛國情操，在克伯屈的同時學習原則中屬於？',['附（輔）學習','主學習','副學習','熟練學習'],'情意態度屬於附（輔）學習；了解原因經過結果才是主學習。']
+]
+},
+{
+id:'t3', no:'3', title:'教學目標', src:'第03章教學目標 (無題版).pptx',
+sections:[
+{h:'教學基本模式與學習結果', b:`
+<p><b>Glaser（1962）一般教學模式</b>：教學目標 → 起點行為 → 教學過程 → 評鑑，並有<mark>回饋循環線</mark>。</p>
+<p><b>學習結果</b>是教師教學後，學生應獲得的表現。<mark>教學目標是教師的觀點，學習結果是學生的觀點</mark>。教師的教學目標要根據學生的學習結果來思考。</p>`},
+{h:'蓋聶（Gagné）五大類學習結果', b:`
+<div class="tbl"><table>
+<tr><th>類別</th><th>說明</th><th>舉例</th></tr>
+<tr><td><mark>心智技能</mark></td><td>knowing how，知道「如何」去做</td><td>知道如何操作收銀機</td></tr>
+<tr><td><mark>語文知識（訊息）</mark></td><td>knowing what，能知道事物並能陳述</td><td>說出機器學習理論的意義</td></tr>
+<tr><td><mark>認知策略</mark></td><td>管理自我學習、記憶、思考的方法</td><td>用心智圖統整所知</td></tr>
+<tr><td><mark>動作技能</mark></td><td>表現或執行動作的能力</td><td>操作堆高機</td></tr>
+<tr><td><mark>態度</mark></td><td>影響個人行動的內在心理狀況（信念、情緒、價值）</td><td>親切接待客人</td></tr>
+</table></div>
+<p class="muted">講義的「教學活動六要素」圖：教學目標、教學內容、教學方法、教師、教學環境，加上主動學習的學習者。</p>`},
+{h:'三大領域與各領域層次', b:`
+<p>教學目標分三大領域：<mark>認知（Bloom）、技能（Simpson）、情意（Krathwohl）</mark>。</p>
+<div class="tbl"><table>
+<tr><th>領域</th><th>層次（由低到高）</th></tr>
+<tr><td>認知</td><td>記憶（知識）→ 瞭解 → 應用 → 分析 → 評鑑 → 創造</td></tr>
+<tr><td>情意</td><td>接受 → 反應 → 價值評定 → 組織 → 形成品格</td></tr>
+<tr><td>技能</td><td>知覺 → 準備狀況（心向）→ 引導反應（模仿）→ 機械化 → 複雜反應 → 調適 → 創新（創作）</td></tr>
+</table></div>
+<div class="tip"><b>記法</b>認知 6 層、情意 5 層、技能 7 層。</div>`},
+{h:'認知領域一：知識向度（4 類）', b:`
+<p>2001 年 Anderson 與 Krathwohl 把認知領域目標分成兩向度：<mark>知識向度</mark>與<mark>認知歷程向度</mark>。</p>
+<div class="tbl"><table>
+<tr><th>知識類型</th><th>子類</th><th>例子</th></tr>
+<tr><td><mark>事實知識</mark><br>學科基本元素</td><td>術語知識；特定細節和事件的知識</td><td>各學科術語與符號；甲午戰爭</td></tr>
+<tr><td><mark>概念知識</mark><br>類別、分類及其關係</td><td>分類和類別；原則和概括化；理論、模式及結構</td><td>熱帶、溫帶、寒帶；海拔越高溫度越低；畢氏定理</td></tr>
+<tr><td><mark>程序知識</mark><br>知道如何做某事</td><td>學科技能和演算；學科技術和方法；決定規準的知識</td><td>主持班會；專題探討的方法；以何標準提出衝突解決策略</td></tr>
+<tr><td><mark>後設認知知識</mark><br>對認知的覺察</td><td>策略知識；認知任務知識；自我知識</td><td>用複習技巧保留訊息；知道回憶比再認需要更多記憶；知道自己擅長 A 不擅長 B</td></tr>
+</table></div>`},
+{h:'認知領域二：認知歷程向度（6 層）', b:`
+<div class="tbl"><table>
+<tr><th>層次</th><th>意義</th><th>子類</th></tr>
+<tr><td>1 記憶</td><td>從長期記憶提取知識</td><td>再認、回憶</td></tr>
+<tr><td>2 瞭解</td><td>從教學訊息建構意義</td><td>詮釋、舉例、分類、摘要、推論、比較、解釋（7 類）</td></tr>
+<tr><td>3 應用</td><td>運用程序執行練習或解決問題</td><td>執行（熟悉任務）、實施（不熟悉任務）</td></tr>
+<tr><td>4 分析</td><td>把整體分解成部分並指出關係</td><td>辨別、組織、歸因</td></tr>
+<tr><td>5 評鑑</td><td>根據規準或標準作判斷</td><td>檢查（內部一致性）、批判（外部標準）</td></tr>
+<tr><td>6 創造</td><td>把元素組裝成有功能的整體</td><td>產生、計畫、製作</td></tr>
+</table></div>
+<div class="ex"><b>例子</b><br>・再認：選擇題中找出正確答案。回憶：沒有選項，依提示寫出答案。<br>・實施：遇到沒做過的題型，自己選擇合適的公式。<br>・歸因：看一篇新聞，指出作者的立場與偏見。<br>・檢查 vs 批判：檢查論證有沒有邏輯矛盾（內部）；依社會標準評斷政策好壞（外部）。</div>`},
+{h:'二維分類表與動詞示例（表 3-1）', b:`
+<p>新版（2001）教育目標二維分類，格內為各知識向度在各認知歷程層次的用詞（動詞）示例：</p>
+<div class="tbl"><table>
+<tr><th>知識向度＼歷程</th><th>記憶</th><th>瞭解</th><th>應用</th><th>分析</th><th>評鑑</th><th>創造</th></tr>
+<tr><th>事實知識</th><td>列出</td><td>摘要</td><td>分類</td><td>順序</td><td>排序</td><td>組合</td></tr>
+<tr><th>概念知識</th><td>描述</td><td>說明</td><td>實驗</td><td>解釋</td><td>評估</td><td>計畫</td></tr>
+<tr><th>程序知識</th><td>列表</td><td>預測</td><td>計算</td><td>分辨</td><td>結論</td><td>組成</td></tr>
+<tr><th>後設認知知識</th><td>使用</td><td>執行</td><td>建構</td><td>達成</td><td>行動</td><td>實踐</td></tr>
+</table></div>
+<p class="muted">這張表在考試中比較少直接考細節，重點是理解「縱軸＝知識向度、橫軸＝認知歷程」的二維結構。</p>`},
+{h:'技能領域：Simpson 七層次', b:`
+<div class="tbl"><table>
+<tr><th>層次</th><th>說明</th></tr>
+<tr><td>1 知覺</td><td>藉感官注意到事物及其性質（感官刺激、提示的選擇、轉換）</td></tr>
+<tr><td>2 準備狀況（心向）</td><td>對特定活動有初步適應（心理、身體、情緒的準備）</td></tr>
+<tr><td>3 引導反應</td><td>在教學者指導下表現明顯動作：<mark>模倣</mark>（依示範分段完成）、<mark>嘗試錯誤</mark></td></tr>
+<tr><td>4 機械化</td><td>技能反應已成習慣（偏向單一技能）</td></tr>
+<tr><td>5 複雜反應</td><td>技能已熟練（偏向整套技能）：解決模糊的順序、自動的行為表現</td></tr>
+<tr><td>6 調適</td><td>能改變動作技巧以應付新情境（接近專家）</td></tr>
+<tr><td>7 創新</td><td>對專精技能發展出悟性，產生新動作或設計一套技能表現（專家）</td></tr>
+</table></div>
+<div class="ex"><b>例子（學打字）</b>知覺：看到鍵盤位置 → 準備：坐好、手放定位 → 引導反應：跟著老師一個字一個字打 → 機械化：不看鍵盤也能打 → 複雜反應：流暢打完整篇 → 調適：能用不同鍵盤與輸入法 → 創新：自創更快的打字方式。</div>`},
+{h:'情意領域：Krathwohl 五層次', b:`
+<div class="tbl"><table>
+<tr><th>層次</th><th>子層次</th></tr>
+<tr><td>1 接受（注意）</td><td>覺知；願意接受（保持中立、忍受不排斥）；控制的或選擇的注意</td></tr>
+<tr><td>2 反應</td><td><mark>勉強反應</mark>（順從師長）→ <mark>願意反應</mark>（自願學習）→ <mark>樂意反應</mark>（伴隨滿足）</td></tr>
+<tr><td>3 價值評定</td><td>價值的接受 → 價值的偏愛 → 堅信（確信）</td></tr>
+<tr><td>4 組織</td><td>價值概念的建立；價值體系的組織</td></tr>
+<tr><td>5 形成品格</td><td>一般的態度；品格的形成（建立自己的人生觀）</td></tr>
+</table></div>
+<div class="ex"><b>例子（環保）</b>接受：知道有垃圾分類這回事 → 反應：被老師要求才分類（勉強）→ 自己會主動分類（願意）→ 分類時感到開心（樂意）→ 價值評定：相信環保很重要 → 組織：與其他價值（便利、成本）取得平衡 → 形成品格：終身自然實踐環保。</div>`},
+{h:'單元目標 vs. 行為目標', b:`
+<div class="tbl"><table>
+<tr><th></th><th>單元目標</th><th>行為目標（具體目標）</th></tr>
+<tr><td>層次</td><td>較高</td><td>較低</td></tr>
+<tr><td>範圍</td><td>涵蓋範圍大</td><td>範圍小</td></tr>
+<tr><td>抽象性</td><td>高</td><td>低或非常具體</td></tr>
+<tr><td>是否告知學生</td><td><mark>可告知或提示學生</mark></td><td><mark>不必告知學生</mark></td></tr>
+</table></div>
+<p><b>單元目標</b>是每單元（課）教學要達成方向的敘述，例如「瞭解詩句運用的寫作技巧與趣味性」。可依認知、技能、情意分別列出，或依單元內容順序列出。</p>
+<div class="ex"><b>例子</b>單元目標：「認識葉子外型的特徵」→ 行為目標：「1-1 能比較植物不同葉形；1-2 能辨別平行脈和網狀脈」。</div>`},
+{h:'行為目標的敘寫：五要素與三要素', b:`
+<p><b>五要素</b>：<mark>對象、行為、結果、情境、標準</mark>。</p>
+<div class="ex"><b>例子</b>「學生（對象）能利用字典（情境）查出（行為）正確的（標準）生字字義（結果）。」</div>
+<p><b>簡化為三要素</b>：<mark>行為、結果、標準</mark>。例：能［列舉］［5 種以上］［投資方式］。</p>
+<p><b>功能</b>：有助於教師教學的精緻性與邏輯性；精簡提示學生的學習表現。</p>
+<div class="tip"><b>寫作提醒</b>行為要「可觀察」，所以用「列舉、說出、比較、辨別」，避免「瞭解、知道」這種看不出來的動詞。</div>`},
+{h:'能力指標與學習重點分析', b:`
+<ul>
+<li><b>能力指標（九年一貫）</b>：把能力指標分析成較小的目標。例：「5-3-3 瞭解各種角色的特徵、變遷及角色間的互動關係」可分析成五個教學目標（行業特徵與貢獻、角色發展、角色改變與多重角色、角色互動與互補、平等對待各行業的人）。</li>
+<li><b>學習重點（十二年課綱）</b> = <mark>學習表現 ＋ 學習內容</mark>。
+<ul><li>學習表現與能力指標類似，也能分析。例：「2a-Ⅱ-2 表達對居住地方社會事物與環境的關懷」可分析成四個單元層次的目標。</li>
+<li>學習內容在形式上加上動詞，可視為學習表現的呈現方式。例：「INb-Ⅱ-6 常見植物的外部形態…」（加上「瞭解」）可分析成四個單元目標，再拆成行為目標。</li></ul></li>
+<li>師資生要能解讀<mark>課程綱要的能力指標、領域核心素養和學習表現</mark>。</li>
+</ul>
+<div class="tbl"><table>
+<tr><th>單元目標</th><th>行為目標</th></tr>
+<tr><td>1 認識葉子外型的特徵</td><td>1-1 能比較植物不同葉形；1-2 能辨別平行脈和網狀脈</td></tr>
+<tr><td>2 瞭解根、莖構造與形態</td><td>2-1 能列出根、莖的不同形態並舉例；2-2 能說出根、莖的功能</td></tr>
+<tr><td>3 認識花、果實、種子的構造</td><td>3-1 能說出花的組成；3-2 能說出花、果實、種子的關聯性</td></tr>
+<tr><td>4 認識並愛護校園植物</td><td>4-1 能說出校園五種以上植物名稱及外部特徵；4-2 能欣賞並愛護校園植物</td></tr>
+</table></div>
+<p class="muted">講義作業：自己專精領域的國中學科內容，寫兩則具體目標，一則包含三要素，一則包含五要素。</p>`}
+],
+quiz:[
+['「知道如何操作收銀機」屬於蓋聶的哪一類學習結果？',['心智技能','語文知識','動作技能','態度'],'心智技能是 knowing how。'],
+['「能說出機器學習理論的意義」屬於蓋聶的哪一類學習結果？',['語文知識','心智技能','認知策略','動作技能'],'語文知識是 knowing what，能知道並陳述。'],
+['學員用心智圖幫助自己統整所知，屬於？',['認知策略','心智技能','語文知識','態度'],'認知策略是管理自我學習、記憶與思考的方法。'],
+['「親切接待客人」屬於蓋聶的哪一類學習結果？',['態度','動作技能','心智技能','認知策略'],'態度包括信念、情緒、價值等內在心理狀況。'],
+['下列敘述何者正確？',['教學目標是教師的觀點，學習結果是學生的觀點','教學目標是學生的觀點，學習結果是教師的觀點','兩者都是學生的觀點','兩者完全沒有關係'],'教師的教學目標要根據學生的學習結果來思考。'],
+['教學目標分類中，技能領域的七層次是誰提出的？',['Simpson','Bloom','Krathwohl','Gagné'],'認知 Bloom、情意 Krathwohl、技能 Simpson。'],
+['2001 年修訂版把認知領域分成哪兩個向度？',['知識向度與認知歷程向度','認知向度與情意向度','事實向度與概念向度','記憶向度與創造向度'],'知識向度四類，認知歷程向度六層。'],
+['下列何者「不是」知識向度的四類之一？',['情意知識','事實知識','概念知識','後設認知知識'],'四類為事實、概念、程序、後設認知知識。'],
+['「海拔越高溫度越低」屬於哪一類知識？',['概念知識（原則和概括化）','事實知識','程序知識','後設認知知識'],'兩個概念之間的關係，屬概念知識中的原則和概括化。'],
+['「知道如何主持班會」屬於哪一類知識？',['程序知識','事實知識','概念知識','後設認知知識'],'程序知識是知道如何做某事。'],
+['「知道自己擅長 A 領域而非 B 領域」屬於？',['後設認知知識（自我知識）','事實知識','概念知識','程序知識'],'後設認知知識包括策略知識、認知任務知識、自我知識。'],
+['認知歷程中，「根據規準或標準作判斷」屬於哪一層？',['評鑑','分析','應用','創造'],'評鑑包括檢查與批判。'],
+['從幾個選項中找出符合的答案，屬於記憶層次中的？',['再認','回憶','推論','實施'],'再認是搜尋長期記憶找出符合所呈現資訊的知識；回憶則是由提示自行提取。'],
+['對一個概念能舉出特定範例，屬於瞭解層次中的？',['舉例','詮釋','摘要','比較'],'瞭解有詮釋、舉例、分類、摘要、推論、比較、解釋七類。'],
+['依示範動作分段逐一完成，進而做出整體動作，屬於 Simpson 的哪一層？',['引導反應（模倣）','機械化','複雜反應','知覺'],'引導反應包括模倣與嘗試錯誤。'],
+['所學技能已經成為習慣，偏向單一技能，屬於 Simpson 的？',['機械化','引導反應','調適','創新'],'機械化指技能反應已成習慣；複雜反應偏向整套技能。'],
+['學生「順從師長或父母」而學習，屬於情意領域的？',['反應層次中的勉強反應','接受層次中的覺知','價值評定中的堅信','組織層次'],'勉強反應是被動地順從；願意反應則是自願學習。'],
+['下列何者是「行為目標」相較於「單元目標」的特點？',['抽象性低、範圍小，不必告知學生','抽象性高、範圍大','層次較高，須告知學生','不可觀察'],'行為目標比較具體，範圍較小。'],
+['「學生能利用字典查出正確的生字字義」中，「利用字典」屬於行為目標五要素的？',['情境','對象','標準','結果'],'對象＝學生；情境＝利用字典；行為＝查出；標準＝正確的；結果＝生字字義。'],
+['十二年課綱的「學習重點」由哪兩者組成？',['學習表現與學習內容','能力指標與核心素養','單元目標與行為目標','知識向度與歷程向度'],'學習重點＝學習表現＋學習內容。']
+]
+},
+{
+id:'t4', no:'4', title:'教學設計', src:'第04章教學設計（無題版）.ppt',
+sections:[
+{h:'教學設計的必要性、定義與功能', b:`
+<p><b>必要性</b>：讓學生在有限時間內學習教材；教學過程預先構思，進行才順暢；有準備的教學帶來滿意結果；教學前充分準備是教師的專業責任。</p>
+<p><b>定義</b>：「對教學的整體思考規劃之歷程，衡量學習者的特性，依據課程綱要和表現指標擬定教學目標，分析教材內容，選擇教學方法和媒體，構思教學活動與學習評量，組織成有效引導學生學習之教學方案。」</p>
+<p><b>四個重點</b>：① 是一種歷程，也是結果（方案呈現）；② 要思考整體教學的要素；③ 要有系統的程序；④ 最終是要幫助學習者的學習。</p>
+<p><b>五項功能</b>：</p>
+<ol><li>指出教師教學的方向</li><li>為教師的教學作準備</li><li>為編製評量工具的依據</li><li>做為相關人員溝通的依據</li><li>作為學校教育的歷史文獻</li></ol>`},
+{h:'Glaser 基本教學模式', b:`
+<div class="flow"><span>教學目標</span><span>起點行為<small>準備度預估</small></span><span>教學程序</span><span>評鑑</span></div>
+<p>R. Glaser（1962）一般教學模式（GMI），特點是有<mark>回饋循環線</mark>：評鑑結果會回頭修正前面的步驟。</p>
+<div class="ex"><b>例子</b>期中考（評鑑）發現全班「因式分解」錯誤率高 → 回饋到教學程序，下次補救教學；也可能回頭檢查起點行為，原來學生的乘法公式根基不穩。</div>`},
+{h:'Kemp 教學設計模式（九要素）', b:`
+<p>Kemp 的模式有<mark>三個環形</mark>，內圈有<mark>九要素</mark>：</p>
+<div class="tbl"><table>
+<tr><th>#</th><th>要素</th><th>內容</th></tr>
+<tr><td>1</td><td>確認教學需求</td><td>評估學習需求、進行教學目標分析</td></tr>
+<tr><td>2</td><td>學習者特性</td><td>先備知識、特殊能力等</td></tr>
+<tr><td>3</td><td>任務分析</td><td>學科內容分析，確定主題內容</td></tr>
+<tr><td>4</td><td>教學目標</td><td>訂定明確、有條理層次的目標敘述</td></tr>
+<tr><td>5</td><td>內容順序</td><td>設計教學與學習活動的順序</td></tr>
+<tr><td>6</td><td>教學策略</td><td>設計教學的策略或方法</td></tr>
+<tr><td>7</td><td>訊息設計</td><td>教學內容如何有效傳遞（文字、圖片、影音）</td></tr>
+<tr><td>8</td><td>教學發展</td><td>開發指導的材料（教學與學習的指引）</td></tr>
+<tr><td>9</td><td>評量工具</td><td>知識測驗、技能測驗、態度評量</td></tr>
+</table></div>`},
+{h:'Dick-Carey 系統方法模式', b:`
+<p>此模式為<mark>線性歷程</mark>，並有回饋用來修正教學：</p>
+<ol>
+<li>確認教學目標（知識、技能、態度）</li>
+<li>執行教學分析（學習者應先具備的知識或任務）</li>
+<li>分析學習者與情境脈絡</li>
+<li>撰寫表現目標（判斷學習者表現的依據）</li>
+<li>發展評量工具（前測、後測、遷移練習）</li>
+<li>發展教學策略（準備活動、教材呈現、學習者參與、評量）</li>
+<li>發展與選擇教材</li>
+<li>設計與執行<mark>形成性評量</mark>（蒐集專家回饋）</li>
+<li><mark>修正教學</mark>（依回饋修正前面各項）</li>
+<li>設計與執行<mark>總結性評量</mark>（專家判斷＋影響）</li>
+</ol>
+<div class="tip"><b>注意</b>講義文字寫「九要素」，但實際列出的是 10 個步驟（含總結性評量）。看到題目時以選項為準，可用「前 9 個 + 總結性評量」來理解。</div>
+<p>Kemp 與 Dick-Carey 是範圍較廣且嚴謹的「<mark>教學系統設計</mark>」；班級教師的教學設計範圍較小（單元、課），<mark>聚焦在教學本身</mark>，不是整個教學系統。</p>`},
+{h:'教學設計的八項內容（一）學習者與教學分析', b:`
+<p>八項要素：① 學習者特性分析 ② 教學分析 ③ 教學目標分析 ④ 選擇與編輯教材 ⑤ 教學方法與策略 ⑥ 教學活動與流程 ⑦ 選擇教學媒體 ⑧ 教學評量。</p>
+<p><b>(一) 學習者特性分析</b>：</p>
+<ul><li><mark>課程經驗</mark>：在課程安排上，學生已經學會哪些教材內容。</li><li><mark>生活經驗</mark>：學生的生活背景與習慣、居住環境、社會經驗、經歷的事件。</li></ul>
+<p><b>(二) 教學分析</b>：</p>
+<ul><li><mark>教材性質</mark>：本單元教材的類別、重要性、難度。</li><li><mark>教學重點</mark>：本單元教材的主要內容，用條列式或架構圖呈現並輔以說明。</li></ul>
+<div class="ex"><b>例子</b>教「投資活動」：課程經驗＝學生已學過金錢與交易；生活經驗＝家裡有人買股票或自己有零用錢儲蓄的經驗。</div>`},
+{h:'八項內容（二）教學目標分析與課綱對應', b:`
+<ol>
+<li><b>確認單元目標</b></li>
+<li><b>分析第二層目標：行為目標</b>，拆成較細並形成有邏輯順序的關聯（表 4-1）。單元目標也可從認知、技能、情意三部分敘述（表 4-2）；內容範圍小的單元可用簡單條列（表 4-3），不一定要分兩層。<mark>情意目標可在學生獲得知識、技能學習的同時或之後進行引導</mark>。</li>
+<li><b>對應領綱學習重點與核心素養</b>（以「投資活動」為例）：
+<ul>
+<li>學習內容：Aa-Ⅲ-1（價值觀影響金錢與時間運用的選擇）、Da-Ⅲ-1（依價值觀選擇須評估風險與結果，承擔責任）</li>
+<li>學習表現：2c-Ⅲ-1（反省自己的價值觀，思考其重要性並加以調整）</li>
+<li>核心素養：社-J-A2、社-J-B1、社-J-B2</li>
+</ul></li>
+</ol>`},
+{h:'八項內容（三）教材、方法、活動流程', b:`
+<ul>
+<li><b>(四) 選擇與編輯教材</b>：教科書的教材；<mark>自編教材</mark>（依教師的學科教學專業能力與經驗編輯）。</li>
+<li><b>(五) 教學方法與策略</b>：依單元目標和教材性質，選擇方法、策略與技巧。</li>
+<li><b>(六) 教學活動與流程</b>：兩種導向。</li>
+</ul>
+<div class="tbl"><table>
+<tr><th></th><th>目標導向（具體而微）</th><th>建構導向（整體性引導）</th></tr>
+<tr><td>安排方式</td><td>依行為目標分析的順序，逐一思考教學活動</td><td>呈現問題及解題過程的反復歷程，有引導、討論、分享、歸納</td></tr>
+<tr><td>目標與活動</td><td>三種關係：<mark>多個目標對一個活動</mark>、<mark>一個目標多項活動</mark>、<mark>一個目標一個活動</mark></td><td>目標大都僅陳述<mark>單元目標</mark></td></tr>
+<tr><td>適合</td><td>一般知識技能</td><td>高層次原則及問題解決的學習</td></tr>
+</table></div>
+<p class="muted">目標與活動並非一對一關係，有時會分散或合併，原則上依單元教材順序或目標順序來安排流程。</p>`},
+{h:'八項內容（四）媒體與評量', b:`
+<ul>
+<li><b>(七) 選擇教學媒體</b>：有些內容只靠文字或圖片難以了解，必須輔以影片，例如介紹<mark>蜜蜂 8 字舞</mark>。必要時教師自行蒐集或設計。</li>
+<li><b>(八) 教學評量</b>：原則上在<mark>行為目標的敘述中加上「標準」</mark>即可。</li>
+</ul>
+<div class="ex"><b>例子</b>行為目標：「1-2 能列舉投資方式的種類」→ 評量敘述：「能列舉 7 種以上投資方式」（省略「學生」）。</div>`},
+{h:'教學設計的格式', b:`
+<p>完整的教學設計＝<mark>基本資料</mark> ＋ <mark>教學設計內容</mark>（表 4-4）。</p>
+<ul>
+<li><b>基本資料</b>：學校名稱、學年度、標題；領域／科目、單元名稱、教學節數、教材來源；教學年級、設計／教學者及設計日期。</li>
+<li><b>教學設計內容</b>：
+<ul><li>教學分析：教材性質、單元重點、教學方法、學習者分析（學生經驗）</li>
+<li>對應課綱：領域核心素養、學習重點、融入議題、與其他領域（科目）的聯結</li>
+<li>教學目標：單元目標與行為目標</li>
+<li>教學流程、目標、時間預估（分配）、教學媒體、評量</li></ul></li>
+</ul>
+<p class="muted">教案格式範例包括跨領域教學（國文科＋輔導科），其他領域填寫方式相同，具體目標需對應相同個數的核心素養代碼。</p>`},
+{h:'詳案設計與簡案設計', b:`
+<div class="tbl"><table>
+<tr><th></th><th>詳案設計</th><th>簡案設計</th></tr>
+<tr><td>內容</td><td>師生在課程中的活動及問答內容<mark>完整寫出</mark>，使所有人皆能如法炮製</td><td>只呈現<mark>主要內容項目</mark>，部分流程僅有簡略名稱或說明</td></tr>
+<tr><td>運用情境</td><td>① <mark>師資培育階段的職前教育課程</mark>；② 初次進行學科或單元教學；③ 教學觀摩；④ 教師共同備課</td><td>① 學科單元的教學演示（觀課那一節詳細，其他節簡案）；② 自訂主題的觀課；③ 非教學專業者的主題教學</td></tr>
+<tr><td>示例</td><td>國小社會五下「投資活動」（表 4-5）</td><td>表 4-6、4-7、4-8</td></tr>
+</table></div>
+<div class="ex"><b>例子</b>你在師培課程交的試教教案，需要寫出老師說什麼、學生可能怎麼回答 → 詳案。到學校觀課時，只列出流程與重點 → 簡案。</div>`},
+{h:'十九項議題', b:`
+<p>教案格式中要註明可融入的議題，共十九項（資料來源：國教院《議題融入說明手冊》）：</p>
+<div class="tbl"><table>
+<tr><th>議題</th><th>學習目標關鍵</th></tr>
+<tr><td>性別平等教育</td><td>理解性別多樣性；建立性別平等價值；消除偏見與歧視</td></tr>
+<tr><td>人權教育</td><td>了解人權事實與價值；尊重並實踐人權</td></tr>
+<tr><td>環境教育</td><td>理解環境危機與挑戰；執行綠色、簡樸、永續的生活行動</td></tr>
+<tr><td>海洋教育</td><td>親海、愛海、知海</td></tr>
+<tr><td>品德教育</td><td>增進道德發展知能；養成知善、樂善、行善的素養</td></tr>
+<tr><td>生命教育</td><td>探索生命根本課題；提升價值思辨；知行合一</td></tr>
+<tr><td>法治教育</td><td>理解法律與法治；追求人權保障與公平正義</td></tr>
+<tr><td>科技教育</td><td>科技哲學觀與文化素養；科技設計與產品使用技能</td></tr>
+<tr><td>資訊教育</td><td>善用資訊解決問題；運算思維；資訊社會的態度與責任</td></tr>
+<tr><td>能源教育</td><td>能源基本概念；正確能源價值觀；節約能源習慣</td></tr>
+<tr><td>安全教育</td><td>建立安全意識；防範事故傷害</td></tr>
+<tr><td>防災教育</td><td>認識天然災害成因；災害風險管理與防救能力</td></tr>
+<tr><td>生涯規劃教育</td><td>了解個人特質、興趣與工作環境；養成生涯規劃知能</td></tr>
+<tr><td>家庭教育</td><td>探究家庭發展與資源管理；提升家庭生活品質</td></tr>
+<tr><td>閱讀素養教育</td><td>運用文本思考、解決問題與建構知識；樂於閱讀</td></tr>
+<tr><td>戶外教育</td><td>與環境連接；社會覺知與互動；涵養健康身心</td></tr>
+<tr><td>多元文化教育</td><td>認識文化多樣性；尊重差異與追求實質平等</td></tr>
+<tr><td>國際教育</td><td>參與國際活動的知能；跨文化觀察與反思</td></tr>
+<tr><td>原住民族教育</td><td>認識原住民族歷史文化；跨族群理解與尊重</td></tr>
+</table></div>
+<p class="muted">講義練習活動：依取得教師證書的領域專長，選一個單元，參考教科書和教師手冊，依教案格式設計 3～4 節的教學活動（教案）。</p>`}
+],
+quiz:[
+['依講義，教學設計「不是」下列何者的功能？',['保證學生一定通過考試','指出教師教學的方向','為編製評量工具的依據','做為相關人員溝通的依據'],'五項功能：方向、準備、評量依據、溝通依據、歷史文獻。'],
+['Glaser 基本教學模式包含的步驟是？',['教學目標、起點行為、教學程序、評鑑','學習者、教材、方法、評量','準備、呈現、比較、類化','提問、想像、行動、評價'],'並有回饋循環線。'],
+['Kemp 教學設計模式的特色是？',['三個環形，內圈有九要素','線性歷程，共十個步驟','只有四個要素','以評量為唯一起點'],'Dick-Carey 才是線性歷程。'],
+['下列何者是 Kemp 模式九要素之一？',['訊息設計','總結性評量','撰寫表現目標','修正教學'],'訊息設計是指教學內容如何有效傳遞給學習者；其他三項屬於 Dick-Carey 模式。'],
+['Dick-Carey 系統方法模式的特點是？',['線性歷程，並有回饋以修正教學','環形結構，沒有評量','以教師講述為中心','只適用單一節課'],'包含形成性評量與總結性評量。'],
+['Dick-Carey 模式中，依回饋資料修正教學分析、表現目標、評量工具等的是哪一步？',['修正教學','形成性評量','總結性評量','發展教學策略'],'「修正教學」依形成性評量的回饋進行。'],
+['班級教師單元或課的教學設計，與 Kemp、Dick-Carey 模式相比，範圍是？',['較小，聚焦在教學本身','較大，涵蓋整個教學系統','完全相同','不需考慮評量'],'Kemp、Dick-Carey 是範圍較廣且嚴謹的教學系統設計。'],
+['「學習者特性分析」包含哪兩項？',['課程經驗與生活經驗','教材性質與教學重點','單元目標與行為目標','教學媒體與評量'],'課程經驗指已學會的教材內容；生活經驗指生活背景、習慣、社會經驗等。'],
+['「教材性質」與「教學重點」屬於教學設計八項內容中的哪一項？',['教學分析','學習者特性分析','教學目標分析','教學評量'],'教學分析含教材性質與教學重點。'],
+['在教學流程設計中，「多個行為目標對一個教學活動」屬於哪一種導向？',['目標導向教學活動與流程','建構導向教學流程','完全不需考慮目標','只適用簡案'],'目標與活動有三種關係：多對一、一對多、一對一。'],
+['建構導向的教學流程通常適合？',['高層次原則及問題解決的學習','單純記憶學習','技能機械練習','不需要討論的學習'],'目標大都僅陳述單元目標。'],
+['將行為目標「能列舉投資方式的種類」轉成評量敘述，講義建議的做法是？',['在行為目標中加上「標準」，如「能列舉 7 種以上」','改成選擇題','直接省略評量','改成單元目標'],'評量敘述＝行為目標＋標準。'],
+['教師要介紹「蜜蜂 8 字舞」，只用文字圖片難以理解，最適合採取？',['選擇適當的教學媒體，如影片','刪除這個內容','全部改成口述','只讓學生背誦'],'選擇教學媒體需視教材性質與學習目標。'],
+['完整的教學設計包含哪兩大部分？',['基本資料與教學設計內容','學生名單與成績','教材與教具','評量與作業'],'基本資料含學校、年度、單元、節數、年級、設計者等。'],
+['教師共同備課時將教學思考形諸文字，形成的教案類型常是？',['詳案設計','簡案設計','不需教案','評量設計'],'詳案情境：職前教育、初次教學、教學觀摩、共同備課。'],
+['簡案設計常見的使用情境是？',['觀課時只列出主要內容項目的教學演示','師資培育階段的完整試教教案','初次教學一個單元','需要所有人能如法炮製的場合'],'簡案僅呈現主要內容項目，部分流程用簡略名稱。'],
+['「性別平等教育、人權教育、環境教育、海洋教育、品德教育」共同屬於？',['十九項議題','九項核心素養','三面向','十大基本能力'],'十九項議題包含這五項在內。']
+]
+},
+{
+id:'t5', no:'5-1', ch:'第 5-1 章', title:'概念教學', src:'第5-1章概念教學.pptx',
+sections:[
+{h:'概念的意涵與重要性', b:`
+<p><b>概念</b>：「以一概括性的名稱或符號，用以代表具有共同屬性的一類事物之全體。」如桌子、智力、三角形、愛情。兩個重點：</p>
+<ol><li>概念所包含的是<mark>某一類</mark>事物，而非不成類的單一物體或名稱。</li><li>同類事物的<mark>屬性</mark>是形成概念的關鍵。</li></ol>
+<p><b>重要性</b>：生活中有<mark>分類或區別事物</mark>與<mark>產生一組聯想</mark>的作用；概念是學習的基礎。</p>
+<p>蓋聶的心智技能層次：<mark>辨別 → 具體概念 → 定義概念（抽象概念）→ 原則 → 高層次原則（問題解決）</mark>。（講義註明實際為四個層次。）概念在此具有<mark>承上啟下</mark>的功能。</p>
+<div class="ex"><b>例子</b>「鳥」這個概念：把麻雀、老鷹、企鵝歸為同一類，是因為它們有共同屬性（羽毛、卵生…）；一聽到「鳥」就想到飛翔、鳥巢，是聯想作用。</div>`},
+{h:'概念的類別（一）複雜程度', b:`
+<div class="tbl"><table>
+<tr><th>類型</th><th>說明</th><th>例子</th></tr>
+<tr><td>簡單概念</td><td>單一屬性或單一類別</td><td>智力、時鐘、三角形</td></tr>
+<tr><td rowspan="4">複合概念</td><td><mark>連言概念</mark></td><td>「清官」</td></tr>
+<tr><td><mark>選言概念</mark></td><td>「好球」</td></tr>
+<tr><td><mark>條件概念</mark>（如果…就…）</td><td>「想上大學就得先參加大學甄選」；「你想當老師就得先修讀教育學程」</td></tr>
+<tr><td><mark>雙條件概念</mark>（互為因果）</td><td>「有興趣而讀書，因讀書而有興趣」</td></tr>
+</table></div>`},
+{h:'概念的類別（二）內涵與外延', b:`
+<div class="tbl"><table>
+<tr><th>分類</th><th>例子</th></tr>
+<tr><td>個體概念 vs 類概念</td><td>孔子 vs 先哲</td></tr>
+<tr><td>具體概念 vs 抽象概念</td><td>椅子 vs 舒適</td></tr>
+<tr><td>積極概念 vs 消極概念</td><td>認真 vs 不認真（懶惰）</td></tr>
+<tr><td>矛盾概念 vs 反對概念</td><td>矛盾：自相矛盾的「矛與盾」；反對：同一層次、分屬兩個極端、中間有程度差異，如善與惡</td></tr>
+<tr><td>相對概念 vs 絕對概念</td><td>上與下 vs 日、月</td></tr>
+<tr><td>同義概念 vs 歧義概念</td><td>文盲＝目不識丁 vs 民主</td></tr>
+<tr><td>屬概念 vs 種概念</td><td>屬（上位）：車輛；種（下位）：卡車</td></tr>
+</table></div>`},
+{h:'概念的定義', b:`
+<p>概念的定義大都是<mark>語意定義</mark>，包含三部分：被定義概念（被定義端）、下定義概念（定義端）、聯結詞。</p>
+<div class="tip"><b>公式</b>被定義端 ＝ 定義端（<mark>種差 ＋ 屬概念</mark>）。例：三角形是「三條直線構成的」（種差）「幾何圖形」（屬概念）。</div>
+<div class="tbl"><table>
+<tr><th>例</th><th>定義</th><th>被定義端與定義端</th><th>判斷</th></tr>
+<tr><td>1</td><td>三角形是<b>幾何圖形</b></td><td>被定義端 ＜ 定義端，外延擴大</td><td>錯誤定義</td></tr>
+<tr><td>2</td><td>三角形是<b>三個邊相等的</b>幾何圖形</td><td>被定義端 ＞ 定義端，外延縮小</td><td>錯誤定義</td></tr>
+<tr><td>3</td><td>三角形是<b>三條直線構成的</b>幾何圖形</td><td>被定義端 ＝ 定義端，外延相等</td><td>正確定義</td></tr>
+</table></div>
+<p><b>內涵與外延</b>：定義的<mark>內涵愈少，外延愈大</mark>；內涵愈多，外延（範圍）愈小。可用范氏圖表示。</p>`},
+{h:'概念教學法的兩種模式', b:`
+<p>概念教學是協助學生對特定事物或現象概念化，分為兩種：</p>
+<div class="two">
+<div><h4>演繹說明式</h4><p>先呈現<b>定義</b>，再舉例說明。</p></div>
+<div><h4>歸納發現式</h4><p>先呈現<b>正例與非正例</b>，再引導學生歸納出概念。</p></div>
+</div>
+<div class="tip"><b>記法</b>演繹＝從定義走向例子；歸納＝從例子走向定義。也稱「概念獲得教學法」。</div>`},
+{h:'演繹說明式的六步驟', b:`
+<ol>
+<li><b>選定學習目標</b>（例：社會科「角色內衝突」）</li>
+<li><b>列出概念的關鍵屬性</b>：一種角色要面對兩個以上的團體；兩個團體各有不同要求；兩個要求無法並存</li>
+<li><b>舉出正例</b>：教育局要求校長實施常態編班，家長會卻要求實施能力分班</li>
+<li><b>舉出對比的非正例</b>：李大年參加排球賽，同時又是裁判（這是兩個角色，不是一個角色）</li>
+<li><b>整理概念屬性</b>：再舉正反例讓學生討論</li>
+<li><b>評量與回饋</b>：學生練習舉出不同的正例</li>
+</ol>
+<div class="ex"><b>換個例子：「哺乳類」</b>① 目標：認識哺乳類 ② 屬性：胎生、哺乳、體溫恆定 ③ 正例：狗、鯨魚 ④ 非正例：鯊魚（長得像鯨魚但不是）⑤ 整理屬性 ⑥ 請學生再舉三個例子。</div>
+<div class="tip"><b>考古題特徵</b>「提示概念名稱、列出關鍵屬性、呈現正例與非正例、整理概念屬性、評量與回饋」→ 演繹說明式。</div>`},
+{h:'歸納發現式的七步驟', b:`
+<ol>
+<li><b>選定學習目標</b>：例如「矩形」，但<mark>不告訴學生概念名稱</mark>，只提示要認識一種圖形的概念</li>
+<li><b>提示正例與非正例</b>：同時呈現一正例一非正例，觀察差異（逐一隨機呈現，最後再全部呈現）</li>
+<li><b>詢問分類</b>：把全部正例與非正例一起呈現，請學生觀察差異並分類</li>
+<li><b>分析關鍵屬性</b>：引導歸納「四個邊」、「四個直角」、「兩雙對邊平行」</li>
+<li><b>概念名稱命名</b>：給共同屬性的圖形一個名稱──矩形</li>
+<li><b>歸納整理</b>：「矩形」為有四個角是直角的平行四邊形</li>
+<li><b>評量與回饋</b>：再舉出一些正例和非正例</li>
+</ol>
+<div class="tip"><b>考古題特徵</b>「呈現正例和非正例、詢問分類、詢問關鍵屬性、詢問名稱（概念）」→ 歸納發現式。</div>
+<div class="tbl"><table>
+<tr><th></th><th>演繹說明式</th><th>歸納發現式</th></tr>
+<tr><td>起點</td><td>先給概念名稱／定義與關鍵屬性</td><td>先給正例與非正例，名稱最後才命名</td></tr>
+<tr><td>學生角色</td><td>理解並應用</td><td>觀察、分類、歸納</td></tr>
+</table></div>`},
+{h:'問答題參考架構', b:`
+<p><b>題目</b>：請舉一實例說明「演繹說明式」或「歸納發現式」概念教學的教學過程。</p>
+<p class="muted">以下是依講義步驟整理的答題架構，可以換成自己任教科目的概念。</p>
+<div class="ex"><b>歸納發現式示範：「名詞」</b><br>1. 選定目標：認識「名詞」，先不說名稱。<br>2. 呈現正例（桌子、老師、台北）與非正例（跑、快樂地）。<br>3. 詢問分類：請學生分成兩組。<br>4. 分析關鍵屬性：正例都是「人、事、物、地的名稱」。<br>5. 命名：這類詞叫「名詞」。<br>6. 歸納定義：名詞是用來稱呼人、事、物、地的詞。<br>7. 評量回饋：請學生再各舉三個正例與非正例。</div>
+<p><b>結語</b>：概念是各學科的學習基礎，教師應引導學生獲得清晰的概念及概念之間的關聯；除能運用和舉例外，也要會「定義和陳述概念內涵」。</p>`}
+],
+quiz:[
+['【考古題】在概念獲得教學模式中，老師的教學過程為：提示概念名稱、列出關鍵屬性、呈現正例與非正例、整理概念屬性、評量與回饋。這是概念的何種教學模式？',['演繹說明式','演繹發現式','歸納說明式','歸納發現式'],'先給名稱與屬性，再舉例，是演繹說明式。'],
+['【考古題】下列哪種教學法是教師能定義一個概念，選擇概念所包含的屬性特徵，準備正反例和學生一起討論，促使學生能夠詳細定義概念、辨別屬性差異？',['概念獲得教學法','直接教學法','合作學習教學法','協同教學法'],'講義答案為概念獲得教學法。'],
+['【考古題】在概念獲得教學模式中，老師的教學過程為：呈現正例和非正例、詢問分類、詢問關鍵屬性、詢問名稱（概念）。這是何種教學模式？',['歸納發現式','演繹說明式','演繹發現式','歸納說明式'],'先給例子，最後才命名，是歸納發現式。'],
+['【考古題】「你想當老師就得先修讀教育學程」依邏輯語法屬於何種複合概念？',['條件概念','連言概念','選言概念','雙條件概念'],'「如果…就…」是條件概念。'],
+['【考古題・108-2 中學教檢】在臺灣自然環境單元中，丘老師將有惡地地形的縣市作為正例，將沒有該地形的縣市作為反例，讓學生找出正例環境的共同特徵。這是哪一種教學方法？',['概念獲得法','交互教學法','創造思考教學法','問題解決教學法'],'用正反例找共同屬性，是概念獲得法。'],
+['概念的定義有兩個重點，下列何者正確？',['代表某一類事物，且同類事物的屬性是形成概念的關鍵','代表單一物體，且與屬性無關','只要有名稱就是概念','概念只存在於數學科'],'概念是概括性的名稱或符號，代表具有共同屬性的一類事物之全體。'],
+['蓋聶的心智技能層次中，概念具有什麼功能？',['承上啟下','只是最後一層','與問題解決無關','只用於記憶'],'辨別 → 具體概念 → 定義概念 → 原則 → 高層次原則。'],
+['「有興趣而讀書，因讀書而有興趣」屬於？',['雙條件概念','連言概念','選言概念','條件概念'],'互為因果是雙條件概念。'],
+['「善」與「惡」兩個同一層次、分屬極端、中間有程度差異的概念，屬於？',['反對概念','矛盾概念','絕對概念','同義概念'],'反對概念中間有不同程度的差異。'],
+['「車輛」與「卡車」的關係是？',['屬概念（上位）與種概念（下位）','個體概念與類概念','積極概念與消極概念','相對概念與絕對概念'],'車輛是上位的屬概念，卡車是下位的種概念。'],
+['被定義端＝定義端（？＋？）',['種差＋屬概念','內涵＋外延','正例＋非正例','屬性＋名稱'],'例：三角形是三條直線構成的（種差）幾何圖形（屬概念）。'],
+['「三角形是幾何圖形」這個定義的問題是？',['定義端範圍太大，外延擴大，是錯誤定義','定義端範圍太小','完全正確','與外延無關'],'被定義端＜定義端，外延擴大。'],
+['一個概念定義的內涵愈多，其外延會？',['愈小','愈大','不變','無法判斷'],'內涵與外延成反比。'],
+['歸納發現式的特點是？',['先給正例與非正例，最後才命名並歸納定義','先給定義再舉例','不需要例子','學生不需要分類'],'歸納發現式從例子走向定義。'],
+['在「角色內衝突」的演繹說明式教學中，下列何者是「對比的非正例」？',['李大年參加排球賽又擔任裁判','教育局要求常態編班而家長會要求能力分班','校長面對兩個團體不同要求','要求無法並存'],'李大年是兩個角色，不是一個角色面對兩個團體，因此是非正例。']
+]
+},
+{
+id:'t6', no:'5-2', ch:'第 5-2 章', title:'問題解決教學', src:'第5-2章問題解決.pptx',
+sections:[
+{h:'問題本位 PBL 與專題本位 PjBL', b:`
+<div class="tbl"><table>
+<tr><th></th><th>問題本位學習（problem-based）</th><th>專題本位學習（project-based）</th></tr>
+<tr><td>重點</td><td>學習<mark>面對及處理問題</mark></td><td>以專案方式<mark>調查及闡釋實際問題</mark>，並產出解決方案</td></tr>
+<tr><td>起源</td><td>1960 年代中期由加拿大醫學教育學者發展；醫學生若只靠背誦，無法在醫療現場正確判斷</td><td>常用於中小學科展、高中探究與實作課程</td></tr>
+</table></div>
+<p>問題解決教學有時稱「問題本位學習（PBL）」──<b>學生觀點</b>；或「問題本位教學（PBT）」──<b>教師觀點</b>。</p>
+<div class="ex"><b>例子</b>「如何降低學校周邊噪音？」學生要調查、討論、提出方案 → 問題解決；若最後還要做成海報、辦成果發表並公開 → 偏向專題本位。</div>`},
+{h:'問題解決教學的意義與 PBL 理論基礎', b:`
+<p><b>意義</b>：教師引導學生探索學科與真實世界，運用系統的步驟發掘問題，形成假設及解決計畫，統整有關學科知識與技能，循序漸進以解決問題。PBL 是<mark>以學生為中心</mark>的教學法。</p>
+<p><b>PBL 的理論基礎</b>：</p>
+<ol>
+<li><mark>杜威的實用主義哲學</mark>：教育即生活</li>
+<li><mark>建構主義的學習觀</mark>：學習者是主動的，知識由個人認知建構</li>
+<li><mark>訊息處理論</mark>：人是訊息處理者，主動取、換、存、用訊息</li>
+<li><mark>後設認知論</mark>：對自己認知歷程的掌握、控制、監督與評鑑</li>
+<li><mark>情境學習論</mark>：學習發生於情境脈絡中</li>
+</ol>
+<div class="tip"><b>注意</b>講義說「理論基礎可概分為六種」，但實際列出五種，作答時以這五種為主。</div>`},
+{h:'Gold Standard PBL：專題設計七大準則', b:`
+<p>《為專題式學習設下標準》（Setting the Standard for Project Based Learning）提出：</p>
+<div class="tbl"><table>
+<tr><th>準則</th><th>內容</th></tr>
+<tr><td>有挑戰性的問題</td><td>由有意義、待解決、難度適中的問題驅動</td></tr>
+<tr><td>持續探究</td><td>學生提問、找資源、應用資訊，投入嚴謹且不停延伸的探究</td></tr>
+<tr><td>真實性</td><td>與現實世界的情境、任務、工具、品質標準、影響力有連結，或與學生興趣相關</td></tr>
+<tr><td>學生的聲音</td><td>學生對專題有決定權（怎麼做、做什麼）</td></tr>
+<tr><td>反思</td><td>師生反思學習、專題效用、作品品質、障礙與克服策略</td></tr>
+<tr><td>批評與修正</td><td>學生互相給予與接收回饋，用以改善歷程與作品</td></tr>
+<tr><td>公開作品</td><td>公開發表與解說，對象不限於教室內</td></tr>
+</table></div>
+<p class="muted">講義案例：自然浮力題 vs 造船划船、熱對流知識 vs 窯烤技巧；PBLWorks「小屋計畫」（Tiny House Project）。</p>`},
+{h:'問題的來源', b:`
+<ul>
+<li>學生在<mark>真實生活</mark>中有興趣或遭遇到的問題（比較實際）。</li>
+<li><mark>教師特意拋出</mark>來的問題。</li>
+</ul>
+<p><b>教師選擇問題應考慮的五個條件</b>：</p>
+<ol><li>這個問題對課程而言適切嗎？</li><li>學生具備相關的知識與技能嗎？</li><li>所需的材料可以找得到嗎？</li><li>能夠在限定的時間內完成嗎？</li><li>需要特殊的設備和空間嗎？</li></ol>
+<div class="ex"><b>講義例</b>自然科學：「如何製作水火箭並比較誰的飛行最高？」社會科學：「為何鄉民不行使他們的選舉權？」</div>`},
+{h:'杜威的五步驟與本書的六步驟', b:`
+<p><b>杜威《思維術》</b>解決問題五步驟：</p>
+<div class="flow"><span>遭遇困難或問題</span><span>認定和界定問題</span><span>提出可能的解決方案（假設）</span><span>選擇合理的解決方案</span><span>驗證假設而成立結論</span></div>
+<p><b>本書歸納適合中小學的六步驟</b>：</p>
+<div class="flow"><span>提出問題或遭遇困難</span><span>分析並界定問題</span><span>提出解決途徑或假設</span><span>解決問題或蒐集資訊</span><span>歸納與驗證假設</span><span>發表結果</span></div>`},
+{h:'六步驟實例：製作水火箭', b:`
+<div class="tbl"><table>
+<tr><th>步驟</th><th>水火箭範例</th></tr>
+<tr><td>(一) 提出問題或遭遇困難</td><td>「如何製作水火箭並比較誰的飛行最高？」可由教師提出，或由學生在生活中遭遇</td></tr>
+<tr><td>(二) 分析並界定問題</td><td>敘述是否明確？屬於<mark>科學問題還是價值信仰問題</mark>？界定主要概念（材料、瓶子大小、水火箭優劣標準）</td></tr>
+<tr><td>(三) 提出解決途徑或假設</td><td>分成火箭頭（箭身）、尾翼、降落傘、發射架四個任務小組，各自討論途徑或假設</td></tr>
+<tr><td>(四) 解決問題或蒐集資訊</td><td>小組實際製造成品；蒐集既有資訊與數據，或進行實驗取得數據</td></tr>
+<tr><td>(五) 歸納與驗證假設</td><td>最後檢查、發射準備、比賽評比</td></tr>
+<tr><td>(六) 發表結果</td><td>記錄整個過程並整理成果：書面報告；高年級以上可整理成研究報告格式發表於刊物或網頁</td></tr>
+</table></div>`},
+{h:'問題解決教學的效果', b:`
+<p>實證研究顯示，問題解決教學：</p>
+<ul>
+<li>可提升學生<mark>自然科學和數學</mark>的學習成效</li>
+<li>能提升<mark>批判思考能力和問題解決能力</mark></li>
+<li>有助於提升<mark>學習動機及相關態度</mark>，如合作學習態度、學科學習態度</li>
+</ul>
+<div class="tip"><b>與其他教學法的分辨</b>PBL 強調「問題的引導與解決」與「小組合作」，<b>不重視</b>原理原則的講述與練習（考古題常問）。</div>`},
+{h:'問答題參考架構', b:`
+<p><b>題目 1</b>：問題解決教學法可以培養學生何種素養？請以一項待解決的問題為例，說明步驟。</p>
+<div class="ex"><b>參考</b>可培養：系統思考與解決問題、批判思考、合作與溝通。以「如何降低學校周遭噪音」為例：<br>(1) 提出問題：學生在教室常被馬路噪音干擾。<br>(2) 分析界定：噪音是科學問題（分貝可測量）；定義「噪音」與標準。<br>(3) 假設：種樹、裝隔音窗、調整上課位置等。<br>(4) 蒐集資訊：實測各時段分貝，調查有效做法。<br>(5) 歸納驗證：試做隔音措施後再測量比較。<br>(6) 發表：製作報告向學校提案。</div>
+<p><b>題目 2（109 中學教檢）</b>：以「COVID-19 防疫」為主題進行專題導向式學習。(1) 寫出專題導向式學習的特色至少 2 點；(2) 寫出教學步驟並簡述活動重點。</p>
+<p class="muted">特色可由 Gold Standard 七準則選取，例如「有挑戰性的問題」、「真實性」、「公開作品」；步驟可用六步驟：提出防疫問題 → 界定問題 → 提出方案 → 蒐集資訊／實作 → 歸納驗證 → 公開發表（如製作防疫海報、向社區宣導）。</p>`}
+],
+quiz:[
+['【考古題・105 教檢】有關問題導向學習的敘述，下列何者最不適切？',['重視原理原則的講述與練習','學習者必須負起學習的責任','重視小組團隊合作以解決問題','教學過程強調問題的引導與解決'],'PBL 重視問題引導與合作，不是原理原則的講述練習。'],
+['【考古題・108-2 中學教檢】黃老師先引導學生觀察不同時期家鄉環境的照片，分組討論現在與過去的差異及衍生課題，再請各組提出保護本土生態的計畫。這較符合？',['問題導向教學','概念教學法','直接教學法','差異化教學'],'從真實問題出發，分組討論並提出解決方案。'],
+['【考古題】若欲達到「設法降低學校周遭噪音」的學習目標，下列何者較為適用？',['問題解決教學','概念獲得教學','角色扮演教學','理性探究教學'],'講義答案為問題解決教學。'],
+['【考古題・104 教檢】「基隆廟口小吃地圖」的教學設計，讓學生透過訪談、踏察、資料蒐集等行動學習，最後彙整學習結果報告。這較屬於？',['專題導向學習','精熟學習','交互學習','批判導向學習'],'以專案方式調查並產出成果，是專題導向學習。'],
+['【考古題】楊老師採用「問題導向學習」的課程設計，利用與學生生活實際相關的問題為起點。這屬於哪一種課程設計取向？',['學生中心取向','學科中心取向','領導中心取向','發展中心取向'],'講義答案為學生中心取向。'],
+['【考古題・104 教檢】劉老師讓全班討論「零食的成分、生產與食用安全」，再由學生分組蒐集資料，最後提出確保食用安全的解決策略。這屬於？',['問題導向學習','價值澄清','交互教學','批判思考教學'],'從問題出發，蒐集資料並提出解決策略。'],
+['【考古題・103 教檢】確認問題、陳述研究目標、蒐集資料、解釋資料、形成暫時性的結論、應用與評鑑，此流程屬於？',['問題解決教學','合作教學','價值教學','直接教學'],'講義答案為問題解決教學。'],
+['【考古題】王老師以紫蝶為主題，讓學生到花田觀察並探究生態，自行提出假設並驗證，最後撰寫發現。依講義答案，此屬於？',['專題導向教學法','案例教學法','概念獲得教學法','問題解決教學法'],'講義答案為專題導向教學法（選項中也有問題解決教學法，考試以老師講義答案為準）。'],
+['【考古題・108-2 中學教檢】要培養學生「系統思考與解決問題」素養，下列哪種課程設計較適當？',['探究社區環境及善用資源，以規劃並執行社會行動方案','推動跨領域閱讀教學活動以解決閱讀能力低落','鼓勵自然科學實驗社團參觀全國科學博覽會','舉辦全校環保歌曲創作比賽解決資源浪費'],'要有探究、規劃與行動，才符合系統思考與解決問題。'],
+['PBL（問題本位學習）最早於 1960 年代中期由哪一類學者發展？',['加拿大的醫學教育學者','美國的數學教育學者','英國的語言學者','德國的哲學家'],'醫學生若只靠記憶背誦，無法在現場做出正確判斷。'],
+['「問題本位教學（PBT）」與「問題本位學習（PBL）」的差別是？',['PBT 是教師觀點，PBL 是學生觀點','PBT 是學生觀點，PBL 是教師觀點','兩者完全相反','兩者沒有關係'],'講義：PBL──學生觀點；PBT──教師觀點。'],
+['杜威解決問題的第一個步驟是？',['遭遇困難或問題','提出假設','驗證假設','選擇合理的解決方案'],'杜威五步驟：遭遇困難 → 界定問題 → 假設 → 選擇方案 → 驗證假設。'],
+['本書歸納的問題解決教學六步驟中，最後一步是？',['發表結果','歸納與驗證假設','解決問題或蒐集資訊','分析並界定問題'],'六步驟的最後是將過程與成果整理後發表。'],
+['在「分析並界定問題」階段，教師要引導學生判斷？',['問題屬於科學問題，還是價值信仰問題','問題是否一定有標準答案','學生是否喜歡這個問題','問題要多久才能完成'],'還要檢查敘述是否明確、界定主要概念。'],
+['Gold Standard PBL 準則中，「學生對專題的做法與內容有決定權」指的是？',['學生的聲音','真實性','反思','公開作品'],'學生對專題有決定權，並表達自己的想法。'],
+['下列何者「不是」教師選擇問題時應考慮的條件？',['學生是否喜歡老師','問題對課程而言是否適切','所需材料能否找到','能否在限定時間內完成'],'五個條件：適切、知識技能、材料、時間、特殊設備空間。']
+]
+},
+{
+id:'t7', no:'5-3', ch:'第 5-3 章', title:'批判思考教學', src:'第5-3章批判思考.pptx',
+sections:[
+{h:'批判思考的意義', b:`
+<p>「以<mark>理性的思考</mark>，判斷訊息的是非，決定何者可信，何者可做的過程。」三個重點：</p>
+<ol><li>強調<mark>理性思考</mark>：心平氣和，聽取並閱讀各種陳述後自主獨立思考。</li><li>相互討論出判斷的準據。</li><li>依<mark>邏輯程序</mark>推演出結論。</li></ol>
+<p>在學校教育中，培養學生（未來的掌權者）的批判思考素養，是教師教學的重要任務。</p>`},
+{h:'批判思考素養＝知識＋能力＋態度', b:`
+<p><b>批判思考的知識</b>：</p>
+<ul><li>批判思考本身的知識：邏輯思考、歸納推理、演繹推理</li><li>批判思考對象的認知：學科領域知識</li></ul>
+<p><b>批判思考的能力（9 項）</b>：</p>
+<ol>
+<li>聚焦一項問題並隨時把問題掛在心上</li>
+<li>分析出爭論點</li>
+<li>發問並回答具有澄清性或挑戰性的問題</li>
+<li>判斷資訊來源的可信度</li>
+<li>辨認<mark>未陳述的假定</mark></li>
+<li>辨別<mark>事實描述與意見論述</mark></li>
+<li>區分<mark>科學問題與價值選擇</mark></li>
+<li>確定或形成用來評判答案優劣的指標</li>
+<li>定義術語及判斷其定義</li>
+</ol>
+<div class="ex"><b>例子</b>記者到校問學生：「你對學校霸凌事件，心裡有何感受？」這個問題的假定是「學生一定有感受、且願意說」──辨認未陳述的假定。</div>`},
+{h:'批判思考的態度（9 項）', b:`
+<ol>
+<li>對訊息或問題，尋求<mark>清楚的陳述</mark></li>
+<li>尋求<mark>理由、原因</mark></li>
+<li>採用並引述<mark>可靠的資源</mark></li>
+<li>考慮<mark>整體情境</mark>而不做片斷解釋</li>
+<li>隨時惦記著原本的目標或討論議題（避免離題）</li>
+<li>避免或留意<mark>二分法</mark>產生的錯誤和偏見（善與惡之間有很多漸層）</li>
+<li>要有<mark>開闊的心胸</mark>，認真考量他人的觀點</li>
+<li>有充足的證據和理由，要<mark>站穩立場或改變立場</mark>（「是是非非謂之『是』，非是是非謂之『非』」）</li>
+<li>敏於感知他人的感覺、知識水平及世故程度（理直氣緩）</li>
+</ol>
+<div class="tip"><b>分辨</b>「能判斷資訊來源可信度」是<b>能力</b>；「願意接納證據和理由並改變立場」是<b>態度</b>。考古題常考這個分辨。</div>`},
+{h:'批判思考教學原則', b:`
+<ol>
+<li><mark>民主的原則與氣氛</mark>：培養批判思考素養的必要條件</li>
+<li><mark>教師要有開闊的心胸</mark>：教師本身要先具備批判思考的態度</li>
+<li><mark>提供與創造反思的機會</mark>：遇到值得思考的問題，教師放慢教學節奏，讓學生有反思空間</li>
+</ol>
+<div class="ex"><b>例子</b>學生質疑課本的說法時，老師不是說「考試就這樣寫」，而是請他說明理由並邀請全班一起檢視證據。</div>`},
+{h:'批判思考教學策略', b:`
+<ul>
+<li><b>提問策略</b>：多提<mark>高層次問題──分析和評鑑</mark>的問題。如「愚公移山的精神為什麼可佩？」</li>
+<li><b>討論策略</b>：讓學生互動、對話、交換觀點。例如用「菲立普六六討論」討論「國中段考要不要排名次」。</li>
+<li><b>對話與辯證</b>：對等交換意見，不堅持己見；針對爭論點，各自陳述支持與不支持的論據，使論點更合理。</li>
+<li><b>案例教學（case-method）</b>：以案例為教材，透過問答、討論、評析深入了解主題概念並培養高層次能力。參考程序：<mark>引起動機與告知目標 → 分組討論 → 全班分享 → 總結與回饋</mark>。</li>
+</ul>`},
+{h:'菲立普六六討論法', b:`
+<p><mark>J. Donald Phillips</mark> 首創，以<mark>腦力激盪</mark>為基礎，適用於<mark>大團體</mark>，避免人數太多不利自由發言。</p>
+<ol>
+<li>每組<mark>五或六人</mark>，一位主席（可輪流），由主席指定一位計時員、一位紀錄，另推舉一位發言人。</li>
+<li>小組成員輪流發言，<mark>每人限時一分鐘</mark>，要剛好講足一分鐘，不足不可坐下。</li>
+<li>一分鐘到，主席切斷發言，輪下一位，直到每位都發言完畢。</li>
+<li>發言時間約五、六分鐘即可結束。</li>
+<li>發言人整合意見後，各組發言人輪流上台報告結論，每人亦限時一分鐘。</li>
+<li>老師綜合說明與進一步指導。整個活動約 <mark>15～20 分鐘</mark>。</li>
+</ol>
+<div class="ex"><b>講義討論題</b>「階級／人生是可以透過教育來流動嗎？」搭配 Richard Delgado、劍橋大學學生、台灣「台大不是給鄉下人讀的」與紀錄片《人生七年》，讓學生從不同論據來討論。</div>`},
+{h:'案例練習：喝牛奶真的有益健康嗎？', b:`
+<p>案例：某《健康醫報》報導「喝鮮奶反而讓人體流失鈣質」，並引述某研究員說法「長期喝牛奶會導致酸性體質」。</p>
+<p><b>分組討論</b>：此案例論點是什麼？主張不要喝牛奶的<b>理據</b>在哪裡？理據的資訊來源可靠程度？此案例對你有何影響？</p>
+<p>可引導的批判思考<b>能力與態度</b>：</p>
+<ul>
+<li>案例要傳達的訊息是什麼（主要論點）──能力</li>
+<li>若無充分證據和理由，<mark>不要下判斷</mark>──態度</li>
+<li>找出論點的偏頗或錯誤──能力</li>
+<li>判斷資訊來源的可信度──能力</li>
+<li>若有充足的證據和理由時，應據此改變立場──態度</li>
+</ul>
+<p class="muted">案例 2：各國公民權年齡有 20 歲或 18 歲，你對我國將公民權年齡修為 18 歲的想法為何？</p>`},
+{h:'問答題參考架構與結語', b:`
+<p><b>題目 1</b>：在學生批判思考能力的培養方面，你認為教師在教學上應當有哪些作為？</p>
+<div class="ex"><b>參考架構</b>① 營造民主氣氛、接納不同意見；② 教師自身先有開闊心胸與批判態度；③ 放慢節奏，給學生反思機會；④ 多提分析與評鑑的高層次問題；⑤ 運用討論（六六討論）、對話辯證、案例教學；⑥ 提供多元資源，引導學生自行判斷。</div>
+<p><b>題目 2</b>：您可能偏重記憶式學習，如何提升自己本身的批判思考能力？</p>
+<p class="muted">參考方向：學習邏輯與推理知識；對資訊追問來源與理由；區分事實與意見；練習從多方觀點閱讀；有證據時願意改變立場。</p>
+<p><b>結語</b>：要培養現代公民的批判思考素養，應從學生時代開始，教師承擔重要角色；學校要培養學生，<mark>教師要先具備批判思考素養</mark>。</p>`}
+],
+quiz:[
+['【考古題】下列哪一項是批判思考的「態度」？',['願意接納證據和理由並改變立場','能把握問題的重點','能判斷資訊來源可信度的能力','能發問並回答具有澄清或挑戰性的問題'],'其他三項屬於批判思考的能力。'],
+['【考古題・100 教檢】張老師想藉小紅帽故事培養批判思考能力，下列哪項教學活動最適切？',['討論小紅帽故事中不符常理的地方','摘記小紅帽的故事內容','忠實地演出小紅帽的故事內容','針對精采字詞造句'],'質疑不符常理處才是批判思考。'],
+['【考古題】有關批判思考教學的敘述，下列何者最適切？',['教師應提供多元資源，引導學生自行思考','教學成效可以立即看到','教學方式以標準答案最主要','教師具專家角色，學生是等待充填的容器'],'批判思考教學強調多元資源與學生自行思考。'],
+['批判思考的定義，其重點「不包括」？',['完全服從權威的說法','強調理性思考','相互討論出判斷的準據','依邏輯程序推演出結論'],'批判思考要自主獨立思考，不是盲從權威。'],
+['批判思考素養由哪三個部分組成？',['知識、能力、態度','認知、技能、情意','目標、方法、評量','記憶、理解、應用'],'講義：批判思考的知識、能力及態度。'],
+['辨認記者提問「你對學校霸凌事件，心裡有何感受？」背後的前提，屬於哪一項批判思考能力？',['辨認未陳述的假定','定義術語','判斷來源可信度','聚焦問題'],'能辨認未陳述的假定。'],
+['避免「非善即惡」的想法，主要是批判思考態度中的？',['留意二分法產生的錯誤與偏見','尋求清楚的陳述','隨時惦記原本目標','敏於感知他人感覺'],'善與惡之間有很多漸層，二分法容易造成偏見。'],
+['下列何者是培養批判思考的教學原則？',['民主的原則與氣氛','統一標準答案','加快教學節奏','由教師單向講述'],'三原則：民主氣氛、教師開闊心胸、提供反思機會。'],
+['教師多提出「分析」與「評鑑」層次的問題，屬於批判思考教學策略中的？',['提問策略','討論策略','案例教學','對話與辯證'],'如「愚公移山的精神為什麼可佩？」'],
+['菲立普六六討論法的特色是？',['約五、六人一組，每人限時一分鐘輪流發言','兩人一組，不限時間','全班一起同時發言','由老師決定所有結論'],'整個活動約 15～20 分鐘，適用於大團體。'],
+['案例教學的參考程序是？',['引起動機與告知目標 → 分組討論 → 全班分享 → 總結與回饋','分組討論 → 引起動機 → 總結 → 全班分享','直接講述 → 練習 → 測驗','提問 → 想像 → 實作 → 評價'],'案例教學是以案例為教材，透過問答、討論、評析深入理解。'],
+['「若沒有充分的證據和理由，不要下判斷」屬於批判思考的？',['態度','能力','知識','評量'],'講義中的牛奶案例將它歸類為態度。'],
+['菲立普六六討論法是以什麼為基礎？',['腦力激盪','直接教學','制約學習','價值澄清'],'J. Donald Phillips 首創，以腦力激盪為基礎。']
+]
+},
+{
+id:'t8', no:'5-4', ch:'第 5-4 章', title:'創造思考教學', src:'第5-4章創造思考.pptx',
+sections:[
+{h:'創造力是一種特質（五項）', b:`
+<div class="tbl"><table>
+<tr><th>特質</th><th>意思</th><th>俗語</th></tr>
+<tr><td><mark>獨創性</mark></td><td>觀念或思考特殊新穎，提出不尋常的想法</td><td>出類拔萃</td></tr>
+<tr><td><mark>流暢性</mark></td><td>思考流利順暢，字詞、觀念、聯想的速度快而多量</td><td>舉一反三</td></tr>
+<tr><td><mark>變通性</mark></td><td>變化思考方式、擴大思考範圍，產出不同向度、類別的作品</td><td>觸類旁通</td></tr>
+<tr><td><mark>精密性</mark></td><td>觀念或思考縝密精細、力求完美</td><td>面面俱到</td></tr>
+<tr><td><mark>敏覺性</mark></td><td>敏於察覺事物的功能、變化、不足、缺失、矛盾</td><td>敏於察覺問題</td></tr>
+</table></div>
+<p><b>托倫斯（Torrance）創意思考測驗</b>測量<mark>擴散性思考</mark>，包括：流暢性（大量觀念）、變通性（觀念有彈性）、獨特性（觀念獨特）、精密性（品質改善）。</p>
+<div class="ex"><b>例子（磚塊有什麼用途？）</b><br>三分鐘說出 32 種 → 流暢性。32 種中有蓋房子、當書擋、當運動器材、當畫筆等不同類別 → 變通性。說出別人都想不到的用法 → 獨創性。把每種用法說得很具體完整 → 精密性。</div>`},
+{h:'創造力是心智歷程與人格特質', b:`
+<p><b>Wallas 創造思考歷程四階段</b>：</p>
+<div class="flow"><span>準備期<small>感知問題、蒐集資料</small></span><span>醞釀期<small>進一步了解、嘗試解決</small></span><span>豁朗期<small>突然頓悟、靈感</small></span><span>驗證期<small>付諸實施、確認</small></span></div>
+<div class="ex"><b>例子</b>為校慶想不出點子，翻了很多資料（準備）→ 放著想了幾天（醞釀）→ 洗澡時突然靈機一動（豁朗）→ 做出來實際評估是否可行（驗證）。</div>
+<p><b>人格特質</b>：高創造力的人通常較<mark>獨立、開放、接納、容忍</mark>，並積極探索事物。</p>`},
+{h:'創造思考教學的原則、阻礙與教師素養', b:`
+<p><b>(一) 教學七原則</b>：</p>
+<ol><li>可在各科教學中隨機進行</li><li>要變化教材或組織統整的課程</li><li>營造利於創造思考的學習氣氛</li><li>多運用創造性發問技巧</li><li>鼓勵學生勇於說出想法</li><li>傾聽與接納學生的意見</li><li>允許學生有<mark>嘗試錯誤</mark>的經驗</li></ol>
+<p><b>(二) 阻礙創造力的七項因素</b>（教師應去除）：</p>
+<ol><li>權威式教育</li><li>強調團體一致性的要求</li><li>缺乏幽默感的教學</li><li>不斷地批評</li><li>偏重紙筆測驗的評量</li><li>缺乏創造力教學的專業知能</li><li>缺乏專業信心</li></ol>
+<p><b>(三) 教師教學素養</b>：① 改變以教師為本位的態度；② 尊重和接納不同意見；③ 樂於嘗試不同教學方法；④ 留意並祛除盲目依從的態度。</p>
+<div class="tip"><b>考古題提醒</b>「仿寫優秀的童話作品」較偏模仿，不是促進創造的活動；「故事接龍、改編故事、自創結局」才是。</div>`},
+{h:'五項一般性創造思考策略總覽', b:`
+<div class="flow"><span>腦力激盪術</span><span>屬性列舉法</span><span>型態分析法</span><span>糾合術（分合法）</span><span>檢核表技術</span></div>
+<div class="tbl"><table>
+<tr><th>策略</th><th>一句話</th></tr>
+<tr><td>腦力激盪術</td><td>多人互提意見，量中生質</td></tr>
+<tr><td>屬性列舉法</td><td>列出物品屬性，逐一檢視改進</td></tr>
+<tr><td>型態分析法</td><td>分析出獨立要素，各要素改變方式後組合</td></tr>
+<tr><td>糾合術（分合法）</td><td>把不相關的東西整合，用類比產生新意念</td></tr>
+<tr><td>檢核表技術</td><td>用一份改變方向的清單逐項檢視（SCAMPER）</td></tr>
+</table></div>`},
+{h:'腦力激盪術', b:`
+<p>brainstorming：以集思廣益方式，多人互提意見，產生大量意見，從中激發創意。</p>
+<p><b>五原則</b>：</p>
+<ol><li><mark>延緩批評</mark>：禁止批評任何意見</li><li>不怕標新立異</li><li><mark>量中生質</mark>：先求量多</li><li>運用他人點子</li><li>思考速度越快越好</li></ol>
+<p><b>五步驟</b>：</p>
+<ol>
+<li><b>選擇及說明問題</b>：開放式、範圍小、有分歧性答案，大都為「如何」形式</li>
+<li><b>組織討論小團體</b>：十到十二人，1 人當主席，1～2 人記錄</li>
+<li><b>分組討論</b>：U 字型圍坐，面牆貼壁報紙，意見越多越好，不評論</li>
+<li><b>評估意見</b>：結束後再評估，可延後兩三天或次週；<mark>先訂評估標準</mark></li>
+<li><b>歸納最佳意見</b>：選擇最好、最可行的方法</li>
+</ol>
+<div class="tip"><b>考古題順序</b>選擇適當問題（乙）→ 組成腦力激盪小組（丙）→ 說明規則（戊）→ 進行腦力激盪（丁）→ 評估構想（甲）。</div>
+<div class="ex"><b>例子</b>「如何讓雞蛋從五樓落下不破？」大家盡量提出：氣球、降落傘、海綿、水桶…先不評論可不可行。</div>`},
+{h:'屬性列舉法與型態分析法', b:`
+<p><b>屬性列舉法（attribute listing）</b>：先列出物品的屬性，再逐一檢視改進的可能性。以單車為例：</p>
+<div class="tbl"><table>
+<tr><th>屬性類型</th><th>單車例子</th></tr>
+<tr><td>名詞特性</td><td>手把、坐墊、輪組、輪胎、齒輪、鏈條、踏板</td></tr>
+<tr><td>形容詞特性</td><td>高低、大小、形狀、輕重、安全性</td></tr>
+<tr><td>動詞特性</td><td>動力、傳動、避震、剎車</td></tr>
+<tr><td>結構屬性</td><td>車架、傳動系統、剎車系統、前後輪</td></tr>
+</table></div>
+<p><b>型態分析法（morphological analysis）</b>：把事物分析成若干<mark>獨立組成要素</mark>，思考各要素的改變方式，並加以<mark>組合</mark>。</p>
+<div class="ex"><b>鬧鐘設計（表 5-3）</b>六個要素各有若干參數：時間顯示 3 種、鬧鈴設定 3 種、造型 4 種、夜間顯示 3 種、使用電源 3 種、產品功能 5 種。<br>組合方案共 3 × 3 × 4 × 3 × 3 × 5 = <b>1620</b> 種可能。</div>
+<div class="tip"><b>分辨</b>「先列出特質，再逐一檢視如何改變」→ 屬性列舉法；「要素 × 參數的組合表」→ 型態分析法。</div>`},
+{h:'糾合術（分合法）：四種類比', b:`
+<p>synectics：把原本不同或看似不相關的東西整合，產生新意念。Gordon 提出<mark>四種隱喻或類推技術</mark>：</p>
+<div class="tbl"><table>
+<tr><th>類比</th><th>意思</th><th>例子</th></tr>
+<tr><td><mark>直接類比</mark></td><td>把兩種不同事物彼此譬喻</td><td>魯班的妻子從涼亭得到靈感發明傘（活動的涼亭）</td></tr>
+<tr><td><mark>擬人類比</mark></td><td>假設自己是某物，設身處地思索</td><td>「人有悲歡離合，月有陰晴圓缺」</td></tr>
+<tr><td><mark>符號類比</mark></td><td>運用符號象徵化類推，引申高層次意境</td><td>看到八卦山大佛像，感受「禪定與莊嚴」</td></tr>
+<tr><td><mark>狂想性類比</mark></td><td>盡情思索不尋常或狂想的觀念</td><td>「蜜蜂和人砍木頭有什麼相似？」</td></tr>
+</table></div>`},
+{h:'檢核表技術：SCAMPER（代合調改用消排）', b:`
+<div class="tbl"><table>
+<tr><th>字母</th><th>中文</th><th>問題</th></tr>
+<tr><td>S</td><td><mark>代</mark>──取代（Substituted）</td><td>何者可被取代？誰可代替？</td></tr>
+<tr><td>C</td><td><mark>合</mark>──結合（Combined）</td><td>何者可與其結合？</td></tr>
+<tr><td>A</td><td><mark>調</mark>──調整（Adapt）</td><td>是否能調整？有什麼事物與此類似？</td></tr>
+<tr><td>M</td><td><mark>改</mark>──修改（Modify）</td><td>可否改變意義、顏色、聲音、形式？可否擴大？</td></tr>
+<tr><td>P</td><td><mark>用</mark>──其他用途（Put to other uses）</td><td>可否用在其他方面、新用途？</td></tr>
+<tr><td>E</td><td><mark>消</mark>──取消（Eliminate）</td><td>可否取消？取消何者？</td></tr>
+<tr><td>R</td><td><mark>排</mark>──重新安排（Rearrange）</td><td>重新安排？交換組件？</td></tr>
+</table></div>
+<div class="ex"><b>例子（改良雨傘）</b>代：用輕量碳纖維代替金屬骨架；合：傘加上手電筒；調：像帳篷那樣可展開；改：加大傘面；用：當作遮陽傘；消：取消傘柄改成穿戴式；排：把傘骨反向收摺。</div>`},
+{h:'威廉斯（Williams）12 項創造思考教學策略（一）', b:`
+<div class="tbl"><table>
+<tr><th>#</th><th>策略</th><th>講義例</th></tr>
+<tr><td>1</td><td><mark>矛盾法</mark></td><td>「民主政治是最糟糕的政治制度」，但為什麼我們都在使用它？有沒有其他制度？</td></tr>
+<tr><td>2</td><td><mark>類比法</mark></td><td>「鹽」和「糖」有何相似之處，對人類有何貢獻？</td></tr>
+<tr><td>3</td><td><mark>辨別法</mark></td><td>「新型冠狀病毒」與其他病毒有何不同？</td></tr>
+<tr><td>4</td><td><mark>問題挑戰</mark></td><td>「為什麼不同社會都需要宗教信仰？」</td></tr>
+<tr><td>5</td><td><mark>變通法</mark></td><td>「此處不留人，自有留人處！」</td></tr>
+<tr><td>6</td><td><mark>習慣改變法</mark></td><td>成績不好就是能力不足或不認真？真的嗎？</td></tr>
+<tr><td>7</td><td><mark>重組法</mark></td><td>像樂高積木一樣重新組織要素或結構</td></tr>
+<tr><td>8</td><td><mark>直觀表達法</mark></td><td>直接說出看到、聽到、感覺、想到、聯想到什麼</td></tr>
+</table></div>`},
+{h:'威廉斯 12 項策略（二）與陳龍安 ATDE', b:`
+<div class="tbl"><table>
+<tr><th>#</th><th>策略</th><th>內容</th></tr>
+<tr><td>9</td><td><mark>創造者及其過程研究法</mark></td><td>閱讀愛迪生、諾貝爾、魯班等人的傳記</td></tr>
+<tr><td>10</td><td><mark>創造性閱讀技巧</mark></td><td>從大量資訊中統整，產生新觀念</td></tr>
+<tr><td>11</td><td><mark>創造性寫作技巧</mark></td><td>透過寫作培養思考力和想像力</td></tr>
+<tr><td>12</td><td><mark>視覺化技巧</mark></td><td>閉目想像圖像；用圖畫呈現情境；用心智繪圖或概念圖呈現關係；用架構圖呈現知識體系</td></tr>
+</table></div>
+<p><b>陳龍安「ATDE」創造思考教學模式</b>：</p>
+<div class="flow"><span>問 Asking<small>提出創造思考問題</small></span><span>想 Thinking<small>自由聯想、擴散思考</small></span><span>做 Doing<small>寫、說、設計、表演</small></span><span>評 Evaluation<small>全班共同評估、發展標準</small></span></div>
+<div class="ex"><b>講義活動：校園沒有垃圾桶，要丟垃圾怎麼辦？</b><br>問：老師拋出問題。想：小組盡量想出辦法（自備垃圾袋、設置回收站、減少垃圾…）。做：把想法畫成海報或演出。評：全班訂標準（可行、環保）選出最佳方案。</div>`},
+{h:'問答題參考架構', b:`
+<p><b>題目</b>：威廉斯提出很多創造思考教學策略，請舉出三種，並以一單元（課）為例說明如何運用。</p>
+<div class="ex"><b>示範：國文《夏夜》</b><br>① <b>類比法</b>：「夏夜的哪些景象像是一首歌？」請學生把夜景與聲音類比。<br>② <b>視覺化技巧</b>：請學生閉眼想像夏夜庭院，再畫出心中的畫面。<br>③ <b>創造性寫作技巧</b>：以「我的夏夜」為題改寫或續寫一小段。</div>
+<p><b>結語</b>：創造力有五項特質（獨創、流暢、變通、精密、敏覺）；創造思考教學是根據創造力發展的原理及教學方法或策略，增進學生創造力特質的歷程。可參考威廉斯十二項策略、「問想做評」模式等。</p>`}
+],
+quiz:[
+['【考古題・96 教檢】創造思考教學的五個步驟：甲.評估各類構想、乙.選擇適當問題、丙.組成腦力激盪小組、丁.進行腦力激盪、戊.說明應該遵守規則。正確的實施順序是？',['乙丙戊丁甲','甲丙丁戊乙','丙乙丁甲戊','丁戊甲丙乙'],'先選問題、組成小組、說明規則，再進行腦力激盪，最後評估。'],
+['【考古題・108-2 中學教檢】葉老師用腦力激盪法讓學生思考「如何使雞蛋從五樓落到一樓而不會摔破？」要學生提出各種策略，且差異性越大越好。依講義答案，較能激發哪一種擴散思考能力？',['流暢力','變通力','精進力','想像力'],'講義答案為流暢力。注意：題幹「差異性越大」容易讓人想到變通力，考試以老師講義答案為準。'],
+['【考古題・106 教檢】下列何者較屬於創造性問題？',['臺灣地區新生兒的人數逐年減少，有何解決辦法？','臺灣地區新生兒的人數統計結果如何？','為什麼臺灣地區新生兒的人數逐年減少？','如果政府提供生育補助，有助於提高生育率嗎？'],'創造性問題是開放式、能引發多種解決方案的問題。'],
+['【考古題】先列出事物的特質或重要部分，再逐一檢視如何改變。這是哪一類創造思考技術？',['屬性列舉法','檢核表法','型態分析法','腦力激盪法'],'列出屬性再逐一檢視改進，是屬性列舉法。'],
+['【考古題】一個人思想已「山窮水盡」時，忽然能「柳暗花明」轉到另一類思考，稱為？',['變通力','流暢力','獨創力','精進力'],'能變化思考方式，是變通性。'],
+['【考古題・101 教檢】班級生活常規每況愈下，教師用「腦力激盪」找解決方法，其運用的最關鍵原則為何？',['對於各種解決方法先不做價值判斷','掌控時間','規定大家參與','運用菲力浦六六討論法'],'腦力激盪的核心是延緩批評。'],
+['【考古題・95 教檢】王老師經過幾天思考，靈機一動想出校慶活動的新點子。這屬於創造思考的哪一階段？',['豁朗期','醞釀期','準備期','驗證期'],'突然頓悟、產生靈感是豁朗期。'],
+['【考古題】教師問：「蜜蜂和人在砍木頭有什麼相似？」這是運用何種創造思考策略？',['分合法（糾合術）','檢核表法','屬性列舉法','型態分析法'],'講義將此作為狂想性類比的例子，屬於糾合術（分合法）。'],
+['【考古題・108-1 國小教檢】依創造思考教學的原則，楊老師在寫作教學時較不會進行下列哪一項？',['仿寫優秀的童話作品','進行故事接龍的遊戲','改編有名的童話故事','讓學生自行創作故事結局'],'仿寫偏模仿，其他三項較能促進創造。'],
+['【考古題・97 教檢】教師問「磚塊有什麼用處？」嬋嬋三分鐘說出 32 種用途，數量為全班之冠。她在創造力的哪一層面表現較佳？',['流暢性','變通性','原創性','精密性'],'數量多而快是流暢性。'],
+['創造力五特質中，「面面俱到」指的是？',['精密性','變通性','敏覺性','獨創性'],'精密性：縝密精細、力求完美。'],
+['創造力五特質中，「敏於察覺問題」指的是？',['敏覺性','流暢性','精密性','獨創性'],'敏覺性：敏於察覺事物的不足、缺失、矛盾。'],
+['Wallas 創造思考歷程的正確順序是？',['準備期 → 醞釀期 → 豁朗期 → 驗證期','醞釀期 → 準備期 → 驗證期 → 豁朗期','準備期 → 豁朗期 → 醞釀期 → 驗證期','驗證期 → 準備期 → 醞釀期 → 豁朗期'],'經過醞釀後才突然頓悟。'],
+['下列何者是阻礙學生創造力發展的因素？',['偏重紙筆測驗的評量','允許嘗試錯誤','傾聽接納學生意見','營造利於創造思考的氣氛'],'阻礙因素還有權威式教育、不斷批評、缺乏幽默感等。'],
+['腦力激盪術的原則「量中生質」是指？',['先求意見數量多，再從中挑選品質','只選品質最好的意見','每人只能提一個意見','一開始就評估好壞'],'意見先求量多。'],
+['鬧鐘設計共六個要素，各要素參數分別為 3、3、4、3、3、5 種，型態分析法的組合方案共有？',['1620 種','18 種','21 種','360 種'],'3 × 3 × 4 × 3 × 3 × 5 = 1620。'],
+['魯班的妻子從涼亭得到靈感發明傘，屬於糾合術中的哪一種類比？',['直接類比','擬人類比','符號類比','狂想性類比'],'把兩種不同事物（涼亭與傘）直接譬喻。'],
+['「人有悲歡離合，月有陰晴圓缺」屬於糾合術中的哪一種類比？',['擬人類比','直接類比','符號類比','狂想性類比'],'把月亮的圓缺與人生變化相比，設身處地類推。'],
+['SCAMPER 中的「R」代表？',['重新安排（Rearrange）','取代','結合','取消'],'代合調改用消排：Substituted、Combined、Adapt、Modify、Put to other uses、Eliminate、Rearrange。'],
+['陳龍安「ATDE」創造思考教學模式依序是？',['問、想、做、評','想、問、評、做','做、想、問、評','評、做、問、想'],'Asking、Thinking、Doing、Evaluation。']
+]
+},
+{
+id:'t9', no:'5補', ch:'第 5 章補充', title:'講述教學法', src:'第5章補充講述教學法.pptx',
+sections:[
+{h:'講述教學法的意義與步驟', b:`
+<ul>
+<li>講授法／講述教學法（Lecture Method／Didactic Instruction）是<mark>使用比例最高</mark>的教學法。</li>
+<li>教師運用敘述或演講方式，透過<mark>單向溝通</mark>，將大量資訊傳遞給學員。</li>
+<li>容易讓學員形成正確概念，因此也稱為「<mark>概念的教學</mark>」。</li>
+</ul>
+<p><b>步驟四階段</b>：</p>
+<div class="flow"><span>引言</span><span>正題</span><span>摘要與提問</span><span>結論</span></div>
+<p>教授中應避免：<mark>深奧的言詞、模糊的概念、太快、太多、太久</mark>。</p>`},
+{h:'適用時機與應用', b:`
+<p><b>適用於</b>：引發學習動機、介紹單元內容、歸納整理教材、教導系統知識、<mark>進行大班教學</mark>。</p>
+<p><b>應用（五類）</b>：</p>
+<ol>
+<li><b>引起學員動機</b>：開始時簡短講述一個課題或新聞</li>
+<li><b>指導學習方向</b>：講述配合學習流程，讓學員循序漸進</li>
+<li><b>說明教材內容</b>：生動說明引發興趣，並補充最新知識</li>
+<li><b>配合技能教學示範</b>：以最精簡語句、合適聲調語速敘述動作
+<ul><li>簡單的部分：<mark>較快的速度、較低的音量</mark></li><li>複雜或轉變的關鍵：<mark>較慢的速度、較高的音量</mark></li><li>必要處停頓，加強記憶</li></ul></li>
+<li><b>配合其他教學法</b>：多媒體教學、討論教學、角色扮演等都需要講述配合</li>
+</ol>
+<div class="ex"><b>例子</b>示範煎荷包蛋時，打蛋、開火這類簡單步驟快速帶過；翻面時機這個關鍵，放慢速度、提高音量並停頓一下強調。</div>`},
+{h:'優點與缺點', b:`
+<div class="two">
+<div><h4>優點（李祖壽，1981）</h4><ul>
+<li><mark>方便</mark>：不受時間空間限制</li>
+<li><mark>經濟</mark>：不用花錢備輔助教材</li>
+<li><mark>省時</mark>：時間掌握力強</li>
+<li><mark>自主性高</mark>：教師可自行調整進度</li>
+<li><mark>系統性教學</mark>：架構清楚</li>
+<li><mark>控制性強</mark>：較易控制上課秩序</li></ul></div>
+<div><h4>缺點</h4><ul>
+<li>單向傳授：效果難傳授</li>
+<li>互動性差</li>
+<li>被動學習</li>
+<li>注意力分散</li>
+<li>學習效果差：成效只能透過測驗得知</li>
+<li>忽視個別差異</li>
+<li>最易對教師的喉嚨造成損傷</li></ul></div>
+</div>
+<p class="muted">與第 2 章「直接教學」對照：講述是直接教學最典型的方式。</p>`},
+{h:'講述＋影片教學的觀察重點', b:`
+<p>講義示範影片（劉安婷「擁抱世代從教育開始」），觀看時注意：</p>
+<ul><li>開場及結束的應用技巧</li><li>肢體的表達動作</li><li>口語表達的特色</li><li>印象最深刻的地方</li><li>如何鋪陳講述結構</li></ul>`}
+],
+quiz:[
+['講述教學法的步驟四階段是？',['引言、正題、摘要與提問、結論','準備、呈現、比較、類化','提問、想像、實作、評價','選擇、珍視、行動、反省'],'講義：引言、正題、摘要與提問、結論。'],
+['講述教學法的溝通方式是？',['單向溝通','雙向討論','學生互相教學','完全不需語言'],'由講師以敘述或演講方式傳遞大量資訊。'],
+['講述教學法為何又稱為「概念的教學」？',['容易讓學員形成正確的概念','只教概念不教事實','一定要用正例與反例','一定要小組討論'],'講義原文如此。'],
+['講述時，簡單的部分與複雜／轉變的關鍵，該如何處理？',['簡單：較快較低音量；關鍵：較慢較高音量','簡單：較慢較高音量；關鍵：較快較低音量','都用相同速度','都不要停頓'],'關鍵處放慢、提高音量並停頓。'],
+['下列何者是講述教學法的優點？',['經濟，不用花錢備輔助教材','互動性高','適合每個學生自主探究','能完全兼顧個別差異'],'優點還有方便、省時、自主性高、系統性、控制性強。'],
+['下列何者是講述教學法的缺點？',['忽視個別差異','準備時間太長','無法控制秩序','缺乏系統性'],'講述齊平式教學，容易忽略個別差異。'],
+['講述教學法最適合用在？',['進行大班教學、教導系統知識','培養學生價值觀','讓學生長期專題探究','個別化補救教學'],'適用：引發動機、介紹單元、歸納教材、教導系統知識、大班教學。'],
+['講述時應避免的狀況「不包括」？',['舉生活例子','深奧的言詞','模糊的概念','太快、太多、太久'],'舉生活例子有助理解，並不需要避免。'],
+['講述教學法中，在開始教學時簡短講述一個課題或新聞，主要作用是？',['引起學員動機','指導學習方向','配合技能示範','歸納教材'],'講述的應用之一是引起學員動機。'],
+['講義指出講述法的一項缺點與身體有關，是指？',['最易對教師的喉嚨造成損傷','容易使學生近視','容易造成學生肩頸痠痛','容易讓教師視力受損'],'講義列為缺點之一。']
+]
+},
+{
+id:'t10', no:'6-1', ch:'第 6-1 章', title:'價值澄清教學法', src:'第6-1章價值澄清1106(無題版).pptx',
+sections:[
+{h:'價值的意義', b:`
+<ul>
+<li>價值是<mark>人們給予的</mark>（講義用「一根爛香蕉藝術品以 369 萬元賣給收藏家」說明：有價值 vs 無價值取決於人如何看待）。</li>
+<li>價值是指事物或現象對人們具有積極意義，為人所重視，能使人感到滿足，為人們所追求的。價值觀念引導努力的方向、幫助做決定、規範行為。</li>
+<li>價值分兩類：
+<ul><li><mark>目的性價值</mark>：人生追求較終極的狀態</li><li><mark>工具性價值</mark>：一種價值是另一種價值的中介過程</li></ul></li>
+</ul>
+<div class="ex"><b>講義例</b>「努力用功」是「理想工作」的中介過程（工具性價值）；「理想工作」又是「???」的工具性價值，最後指向終極的目的性價值（如幸福、自我實現）。</div>`},
+{h:'價值澄清法的意義', b:`
+<p>設計一種情境或活動，引導學生<mark>察覺自己的信念、情感及行為</mark>，經由<mark>公開討論和表達</mark>，進而<mark>反省、批判及選擇</mark>，以建立自己的價值觀念和體系。</p>
+<div class="tip"><b>核心精神</b>價值觀念存在個人主體意識中，難以由他人直接講授傳遞；教師是<b>引導和澄清者</b>，不是價值的灌輸者。</div>`},
+{h:'價值形成：三階段七過程（Raths, Harmin & Simon）', b:`
+<div class="tbl"><table>
+<tr><th>階段</th><th>過程</th><th>說明</th></tr>
+<tr><td rowspan="3"><mark>選擇</mark></td><td>1 自由選擇</td><td>沒有壓力下自主決定</td></tr>
+<tr><td>2 從各種途徑選擇</td><td>對價值有多種選擇</td></tr>
+<tr><td>3 經過三思後選擇</td><td>充分理解並思考各種價值的後果</td></tr>
+<tr><td rowspan="2"><mark>珍視</mark></td><td>4 重視和珍惜所做的選擇</td><td>為它感到驕傲和快樂</td></tr>
+<tr><td>5 公開表示自己的選擇</td><td>願意與他人對話確認此種選擇</td></tr>
+<tr><td rowspan="2"><mark>行動</mark></td><td>6 根據選擇採取行動</td><td>分配時間、精力、金錢去實踐</td></tr>
+<tr><td>7 重複行動</td><td>已顯示在生活型態中，表現在很多情況</td></tr>
+</table></div>
+<div class="tip"><b>口訣</b>3、2、2 → 選擇 3 項、珍視 2 項、行動 2 項。與教育心理學第 5 章末段「價值澄清法」是同一套內容。</div>`},
+{h:'價值澄清策略（一）書寫策略：等級排列與生活餡餅', b:`
+<p><b>1. 等級排列法（rank ordering）</b>：以數種價值、特質或事物為對象，要求學生依重要性排出次序。可分組進行：各自排列 → 組內分享結果與理由 → 各組代表報告 → 老師回饋歸納。</p>
+<div class="ex"><b>講義例</b>朋友間關係的六項價值：忠實、禮貌、誠實、慷慨、助人、原諒。依重要性排序並說明理由。</div>
+<p><b>2. 生活餡餅（the pie of life）</b>：估計日常生活各類活動的時間量及百分比，以<mark>圓餅圖</mark>呈現，明確知道自己時間運用，作為反思依據。</p>
+<ol>
+<li>選擇代表性的一天（或一週）</li>
+<li>時間運用分類（睡眠、上課、做家事、休閒…）</li>
+<li>計算百分比（如睡眠 6 時 30 分，占 27%）</li>
+<li>畫出圓餅圖（用 Excel）</li>
+<li>反思：滿意嗎？如何調整？</li>
+<li>思考如何實踐理想的生活餡餅（可做「實際」與「理想」兩張對照）</li>
+</ol>`},
+{h:'價值澄清策略（二）價值單與未完成句', b:`
+<p><b>3. 價值單（value sheet）</b>：先呈現能激發思考的敘述句或故事，再提出一系列相關問題，引導學生依自己的想法和感覺反應。</p>
+<div class="ex"><b>講義例</b>爸媽陪你買大樂透中獎，扣稅後 200 萬，可自由支配四分之一（50 萬）。問題：(1) 你會把這 50 萬用在哪些方面？(2) 你做這個分配決定是基於何種想法？(3) 這反映你的何種價值選擇？</div>
+<p><b>4. 未完成句（incomplete sentences）</b>：提供不完整語句，要求學生補完。屬於<mark>投射測驗</mark>的一種，反映學生的希望、意願、態度、抱負、目標等價值觀。</p>
+<div class="ex"><b>講義例</b>「在假日，我喜歡……」「我期望我的爸爸／媽媽……」「我希望好朋友應當是……」「我的理想是……」「我期望有一天，……」</div>`},
+{h:'價值澄清策略（三）澄清反應', b:`
+<p><b>澄清反應（clarifying response）</b>：教師依據兒童所說所想，用適當語言給予反應，引起動機、刺激思想，使其對自己重視的事物慎思明辨。可依價值形成的七個過程進行。</p>
+<div class="tbl"><table>
+<tr><th>七過程</th><th>學生想成為歌手 → 教師提問</th></tr>
+<tr><td>1 自由選擇</td><td>你要成為歌手的想法已經有多久了？</td></tr>
+<tr><td>2 從各種可能途徑選擇</td><td>你想成為歌手是基於哪些理由？</td></tr>
+<tr><td>3 考慮後果後再選擇</td><td>你已衡量過成為歌手的各種後果了嗎（名利與失敗）？</td></tr>
+<tr><td>4 重視和珍視</td><td>想到要成為歌手，你的感覺如何？是否因而感到愉快？</td></tr>
+<tr><td>5 公開表示</td><td>你願意將你的想法告訴班上同學嗎？</td></tr>
+<tr><td>6 依選擇採取行動</td><td>你願意花哪些時間和金錢在這個計畫上？</td></tr>
+<tr><td>7 重複實行</td><td>對於成為歌手，你已做哪些事？經常做嗎？</td></tr>
+</table></div>
+<p class="muted">課堂練習：兩人一組，A 說出一個正向的價值選擇（學系、職業、社團、嗜好、打工…），B 依七步驟做澄清式訪問，然後角色互換。</p>`},
+{h:'價值澄清策略（四）討論策略', b:`
+<p>針對引發價值思考的敘述句進行團體討論，交換價值觀念、相互學習。</p>
+<ul>
+<li><b>價值澄清式討論</b>：教師<mark>對學生的回答不作評價</mark>，只是幫助學生對自己的抉擇與結果再檢驗。以「誠實」為例：你不喜歡跟哪一種人做朋友？對一位經常說謊的人你有何感覺？好朋友若對老師或父母說謊，你會勸他嗎？</li>
+<li><b>角色扮演</b>：以含有行為、興趣或價值衝突的小故事，讓學生扮演角色解決衝突，幫助產生與價值關聯的情感和領悟。
+<div class="ex"><b>講義例</b>小英想逛百貨公司買東西，弟弟自強想去郊山看花草昆蟲，媽媽只能帶他們去一處，他們怎麼解決？你曾有過劇中角色那樣的感受嗎？</div></li>
+</ul>`},
+{h:'價值澄清教學過程（六步驟）與實例', b:`
+<div class="flow"><span>引起動機</span><span>呈現教材</span><span>提出價值問題</span><span>價值澄清活動</span><span>小組分享與全班討論</span><span>反省與實踐</span></div>
+<p>講義以國小社會五下「投資活動」第 2、3 節為例：</p>
+<div class="tbl"><table>
+<tr><th>步驟</th><th>實例</th></tr>
+<tr><td>(一) 引起動機</td><td>前一週上股市網虛擬買股票，本節虛擬賣出，計算賺賠並分享心得，體會投資風險</td></tr>
+<tr><td>(二) 呈現教材</td><td>閱讀課本「投資自己與分享所得」，討論「學生應該進行哪一種投資？」歸納：<mark>投資自己不但不賠，且持續增值</mark></td></tr>
+<tr><td>(三) 提出價值問題</td><td>「自己未來可能的職業（志業）或創業是什麼？」</td></tr>
+<tr><td>(四) 價值澄清活動 1、2</td><td>列出 3 項以上要培養（投資）的能力並做<mark>等級排列</mark>；用<mark>生活餡餅</mark>檢視時間或金錢是否投資在這些能力</td></tr>
+<tr><td>(五) 小組分享與全班討論</td><td>分享排列結果、餡餅書寫結果，全班由代表報告</td></tr>
+<tr><td>(六) 反省與實踐</td><td>透過<mark>公開承諾</mark>強化實踐；教師平時觀察並關心實踐困難</td></tr>
+</table></div>
+<p><b>結語提醒</b>：在澄清與討論中，若學生觀念偏離道德法律，教師仍應釐清什麼是個人價值選擇，什麼是道德法律問題。</p>`}
+],
+quiz:[
+['價值澄清法中，Raths、Harmin 與 Simon 提出的價值形成三階段是？',['選擇、珍視、行動','注意、保持、再生','同化、調適、平衡','引起動機、呈現教材、評量'],'三階段七過程。'],
+['下列何者屬於「選擇」階段的過程？',['經過三思後做選擇','公開表示自己的選擇','重複行動','重視和珍惜所做的選擇'],'選擇階段：自由選擇、從各種途徑選擇、三思後選擇。'],
+['「願意公開表示自己的選擇，並與他人對話確認」屬於哪一階段？',['珍視','選擇','行動','反省'],'珍視階段：重視珍惜、公開表示。'],
+['價值單的特色是？',['先呈現敘述句或故事，再提出一系列問題讓學生依自己想法反應','要求學生排列多項價值','以圓餅圖表示時間運用','只提供不完整句子'],'價值單：先給故事或敘述，再提出問題。'],
+['生活餡餅的做法是？',['估計各類活動的時間量及百分比，以圓餅圖呈現後反思','將價值依重要性排序','補完不完整的句子','扮演故事中的角色'],'讓個人明確知道自己時間的運用情形。'],
+['「在假日，我喜歡……」「我的理想是……」這類策略稱為？',['未完成句','價值單','等級排列','角色扮演'],'未完成句屬於投射測驗，能反映價值觀。'],
+['將忠實、禮貌、誠實、慷慨、助人、原諒依重要性排序並說明理由，屬於？',['等級排列法','生活餡餅','澄清反應','價值單'],'等級排列法（rank ordering）。'],
+['學生想成為歌手，教師問：「你已衡量過成為歌手的各種後果了嗎？」這是澄清反應的哪一過程？',['考慮後果後再選擇','自由選擇','公開表示','重複實行'],'三思後選擇：衡量各種後果。'],
+['教師問：「你願意將你的想法告訴班上同學嗎？」這是澄清反應的哪一過程？',['公開表示','重視和珍視','依選擇採取行動','自由選擇'],'公開表示屬於珍視階段。'],
+['價值澄清式討論中，教師的角色是？',['對學生的回答不作評價，幫助學生檢驗自己的抉擇','評論誰的答案最好','告訴學生正確價值觀','避免任何討論'],'價值澄清式討論不評價，只協助學生再檢驗。'],
+['價值澄清教學過程的六步驟，正確順序是？',['引起動機、呈現教材、提出價值問題、價值澄清活動、小組分享與全班討論、反省與實踐','呈現教材、引起動機、評量、討論、實踐、反省','提出價值問題、引起動機、行動、選擇、珍視、評量','引起動機、評量、討論、呈現教材、行動、反省'],'以「投資活動」教案說明。'],
+['「努力用功」是「理想工作」的中介過程，這屬於哪一類價值？',['工具性價值','目的性價值','無價值','絕對價值'],'一種價值是另一種價值的中介過程，稱為工具性價值。'],
+['「人生追求較終極的一種狀態」屬於？',['目的性價值','工具性價值','制約價值','相對價值'],'目的性價值是終極狀態。'],
+['在教師引導下，學生發現的價值觀偏離道德法律時，教師應？',['釐清什麼是個人價值選擇，什麼是道德法律問題','完全不介入','直接懲罰學生','強迫改變價值觀'],'講義結語：教師仍應加以釐清。']
+]
+},
+{
+id:'t11', no:'6-2', ch:'第 6-2 章', title:'道德討論教學法', src:'第6-2章道德討論(無題版).pptx',
+sections:[
+{h:'知與行：認知、技能、道德的教學差異', b:`
+<div class="tbl"><table>
+<tr><th>教學類型</th><th>例子</th></tr>
+<tr><td>認知的教學</td><td>分數相加、修辭</td></tr>
+<tr><td>技能的教學</td><td>前滾翻、直笛音階吹奏</td></tr>
+<tr><td><mark>道德的教學（品格教育）</mark></td><td>尊重他人、孝敬父母、誠實；走行人穿越道、準時到校</td></tr>
+</table></div>
+<ul>
+<li><b>知的學習</b>：科學知識、技能知識、倫理知識</li>
+<li><b>行的學習</b>：技能操作、技能表演、行為實踐</li>
+<li>道德教育的內容有二：<mark>道德認知</mark>與<mark>道德實踐</mark>（知和行兩個層面）。</li>
+</ul>`},
+{h:'皮亞傑的道德發展（本章版本）', b:`
+<div class="flow"><span>無律<small>出生至約 3～5 歲，尚無道德意義</small></span><span>他律<small>約 5 至 7、8 歲，意識到權威與規範</small></span><span>自律<small>約 8、9 歲以後，追問規範的理由</small></span></div>
+<ul>
+<li><b>無律</b>：兒童尚無道德意義可言。</li>
+<li><b>他律</b>：漸漸意識到兄長父母的權威約制，以及學校與社會的風俗習慣和道德規範。</li>
+<li><b>自律</b>：道德意識逐漸成熟，以前當然的規則，現在要追問理由，能運用理性分析判斷。</li>
+</ul>
+<div class="tip"><b>注意</b>這份講義的年齡（他律約 5～7、8 歲；自律約 8、9 歲以後）和教育心理學講義（他律 7～11 歲；自律 11 歲以後）<b>不同</b>。考哪一科就用那一科的老師講義數字，順序「無律 → 他律 → 自律」是共通的。</div>`},
+{h:'柯爾柏格三期六段（本章版本與例子）', b:`
+<div class="tbl"><table>
+<tr><th>層次</th><th>階段</th><th>判斷標準</th><th>講義例</th></tr>
+<tr><td rowspan="2"><mark>前習俗期</mark></td><td>1 懲罰與服從取向</td><td>行為後果是否讓行為者受罰</td><td>大明怕被警察取締而遵守號誌走行人穿越道</td></tr>
+<tr><td>2 功利相對性取向</td><td>行為後果對行為者本身是否有利</td><td>甲偷 1000 元比乙偷 100 元更壞</td></tr>
+<tr><td rowspan="2"><mark>習俗期</mark><br><small>9 歲以上到成人</small></td><td>3 尋求認可（乖孩子）取向</td><td>能否獲得大眾或心中權威人物的認可</td><td>小華在捷運讓座，因為怕別人覺得他沒有愛心</td></tr>
+<tr><td>4 遵守法規取向</td><td>是否合乎法律或社會規範，維護社會秩序</td><td>自強參加球賽遵守規則、服從裁判；半夜開車遇紅燈，路口無人仍等綠燈</td></tr>
+<tr><td rowspan="2"><mark>後習俗期</mark></td><td>5 社會法制取向</td><td>是否符合社會共同利益或期望（民約法理）；遵守人權與社會契約，但<mark>不堅守條規</mark></td><td>見私人禁地圍籬內有受難動物，仍闖進去搭救</td></tr>
+<tr><td>6 普遍倫理取向</td><td>是否符合普遍道德原理或良心準則</td><td>依正義、恕道、尊重個人尊嚴等原則行事，而不墨守誡條</td></tr>
+</table></div>
+<div class="tip"><b>一句話判別</b>怕罰（1）→ 有好處（2）→ 讓人稱讚（3）→ 守法律（4）→ 為公益可變通（5）→ 依普世良心（6）。</div>`},
+{h:'道德教學的內涵與策略', b:`
+<p><b>道德教學內涵</b>：道德的完成應包含<mark>道德認知</mark>與<mark>道德實踐</mark>，即「知」與「行」。</p>
+<p><b>道德教學策略</b>（六種）：</p>
+<ol><li>故事或戲劇</li><li><mark>道德討論</mark>（案例或道德兩難）</li><li>價值澄清</li><li>角色扮演</li><li>空椅法</li><li>手玩偶</li></ol>
+<div class="ex"><b>例子</b>空椅法：讓學生對著一張空椅子，想像椅子上坐著被他說謊欺騙的朋友，說出自己想說的話；手玩偶：用玩偶說出孩子不敢直接說的感受。</div>`},
+{h:'道德討論教學的題材', b:`
+<p>題材可以是<mark>故事（含繪本故事）、案例（判例）及道德兩難問題</mark>。選取應符合三項規準：</p>
+<ol>
+<li><mark>故事內容盡量簡單</mark></li>
+<li><mark>故事情節必須是尚未解決的問題</mark></li>
+<li><mark>故事必須包括兩個以上的道德議題</mark>（如親情 vs 友情；守法 vs 利益；真理 vs 權位 vs 生命）</li>
+</ol>
+<div class="ex"><b>講義道德困境：連體嬰雙胞胎</b>麗娜生下連體嬰雙胞胎，醫生判斷「連體」無法同時維持二人性命，必須短時間內決定是否分體手術，「兩個只能活一個」。如果你是麗娜，你將如何抉擇？說明理由。</div>`},
+{h:'道德討論教學的六步驟', b:`
+<div class="flow"><span>引起動機</span><span>呈現教材</span><span>提出兩難困境</span><span>分組討論</span><span>全班討論</span><span>教師歸納／總結</span></div>
+<div class="tbl"><table>
+<tr><th>步驟</th><th>重點</th></tr>
+<tr><td>(一) 引起動機</td><td>針對教學目標，列舉學生生活中的行為實例，如遇到「誠實與友情」衝突該怎麼辦</td></tr>
+<tr><td>(二) 呈現教材</td><td>方式：故事單、口述、PPT、角色扮演、錄音、影片等</td></tr>
+<tr><td>(三) 提出兩難困境</td><td>這個故事涉及哪些議題？你若是小龍，要不要把小吉的姓名住址告訴老闆？為什麼？</td></tr>
+<tr><td>(四) 分組討論</td><td>小組內<mark>確認要有不同觀點</mark>相互論辯，提出理由、澄清觀念，激發更多道德理由</td></tr>
+<tr><td>(五) 全班討論</td><td>小組代表歸納主張與理由，呈現在黑板，供全班質詢，<mark>激起道德認知衝突，提升道德判斷層次</mark></td></tr>
+<tr><td>(六) 教師歸納／總結</td><td>各組摘要；分析結論是否合邏輯與道德；若不符社會法律規範，再拋問題思考或直接釐清導正</td></tr>
+</table></div>
+<div class="ex"><b>講義教材〈小吉偷東西〉（誠實與友情）</b>小吉和小龍是好朋友，逛超市時小吉偷拿玩具；老闆沒抓到小吉，卻攔住小龍，要他供出小吉的姓名和地址。涉及議題：友情（袒護朋友偷竊）與誠實（避免朋友再偷竊）。</div>`},
+{h:'結語', b:`
+<ul>
+<li>道德教育是學校教學的重要課題，<mark>教師是關鍵角色</mark>。</li>
+<li>道德教育除認知外，更重要的是<mark>道德情意的表現和行為的實踐</mark>。</li>
+<li>道德教學必須運用各種<mark>間接教學</mark>方法或策略，引導學生主動涉入學習，效果較佳。</li>
+</ul>
+<p class="muted">課堂活動：《正義：一場思辨之旅》電車難題等道德困境，說明你作決定的理由。對照教育心理學第 5 章的柯爾柏格道德發展理論一起複習。</p>`}
+],
+quiz:[
+['依本章講義，道德教育的內容有哪兩項？',['道德認知與道德實踐','道德知識與道德考試','規範背誦與行為處罰','故事與影片'],'道德的完成包含「知」和「行」。'],
+['「走行人穿越道」、「準時到校上課」等屬於哪一類教學？',['道德的教學（品格教育）','認知的教學','技能的教學','創造思考教學'],'講義將尊重他人、孝敬父母、誠實及遵守規範習慣歸為道德教學。'],
+['大明怕被警察取締，所以遵守號誌走行人穿越道，屬於柯爾柏格的哪一階段？',['懲罰與服從取向','功利相對性取向','遵守法規取向','社會法制取向'],'為了避免受罰，是階段一。'],
+['「甲偷 1000 元比乙偷 100 元更壞」屬於柯爾柏格哪一階段（講義例）？',['功利相對性取向','懲罰與服從取向','尋求認可取向','普遍倫理取向'],'講義將此例歸在階段二。'],
+['小華在捷運讓座給老婆婆，因為怕其他乘客覺得他沒有愛心，屬於？',['尋求認可（乖孩子）取向','遵守法規取向','社會法制取向','功利相對性取向'],'為了獲得他人認可，是階段三。'],
+['半夜開車遇紅燈，雖然路口空盪無人仍停車等綠燈，屬於？',['遵守法規取向','尋求認可取向','社會法制取向','懲罰與服從取向'],'為維護法律與社會秩序，是階段四。'],
+['見到私人禁地圍籬內有受難動物，仍闖進去搭救，屬於？',['社會法制取向','遵守法規取向','功利相對性取向','尋求認可取向'],'講義將此例歸為階段五。'],
+['「根據正義、恕道、尊重個人尊嚴等原則行事，而不墨守道德誡條」屬於？',['普遍倫理取向','社會法制取向','遵守法規取向','尋求認可取向'],'階段六：普遍倫理取向。'],
+['柯爾柏格的三個層次依序是？',['前習俗、習俗、後習俗','習俗、前習俗、後習俗','後習俗、習俗、前習俗','前習俗、後習俗、習俗'],'每層次兩個階段，共三期六段。'],
+['依本章講義，皮亞傑道德發展的順序是？',['無律 → 他律 → 自律','他律 → 無律 → 自律','自律 → 他律 → 無律','無律 → 自律 → 他律'],'順序是共通的，各講義的年齡略有不同。'],
+['道德討論教學的題材應符合的規準，「不包括」？',['故事一定要有標準答案','故事內容盡量簡單','情節必須是尚未解決的問題','包括兩個以上的道德議題'],'故事必須是尚未解決的問題，才有討論空間。'],
+['〈小吉偷東西〉故事涉及的道德議題是？',['友情與誠實','親情與財富','守法與生命','真理與權位'],'友情：袒護朋友偷竊；誠實：避免朋友再偷竊。'],
+['道德討論教學的過程，正確順序是？',['引起動機、呈現教材、提出兩難困境、分組討論、全班討論、教師歸納總結','呈現教材、引起動機、全班討論、分組討論、提出困境、總結','提出困境、引起動機、總結、討論、呈現教材、評量','引起動機、總結、呈現教材、分組、全班、困境'],'講義歸納為六步驟。'],
+['在分組討論中，為何要「確認小組內有不同的觀點」？',['讓成員相互論辯，激發更多道德理由','讓討論更快結束','避免學生發言','讓老師容易評分'],'小組提出觀點與理由、彼此溝通，澄清觀念。'],
+['全班討論時把各組結果呈現在黑板上，目的是？',['激起道德認知衝突，提升道德判斷層次','比較各組誰贏','節省老師的時間','讓學生背下答案'],'透過觀察、質詢產生認知衝突。']
+]
+}
+];
+
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const strip=h=>{const d=document.createElement('div');d.innerHTML=h;return d.textContent.replace(/\s+/g,' ').trim()};
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEYS='ABCD';
+
+const COURSES=[{id:'edpsy',name:'教育心理學'},{id:'prin',name:'教學原理'}];
+const courseName=u=>COURSES.find(c=>c.id===u.course).name;
+const chap=u=>u.ch||`第 ${u.no} 章`;
+UNITS.forEach(u=>u.course='edpsy');UNITS_B.forEach(u=>u.course='prin');UNITS.push(...UNITS_B);
+const QS=[];UNITS.forEach(u=>{u.qs=u.quiz.map((x,i)=>{const q={id:u.id+'-'+i,unit:u,q:x[0],o:x[1],e:x[2]};QS.push(q);return q});
+  u.plain=u.sections.map(s=>strip(s.b))});
+const QMAP=Object.fromEntries(QS.map(q=>[q.id,q]));
+
+let done=LS.get('ep.done',{}), wrong=new Set(LS.get('ep.wrong',[]).filter(id=>QMAP[id])), best=LS.get('ep.best',{});
+const saveDone=()=>LS.set('ep.done',done), saveWrong=()=>LS.set('ep.wrong',[...wrong]);
+let unitTab='notes', quizKey=null;
+
+function renderNav(){
+  const route=location.hash.slice(1)||'home';
+  $('#nav').innerHTML=COURSES.map(c=>`<div class="navh">${c.name}</div>`+UNITS.filter(u=>u.course===c.id).map(u=>{const d=(done[u.id]||[]).length,t=u.sections.length;
+    return `<a href="#${u.id}" class="${route===u.id?'on':''}"><span class="n">${u.no}</span><span>${u.title}</span><span class="bar"><i style="width:${Math.round(d/t*100)}%"></i></span></a>`}).join('')).join('')
+   +`<hr><a href="#quiz" class="${route==='quiz'?'on':''}"><span class="n">測</span><span>綜合測驗</span></a>`
+   +`<a href="#wrong" class="${route==='wrong'?'on':''}"><span class="n">錯</span><span>錯題本${wrong.size?`<span class="badge">${wrong.size}</span>`:''}</span></a>`
+   +`<a href="#notes" class="${route==='notes'?'on':''}"><span class="n">記</span><span>我的筆記</span></a>`;
+}
+
+function route(){
+  quizKey=null;
+  const r=location.hash.slice(1)||'home';
+  const q=$('#search').value.trim();
+  renderNav();
+  if(q){renderSearch(q);return}
+  const u=UNITS.find(x=>x.id===r);
+  if(u) renderUnit(u);
+  else if(r==='quiz') renderMixed();
+  else if(r==='wrong') renderWrong();
+  else if(r==='notes') renderAllNotes();
+  else renderHome();
+}
+
+function renderHome(){
+  const nSec=UNITS.reduce((a,u)=>a+u.sections.length,0);
+  const ages=[
+   ['皮亞傑認知發展','感覺動作 0–2 歲｜前運思 2–7 歲｜具體運思 7–11 歲｜形式運思 11 歲以後'],
+   ['守恆概念（依講義）','數量 4–6 歲 → 體積 7–8 歲 → 重量 9–12 歲'],
+   ['講義三題推理','木珠題 7 歲｜兒童是生物 10 歲｜兒童是雷根糖 12 歲'],
+   ['物體恆存','約 1 歲完成'],
+   ['皮亞傑道德','無律 → 他律 7–11 歲 → 自律 11 歲以後'],
+   ['柯爾柏格','前習俗 9 歲以下｜習俗 9 歲以上到成人｜後習俗'],
+   ['佛洛伊德','口腔 0–1.5｜肛門 1.5–3｜性器 3–6｜潛伏 6–青春期｜兩性 青春期後'],
+   ['艾瑞克森（學生階段）','0–1.5 信任｜1.5–3 自主｜3–6 主動｜6–12 勤奮｜12–18 認同'],
+   ['嬰兒感覺','顏色 3 個月｜深知覺 6 個月｜成人視力 3 歲｜莫洛反射到 5–6 個月'],
+   ['大腦','18 個月前神經元大量生長聯結；可塑性幼兒期最高'],
+   ['身高體重','6–9 歲女＜男｜10–12 歲女＞男｜13 歲後女＜男｜最快：男 12–14、女 10–12'],
+   ['青春期','男 12–15 歲、女 11–14 歲｜身高頂峰 男 18、女 16']
+  ];
+  const prin=[
+   ['學習金字塔保留率','聽講 5%｜閱讀 10%｜視聽 20%｜參觀展示 30%｜小組討論 50%｜實作演練 75%｜教他人 90%'],
+   ['戴爾經驗金字塔','由具體到抽象共 10 層，最底層直接有目的經驗，最頂層口述符號'],
+   ['核心素養','三面向（自主行動、溝通互動、社會參與）× 每面向 3 項 ＝ 九項'],
+   ['直接教學','7 步驟：每日複習 → 陳述目標 → 呈現新教材 → 引導練習 → 回饋訂正 → 獨立練習 → 定期複習'],
+   ['十項教學原則','準備、興趣、自學、熟練、增強、類化、個別適應、社會化、紀錄與反省、同時學習'],
+   ['教學目標領域層數','認知 6 層｜情意 5 層｜技能（Simpson）7 層'],
+   ['行為目標','五要素：對象、行為、結果、情境、標準；三要素：行為、結果、標準'],
+   ['教學設計模式','Glaser 4 步｜Kemp 九要素（三環）｜Dick-Carey 線性歷程（講義列 10 步）'],
+   ['問題解決教學','杜威 5 步驟｜本書 6 步驟｜Gold Standard PBL 7 準則'],
+   ['批判思考素養','能力 9 項｜態度 9 項｜六六討論：5～6 人、每人 1 分鐘、全程 15～20 分鐘'],
+   ['創造力','五特質：獨創、流暢、變通、精密、敏覺｜Wallas 四階段｜Williams 12 策略｜SCAMPER 七項'],
+   ['價值澄清','三階段七過程（選擇 3、珍視 2、行動 2）；教學過程 6 步驟'],
+   ['道德討論','教學過程 6 步驟；題材三規準：簡單、尚未解決、兩個以上道德議題']
+  ];
+  const tables=[['教育心理學 數字速查','這些數字最容易混淆，考前再看一次。',ages],['教學原理 數字速查','教學原理多是「幾項、哪幾步」，把數量和名稱一起記。',prin]];
+  $('#main').innerHTML=`
+  <div class="eyebrow">黃淑玲教授 講義整理</div>
+  <h1>115-1 教育學程課程筆記</h1>
+  <p class="lead">教育心理學 6 章、教學原理 11 個單元，共整理成 ${nSec} 個重點，每個重點附例子；共 ${QS.length} 題練習題（含講義附的教檢考古題）。讀完一段按「我會了」記錄進度，答錯的題目會自動收進錯題本。</p>
+  ${COURSES.map(c=>{const us=UNITS.filter(u=>u.course===c.id);return `<h2 class="h-sec">${c.name}<span class="muted">　${us.length} 個單元・${us.reduce((a,u)=>a+u.qs.length,0)} 題</span></h2>
+  <div class="cards">${us.map(u=>{const d=(done[u.id]||[]).length;
+    return `<a class="card" href="#${u.id}"><span class="cn">${chap(u)}</span><span class="ct">${u.title}</span>
+    <span class="cm">${u.sections.length} 個重點・${u.qs.length} 題・已熟 ${d}/${u.sections.length}${best[u.id]!=null?`・最佳 ${best[u.id]}%`:''}</span></a>`}).join('')}</div>`}).join('')}
+  ${tables.map(t=>`<h2 class="h-sec">${t[0]}</h2><p class="muted">${t[1]}</p>
+  <div class="tbl"><table>${t[2].map(a=>`<tr><th>${a[0]}</th><td>${a[1]}</td></tr>`).join('')}</table></div>`).join('')}
+  <div class="row" style="justify-content:flex-start"><a class="btn" href="#quiz" style="text-decoration:none">開始綜合測驗</a>${wrong.size?`<a class="btn ghost" href="#wrong" style="text-decoration:none">複習錯題（${wrong.size}）</a>`:''}</div>`;
+}
+
+function renderUnit(u){
+  $('#main').innerHTML=`
+  <div class="eyebrow">${courseName(u)}・${chap(u)}</div><h1>${u.title}</h1>
+  <div class="src">來源：${esc(u.src)}</div>
+  <div class="tabs" role="tablist">
+    <button data-t="notes" class="${unitTab==='notes'?'on':''}">重點筆記</button>
+    <button data-t="quiz" class="${unitTab==='quiz'?'on':''}">本章測驗（${u.qs.length}）</button>
+    <button data-t="mine" class="${unitTab==='mine'?'on':''}">我的筆記</button>
+  </div><div id="pane"></div>`;
+  $('#main').querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{unitTab=b.dataset.t;renderUnit(u)});
+  const pane=$('#pane');
+  if(unitTab==='notes'){
+    const d=new Set(done[u.id]||[]);
+    pane.innerHTML=u.sections.map((s,i)=>`<section class="sec ${d.has(i)?'done':''}" id="${u.id}-s${i}">
+      <div class="sec-head"><h2><span class="num">${u.no}.${i+1}</span>${s.h}</h2>
+      <button class="knew" data-i="${i}">${d.has(i)?'✓ 我會了':'我會了'}</button></div>${s.b}</section>`).join('')
+      +`<div class="row"><span class="muted">讀完了？</span><button class="btn" id="goq">做本章測驗</button></div>`;
+    pane.querySelectorAll('.knew').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;const set=new Set(done[u.id]||[]);
+      set.has(i)?set.delete(i):set.add(i);done[u.id]=[...set];saveDone();
+      const sec=b.closest('.sec');sec.classList.toggle('done',set.has(i));b.textContent=set.has(i)?'✓ 我會了':'我會了';renderNav()});
+    $('#goq').onclick=()=>{unitTab='quiz';renderUnit(u);window.scrollTo(0,0)};
+  } else if(unitTab==='quiz'){
+    runQuiz(pane,u.qs,{key:u.id});
+  } else {
+    const key='ep.note.'+u.id;
+    pane.innerHTML=`<div class="notebox"><label for="note-${u.id}" class="muted">寫下這章你自己的整理、口訣或還不懂的地方，會自動存在這個瀏覽器。</label>
+      <textarea id="note-${u.id}" placeholder="例：同化 = 用舊方法看新東西；調適 = 改自己的方法"></textarea>
+      <div class="row"><span class="muted" id="st"></span><button class="btn ghost" id="cp">複製這章筆記</button></div></div>`;
+    const ta=$('#note-'+u.id),st=$('#st');ta.value=LS.get(key,'');
+    const show=()=>{st.textContent=ta.value.length+' 字'};show();let t;
+    ta.oninput=()=>{clearTimeout(t);st.textContent='儲存中…';t=setTimeout(()=>{st.textContent=LS.set(key,ta.value)?`已儲存・${ta.value.length} 字`:'這個瀏覽器不允許儲存，請自行複製保存'},400)};
+    $('#cp').onclick=e=>copyText(ta.value,e.target,ta);
+  }
+}
+
+function copyText(text,btn,fallbackEl){
+  const ok=()=>{const o=btn.textContent;btn.textContent='已複製';setTimeout(()=>btn.textContent=o,1500)};
+  try{navigator.clipboard.writeText(text).then(ok,()=>{if(fallbackEl){fallbackEl.focus();fallbackEl.select()}btn.textContent='請按 Ctrl+C 複製'})}
+  catch(e){if(fallbackEl){fallbackEl.focus();fallbackEl.select()}}
+}
+
+function runQuiz(el,pool,opt={}){
+  const key=opt.key||'mix';quizKey=key;
+  if(!pool.length){el.innerHTML=`<div class="quiz"><p>目前沒有題目。</p></div>`;return}
+  const qs=shuffle(pool.slice());let i=0,right=0;const missed=[];
+  function show(){
+    if(quizKey!==key) return;
+    if(i>=qs.length) return finish();
+    const q=qs[i];const opts=shuffle(q.o.map((t,k)=>({t,ok:k===0})));
+    el.innerHTML=`<div class="quiz">
+      <div class="qtop"><span>第 ${i+1} / ${qs.length} 題</span><span>答對 ${right}</span></div>
+      <div class="qbar"><i style="width:${i/qs.length*100}%"></i></div>
+      ${opt.showUnit?`<div class="qtag">${courseName(q.unit)}・${chap(q.unit)}・${q.unit.title}</div>`:''}
+      <p class="qq">${esc(q.q)}</p>
+      <div class="opts">${opts.map((o,k)=>`<button class="opt" data-k="${k}"><span class="k">${KEYS[k]}</span><span>${esc(o.t)}</span></button>`).join('')}</div>
+      <div id="fbx"></div></div>`;
+    const btns=[...el.querySelectorAll('.opt')];
+    const pick=k=>{if(btns[0].disabled)return;btns.forEach(b=>b.disabled=true);
+      const good=opts[k].ok;btns[k].classList.add(good?'ok':'no');btns[opts.findIndex(o=>o.ok)].classList.add('ok');
+      if(good){right++;wrong.delete(q.id)}else{wrong.add(q.id);missed.push({q,picked:opts[k].t})}
+      saveWrong();renderNav();
+      el.querySelector('#fbx').innerHTML=`<div class="fb"><b class="${good?'g':'r'}">${good?'答對了':'答錯了'}</b>　${good?'':'正確答案：'+esc(q.o[0])+'。'}${esc(q.e)}</div>
+        <div class="row" style="justify-content:flex-end"><button class="btn" id="nx">${i+1<qs.length?'下一題':'看結果'}</button></div>`;
+      const nx=el.querySelector('#nx');nx.onclick=()=>{i++;show()};nx.focus({preventScroll:true});};
+    btns.forEach((b,k)=>b.onclick=()=>pick(k));
+    el._pick=pick;
+  }
+  function finish(){
+    const pct=Math.round(right/qs.length*100);
+    if(opt.key&&UNITS.some(x=>x.id===opt.key)){best[opt.key]=Math.max(best[opt.key]||0,pct);LS.set('ep.best',best)}
+    el.innerHTML=`<div class="quiz"><div class="muted">測驗結果</div><div class="score">${right} / ${qs.length}</div>
+      <p>${pct}%　${pct>=90?'很熟了，可以換下一章。':pct>=70?'不錯，把錯的幾題再看一次。':'建議回到重點筆記再讀一遍，再做一次。'}</p>
+      <div class="row" style="justify-content:flex-start"><button class="btn" id="again">再做一次</button>${missed.length?`<button class="btn ghost" id="redo">只重做這次錯的 ${missed.length} 題</button>`:''}</div>
+      ${missed.length?`<h2 style="margin-top:22px;font-size:1.2rem">這次答錯的題目</h2><div class="review">${missed.map(m=>`<div><b>${esc(m.q.q)}</b><br>
+      <span class="muted">你選：${esc(m.picked)}</span><br>正確：<mark>${esc(m.q.o[0])}</mark><br><span class="muted">${esc(m.q.e)}</span></div>`).join('')}</div>`:''}</div>`;
+    el.querySelector('#again').onclick=()=>runQuiz(el,pool,opt);
+    const r=el.querySelector('#redo');if(r)r.onclick=()=>runQuiz(el,missed.map(m=>m.q),{...opt,key:opt.key+'-redo'});
+  }
+  show();
+}
+document.addEventListener('keydown',e=>{
+  if(!quizKey||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;
+  const pane=document.querySelector('.quiz');if(!pane)return;
+  const k='1234abcd'.indexOf(e.key.toLowerCase());
+  if(k>=0){const el=pane.parentElement;if(el._pick)el._pick(k%4)}
+});
+
+function renderMixed(){
+  let sel=new Set(UNITS.map(u=>u.id)),count=20;
+  const draw=()=>{
+    const pool=QS.filter(q=>sel.has(q.unit.id));
+    $('#main').innerHTML=`<div class="eyebrow">模擬考</div><h1>綜合測驗</h1>
+    <p class="lead">從選定的章節隨機抽題，題目與選項順序每次都不同。答題時可以用鍵盤 1–4 選答案。</p>
+    <div class="muted">範圍</div><div class="chips"><button class="chip" data-c="all">全選</button>${COURSES.map(c=>`<button class="chip" data-c="${c.id}">只選${c.name}</button>`).join('')}</div>
+    ${COURSES.map(c=>`<div class="muted" style="margin-top:6px">${c.name}</div><div class="chips">${UNITS.filter(u=>u.course===c.id).map(u=>`<button class="chip ${sel.has(u.id)?'on':''}" data-u="${u.id}">${u.no}. ${u.title}</button>`).join('')}</div>`).join('')}
+    <div class="muted">題數（目前範圍共 ${pool.length} 題）</div><div class="chips">${[10,20,30,0].map(n=>`<button class="chip ${count===n?'on':''}" data-n="${n}">${n||'全部'}</button>`).join('')}</div>
+    <div class="row" style="justify-content:flex-start"><button class="btn" id="go" ${pool.length?'':'disabled'}>開始作答</button></div><div id="qz" style="margin-top:18px"></div>`;
+    $('#main').querySelectorAll('[data-u]').forEach(b=>b.onclick=()=>{const id=b.dataset.u;sel.has(id)?sel.delete(id):sel.add(id);draw()});
+    $('#main').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const c=b.dataset.c;sel=new Set(UNITS.filter(u=>c==='all'||u.course===c).map(u=>u.id));draw()});
+    $('#main').querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{count=+b.dataset.n;draw()});
+    $('#go').onclick=()=>{const p=shuffle(pool.slice()).slice(0,count||pool.length);runQuiz($('#qz'),p,{key:'mix'+Date.now(),showUnit:true});$('#qz').scrollIntoView({block:'start'})};
+  };draw();
+}
+
+function renderWrong(){
+  const list=[...wrong].map(id=>QMAP[id]).filter(Boolean).sort((a,b)=>a.id.localeCompare(b.id,undefined,{numeric:true}));
+  $('#main').innerHTML=`<div class="eyebrow">弱點複習</div><h1>錯題本</h1>
+  <p class="lead">${list.length?`目前有 ${list.length} 題。在任何測驗中答對，就會自動從錯題本移除。`:'目前沒有錯題。去做測驗，答錯的題目會自動收進來。'}</p>
+  ${list.length?`<div class="row" style="justify-content:flex-start"><button class="btn" id="go">重做全部錯題</button><button class="btn ghost" id="clr">清空錯題本</button></div>
+  <div id="qz" style="margin-top:18px"></div>
+  ${UNITS.map(u=>{const l=list.filter(q=>q.unit===u);return l.length?`<h2 class="h-sec">${courseName(u)}・${chap(u)}・${u.title}</h2><div class="review">${l.map(q=>`<div><b>${esc(q.q)}</b><br>正確：<mark>${esc(q.o[0])}</mark><br><span class="muted">${esc(q.e)}</span></div>`).join('')}</div>`:''}).join('')}`:`<a class="btn" href="#quiz" style="text-decoration:none">去做綜合測驗</a>`}`;
+  if(!list.length)return;
+  $('#go').onclick=()=>{runQuiz($('#qz'),list,{key:'wrong'+Date.now(),showUnit:true});$('#qz').scrollIntoView({block:'start'})};
+  const c=$('#clr');c.onclick=()=>{if(c.dataset.sure){wrong.clear();saveWrong();route()}else{c.dataset.sure=1;c.textContent='再按一次確認清空'}};
+}
+
+function renderAllNotes(){
+  const notes=UNITS.map(u=>({u,t:LS.get('ep.note.'+u.id,'')}));
+  const any=notes.some(n=>n.t.trim());
+  $('#main').innerHTML=`<div class="eyebrow">自己的整理</div><h1>我的筆記</h1>
+  <p class="lead">各章「我的筆記」分頁寫的內容都集中在這裡。筆記存在這個瀏覽器裡，換電腦或清除瀏覽資料就會不見，重要的記得複製出來。</p>
+  ${any?`<div class="row" style="justify-content:flex-start"><button class="btn ghost" id="cpall">複製全部筆記</button></div>`:''}
+  ${notes.map(n=>`<section class="sec"><div class="sec-head"><h2><span class="num">${n.u.no}</span>${n.u.title}<span class="muted">　${courseName(n.u)}</span></h2><a class="knew" href="#${n.u.id}" data-mine="${n.u.id}" style="text-decoration:none;color:inherit">編輯</a></div>
+   ${n.t.trim()?`<div style="white-space:pre-wrap">${esc(n.t)}</div>`:'<p class="muted">還沒有寫筆記。</p>'}</section>`).join('')}`;
+  $('#main').querySelectorAll('[data-mine]').forEach(a=>a.onclick=()=>{unitTab='mine'});
+  const b=$('#cpall');if(b)b.onclick=()=>copyText(notes.filter(n=>n.t.trim()).map(n=>`【${courseName(n.u)}・${chap(n.u)} ${n.u.title}】\n${n.t}`).join('\n\n'),b);
+}
+
+function renderSearch(q){
+  const ql=q.toLowerCase();const hits=[];
+  UNITS.forEach(u=>u.sections.forEach((s,i)=>{const txt=strip(s.h)+' '+u.plain[i];const p=txt.toLowerCase().indexOf(ql);
+    if(p>=0){const a=Math.max(0,p-30);hits.push({u,i,h:s.h,snip:(a?'…':'')+txt.slice(a,p)+'<mark>'+esc(txt.substr(p,q.length))+'</mark>'+txt.slice(p+q.length,p+q.length+50)+'…'})}}));
+  const qh=QS.filter(x=>(x.q+x.o[0]+x.e).toLowerCase().includes(ql));
+  $('#main').innerHTML=`<div class="eyebrow">搜尋</div><h1>「${esc(q)}」</h1>
+  <p class="muted">筆記 ${hits.length} 處・題目 ${qh.length} 題</p>
+  ${hits.map(h=>`<div class="hit" data-u="${h.u.id}" data-i="${h.i}"><small>${courseName(h.u)}・${chap(h.u)} ${h.u.title}</small><div><b>${h.h}</b></div><div class="muted">${h.snip}</div></div>`).join('')}
+  ${qh.length?`<h2 class="h-sec">相關題目</h2><div class="review">${qh.map(x=>`<div style="border-color:var(--accent)"><b>${esc(x.q)}</b><br>答案：<mark>${esc(x.o[0])}</mark></div>`).join('')}</div>`:''}`;
+  $('#main').querySelectorAll('.hit').forEach(el=>el.onclick=()=>{$('#search').value='';unitTab='notes';
+    const id=el.dataset.u+'-s'+el.dataset.i;if(location.hash==='#'+el.dataset.u)route();else location.hash=el.dataset.u;
+    setTimeout(()=>{const t=document.getElementById(id);if(t)t.scrollIntoView({block:'start'})},30)});
+}
+
+$('#search').addEventListener('input',route);
+$('.brand').onclick=()=>{$('#search').value='';location.hash='home'};
+window.addEventListener('hashchange',()=>{if(UNITS.some(u=>'#'+u.id===location.hash)&&!$('#search').value)window.scrollTo(0,0);route()});
+route();
+</script>
